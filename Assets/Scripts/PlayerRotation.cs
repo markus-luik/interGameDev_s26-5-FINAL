@@ -17,21 +17,16 @@ public class PlayerRotation : MonoBehaviour
     //rotation of the player
     private void RotatePlayerToMouse()
     {
-       // Cast a ray from the mouse to a horizontal plane at player height.
-       Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-       Plane plane = new Plane(Vector3.up, new Vector3(0f, transform.position.y, 0f));
+       if (Camera.main == null) return;
 
-       if (plane.Raycast(ray, out float distance))
-       {
-           Vector3 hitPoint = ray.GetPoint(distance);
-           Vector3 direction = hitPoint - transform.position;
-           direction.y = 0f; // rotate only around Y axis
+       Vector3 mouseWorld = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+       mouseWorld.z = transform.position.z;
 
-           if (direction.sqrMagnitude > 0.0001f)
-           {
-               transform.rotation = Quaternion.LookRotation(direction);
-           }
-       }
+       Vector2 direction = mouseWorld - transform.position;
+       if (direction.sqrMagnitude <= 0.0001f) return;
+
+       float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
+       transform.rotation = Quaternion.Euler(0f, 0f, angle);
     }
    
 }
