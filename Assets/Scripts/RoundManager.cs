@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class RoundManager : MonoBehaviour
 {
@@ -6,6 +7,7 @@ public class RoundManager : MonoBehaviour
     [SerializeField] private GameObject goalCanvas;
     private GameObject currentGoalCanvas;
     
+    //--------------------------------- GOAL ENTER & EXIT
     /// <summary>
     /// Triggers when player ENTERS Goal.
     /// Reported by Goal.
@@ -29,4 +31,29 @@ public class RoundManager : MonoBehaviour
         Debug.Log($"{entityName} exited goal.");
         Destroy(currentGoalCanvas);
     }
+    //---------------------------------
+    
+    //--------------------------------- RELOAD SCENE
+    /// <summary>
+    /// Restarts scene when Left-Shift and R have been pressed
+    /// </summary>
+    void ReloadScene()
+    {
+        if (Input.GetKey(KeyCode.LeftShift))
+        {
+            if (Input.GetKeyDown(KeyCode.R))
+            {
+                Debug.Log("Reloading scene...");
+                SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+            }
+        }
+    }
+    //--------------------------------- 
+    
+    //--------------------------------- UPDATE
+    void Update()
+    {
+        ReloadScene();
+    }
+    //---------------------------------
 }
