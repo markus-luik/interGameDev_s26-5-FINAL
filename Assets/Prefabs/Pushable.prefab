@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 6005956403829970872}
   - component: {fileID: 5605727837243420176}
   - component: {fileID: 7360074844995260216}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Pushable
   m_TagString: block
   m_Icon: {fileID: 0}
