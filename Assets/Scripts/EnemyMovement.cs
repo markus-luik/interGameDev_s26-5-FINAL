@@ -3,13 +3,18 @@ using UnityEngine;
 
 public class EnemyMovement : Block2D
 {
+    [SerializeField] private Vector3 patrolStartPos;
+    [SerializeField] private bool useCustomStart = false;
+
     [System.Serializable]
+    
     public class PatrolStep
     {
         public Direction direction;
         public int amount = 1;
     }
 
+    
     public enum Direction
     {
         Up,
@@ -26,7 +31,10 @@ public class EnemyMovement : Block2D
 
     private int currentStepIndex = 0;
     private int movedInCurrentStep = 0;
-    
+    void Awake()
+    {
+        patrolStartPos = transform.position;
+    }
     private void Update()
     {
         if (State == MoveStates.idle)
@@ -50,7 +58,7 @@ public class EnemyMovement : Block2D
             myAnim.SetBool("isWalking", true);
 
         // enemyVision.SetFacing(new Vector2(dir.x, dir.y));
-        Debug.Log("Patrol dir = " + dir);
+        //Debug.Log("Patrol dir = " + dir);
         CheckMove(dir.x, dir.y);
         //Debug.Log("Enemy trying to move: " + dir);
         movedInCurrentStep++;
@@ -93,26 +101,30 @@ public class EnemyMovement : Block2D
 
         Gizmos.color = Color.cyan;
 
-        Vector3 currentPos = transform.position;
+        Vector3 startPos = Application.isPlaying ? patrolStartPos : transform.position;
+        // Vector3 currentPos = startPos;
+        Vector3 currentPos = startPos;
 
         for (int i = 0; i < patrolSteps.Count; i++)
         {
             PatrolStep step = patrolSteps[i];
             Vector2Int dir = GetDirectionVector(step.direction);
 
+            Vector3 drawDir = new Vector3(dir.x, -dir.y, 0);
+
             for (int j = 0; j < step.amount; j++)
             {
-                Vector3 nextPos = currentPos + new Vector3(dir.x, dir.y, 0);
-
+                Vector3 nextPos = currentPos + drawDir;
 
                 Gizmos.DrawLine(currentPos, nextPos);
-
                 Gizmos.DrawSphere(nextPos, 0.1f);
 
                 currentPos = nextPos;
             }
         }
-        Gizmos.color = Color.gray;
-        Gizmos.DrawLine(currentPos, transform.position);
+
+        // draw start point
+        Gizmos.color = Color.green;
+        Gizmos.DrawSphere(startPos, 0.2f);
     }
 }
