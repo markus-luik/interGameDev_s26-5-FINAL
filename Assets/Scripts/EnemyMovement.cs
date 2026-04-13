@@ -296,6 +296,33 @@ public class EnemyMovement : Block2D
         return false;
     }
 
+    void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.CompareTag("Bullet"))
+        {
+            Die();
+
+            // optional: destroy bullet too
+            Destroy(other.gameObject);
+        }
+    }
+    void Die()
+    {
+         Debug.Log("Enemy died");
+
+        // stop everything
+        enabled = false;
+
+        //stop movement animation
+        if (myAnim != null)
+            myAnim.SetBool("isWalking", false);
+
+        // play death animation
+        // myAnim.SetTrigger("Die");
+
+        // destroy enemy
+        Destroy(gameObject);
+    }
     private void OnDrawGizmos()
     {
         if (patrolSteps == null || patrolSteps.Count == 0)
@@ -325,4 +352,5 @@ public class EnemyMovement : Block2D
         Gizmos.color = Color.green;
         Gizmos.DrawSphere(startPos, 0.2f);
     }
+
 }
