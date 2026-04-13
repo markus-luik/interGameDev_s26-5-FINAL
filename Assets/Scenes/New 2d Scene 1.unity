@@ -439,6 +439,8 @@ MonoBehaviour:
   player: {fileID: 1713113783}
   mouseOffsetMax: 0.3
   mouseFollowSmooth: 4
+  shiftMoveDistance: 10
+  shiftMoveSmooth: 12
 --- !u!1001 &1054874731
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -702,6 +704,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 371589503450696058, guid: 89c4bed9180af81429f0b8558c61c4f6, type: 3}
+      propertyPath: targetCamera
+      value: 
+      objectReference: {fileID: 747551967}
     - target: {fileID: 5269584671380355515, guid: 89c4bed9180af81429f0b8558c61c4f6, type: 3}
       propertyPath: m_Sprite
       value: 
