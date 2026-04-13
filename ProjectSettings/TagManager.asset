@@ -8,6 +8,7 @@ TagManager:
   - Goal
   - RoundManager
   - Bullet
+  - Flag
   layers:
   - Default
   - TransparentFX

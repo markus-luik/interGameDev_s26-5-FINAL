@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: cf0dd29a533030d449c7481d5cf29af5
+guid: 2b37126f615a8f14cb7ca503a241d602
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 829852830240533904
-    second: Baba_0
+      213: -4231979629152777557
+    second: textWin_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -51,7 +51,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 480
+  spritePixelsToUnits: 32
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -126,13 +126,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Baba_0
+      name: textWin_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 480
-        height: 480
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -141,8 +141,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 09de65a90ca348b00800000000000000
-      internalID: 829852830240533904
+      spriteID: baac8a303fcf445c0800000000000000
+      internalID: -4231979629152777557
       vertices: []
       indices: 
       edges: []
@@ -161,7 +161,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Baba_0: 829852830240533904
+      textWin_0: -4231979629152777557
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
