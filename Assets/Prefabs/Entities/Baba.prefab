@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 3356677493377785317}
   - component: {fileID: 7516123086516684450}
   m_Layer: 0
-  m_Name: Player
+  m_Name: Baba
   m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -140,7 +140,7 @@ MonoBehaviour:
   state: 0
   myAnim: {fileID: 0}
   mySprite: {fileID: 5269584671380355515}
-  bypassPlayerInput: 1
+  bypassPlayerInput: 0
 --- !u!58 &8202675291864337367
 CircleCollider2D:
   m_ObjectHideFlags: 0

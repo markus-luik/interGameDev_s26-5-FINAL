@@ -78,6 +78,26 @@ public class Block2D : MonoBehaviour
 
         return false;
     }
+    
+    /// <summary>
+    /// Moves the block to a target cell without any collision or canMove checks.
+    /// Used by the Baba rule system which handles its own movement validation.
+    /// </summary>
+    public void ForceMove(int _deltaX, int _deltaY) {
+        if (State != MoveStates.idle) return;
+
+        int newX = gridPos.x + _deltaX;
+        int newY = gridPos.y + _deltaY;
+
+        if (newX < 0 || newX >= gridManager.gridList.Count) return;
+        if (newY < 0 || newY >= gridManager.gridList[0].Count) return;
+
+        Cell targetCell = gridManager.gridList[newX][newY].GetComponent<Cell>();
+        if (targetCell == null) return;
+
+        StartMove(targetCell, _deltaX, _deltaY);
+        BroadcastMessage("BlockMoved", new Vector2Int(_deltaX, _deltaY), SendMessageOptions.DontRequireReceiver);
+    }
 
     public bool CheckLerpDist(Vector3 _comparePos, float _maxVal)
     {

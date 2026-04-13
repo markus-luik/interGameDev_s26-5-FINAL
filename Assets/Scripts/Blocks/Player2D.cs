@@ -7,9 +7,14 @@ public class Player2D : Block2D
 
     [SerializeField]
     private SpriteRenderer mySprite;
+    
+    // Flag that allows for bypassing player input (so You can move as other entities)
+    [SerializeField]
+    private bool bypassPlayerInput = false;
 
     private void Update()
     {
+        if (bypassPlayerInput) return; //Exits update loop if bypass flag is true (so You can move as other entities)
         if (State == MoveStates.idle)
         {
             MoveInput();
