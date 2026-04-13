@@ -1,10 +1,19 @@
 fileFormatVersion: 2
-guid: cf0dd29a533030d449c7481d5cf29af5
+guid: e1b0cbcd76fda3f489d27eca6ca3ea87
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 829852830240533904
-    second: Baba_0
+      213: 227467083528609067
+    second: BabaText_0
+  - first:
+      213: -4039044143642637604
+    second: BabaText_1
+  - first:
+      213: -5614145048384798526
+    second: BabaText_2
+  - first:
+      213: 2143046997842093719
+    second: BabaText_3
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -51,7 +60,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 480
+  spritePixelsToUnits: 32
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -126,13 +135,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Baba_0
+      name: BabaText_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 480
-        height: 480
+        x: 1
+        y: 15
+        width: 12
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -141,8 +150,74 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 09de65a90ca348b00800000000000000
-      internalID: 829852830240533904
+      spriteID: b2d11d77b10282300800000000000000
+      internalID: 227467083528609067
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BabaText_1
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 17
+        width: 12
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cda0f0a40ce62f7c0800000000000000
+      internalID: -4039044143642637604
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BabaText_2
+      rect:
+        serializedVersion: 2
+        x: 17
+        y: 3
+        width: 12
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2c08181d2dc8612b0800000000000000
+      internalID: -5614145048384798526
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BabaText_3
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 0
+        width: 10
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7966853e3e1adbd10800000000000000
+      internalID: 2143046997842093719
       vertices: []
       indices: 
       edges: []
@@ -161,7 +236,10 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Baba_0: 829852830240533904
+      BabaText_0: 227467083528609067
+      BabaText_1: -4039044143642637604
+      BabaText_2: -5614145048384798526
+      BabaText_3: 2143046997842093719
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
