@@ -374,6 +374,8 @@ MonoBehaviour:
   player: {fileID: 1713113783}
   mouseOffsetMax: 0.3
   mouseFollowSmooth: 4
+  shiftMoveDistance: 5
+  shiftMoveSmooth: 5
 --- !u!1 &1354728681
 GameObject:
   m_ObjectHideFlags: 0
