@@ -4,6 +4,10 @@ using System.Collections.Generic;
 
 public class RuleParser : MonoBehaviour {
     public static RuleParser Instance;
+    
+    //Canvas prefab that signals round end
+    [SerializeField] private GameObject goal;
+    private GameObject currentGoal;
 
     // Stores active noun -> property rules after each parse
     // e.g. "BABA" -> [YOU, WIN]
@@ -70,6 +74,20 @@ public class RuleParser : MonoBehaviour {
         _activeRules[noun.type.entityName].Add(propBlock.type.entityName);
 
         Debug.Log($"Rule found: {noun.type.entityName} IS {propBlock.type.entityName}");
+        if (noun.type.entityName == "FLAG" && propBlock.type.entityName == "WIN")
+        {
+            Debug.Log("Win unlocked");
+            GameObject flag = GameObject.FindWithTag("Flag");
+            if (flag != null)
+            {
+                Vector3 spawnPos = new Vector3(
+                    flag.transform.position.x,
+                    flag.transform.position.y,
+                    0f  // Z = 0 for 2D
+                );
+                currentGoal = Instantiate(goal, spawnPos, Quaternion.identity);
+            }
+        }
     }
 
     private void ApplyRules() {
