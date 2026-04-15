@@ -1189,6 +1189,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5110086327670806081, guid: e382ba62b007eae4fb3b5c2c2a5a6487, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 1141489635}
+    - target: {fileID: 5110086327670806081, guid: e382ba62b007eae4fb3b5c2c2a5a6487, type: 3}
       propertyPath: facingDirection.x
       value: -1
       objectReference: {fileID: 0}
@@ -1196,6 +1200,10 @@ PrefabInstance:
       propertyPath: facingDirection.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6483528136407568157, guid: e382ba62b007eae4fb3b5c2c2a5a6487, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 1141489635}
     - target: {fileID: 6483528136407568157, guid: e382ba62b007eae4fb3b5c2c2a5a6487, type: 3}
       propertyPath: patrolSteps.Array.size
       value: 5
@@ -7349,6 +7357,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5110086327670806081, guid: e382ba62b007eae4fb3b5c2c2a5a6487, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 1141489635}
     - target: {fileID: 6483528136407568157, guid: e382ba62b007eae4fb3b5c2c2a5a6487, type: 3}
       propertyPath: player
       value: 
