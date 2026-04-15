@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 6430262979121427069}
   - component: {fileID: 6483528136407568157}
   - component: {fileID: 2555707366839168709}
+  - component: {fileID: -6862001119192872976}
   m_Layer: 0
   m_Name: Enemy
   m_TagString: block
@@ -213,8 +214,12 @@ MonoBehaviour:
     amount: 3
   - direction: 3
     amount: 3
+  player: {fileID: 0}
+  lostSightTime: 3
   enemyVision: {fileID: 5110086327670806081}
   myAnim: {fileID: 0}
+  patrolStartPos: {x: 0, y: 0, z: 0}
+  useCustomStart: 0
 --- !u!114 &2555707366839168709
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -228,3 +233,34 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EnemyDamaged
   currentState: 0
+  enemyMovement: {fileID: 6483528136407568157}
+  enemyVision: {fileID: 5110086327670806081}
+  enemyShooting: {fileID: 0}
+  myAnim: {fileID: 0}
+  myCollider: {fileID: 0}
+  dropWeaponOnDeath: 1
+  destroyDelay: 0.5
+  dropForce: 2
+  dropSpinMin: -200
+  dropSpinMax: 200
+--- !u!114 &-6862001119192872976
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8462569438251134700}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c176d9aceb2606447b810d9f27de6562, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::EnemyShooting
+  shootPoint: {fileID: 0}
+  bulletPrefab: {fileID: 0}
+  targetPlayer: {fileID: 0}
+  enemyVision: {fileID: 0}
+  ownerCollider: {fileID: 0}
+  startingWeapon: {fileID: 0}
+  bulletSpeed: 16
+  fireInterval: 0.5
+  canShoot: 0
