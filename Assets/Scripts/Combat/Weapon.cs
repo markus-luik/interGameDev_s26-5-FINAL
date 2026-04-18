@@ -72,12 +72,25 @@ public class Weapon : MonoBehaviour
                 break;
 
             case WeaponState.HeldByPlayer:
+                rb.simulated = false;
+
+                if (pickupTrigger != null) pickupTrigger.enabled = false;
+                if (physicsCollider != null) physicsCollider.enabled = false;
+
+                if (mySprite != null)
+                    mySprite.enabled = (weaponType == WeaponType.B);
+
+                break;
+
             case WeaponState.HeldByEnemy:
                 rb.simulated = false;
 
                 if (pickupTrigger != null) pickupTrigger.enabled = false;
                 if (physicsCollider != null) physicsCollider.enabled = false;
-                if (mySprite != null) mySprite.enabled = false;
+
+                if (mySprite != null)
+                    mySprite.enabled = false;
+
                 break;
 
             case WeaponState.Projectile:

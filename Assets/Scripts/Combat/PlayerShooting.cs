@@ -19,6 +19,9 @@ public class PlayerShooting : MonoBehaviour
     [SerializeField] private float throwForce = 8f;
     [SerializeField] private float throwSpinSpeed = 720f;
     [SerializeField] private bool canThrow = true;
+    [SerializeField] private BatMelee batMelee;
+    [SerializeField] private Transform weaponHoldPoint;
+
     public bool HasWeapon => currentWeapon != null;
 
     private float nextFireTime;
@@ -34,7 +37,10 @@ public class PlayerShooting : MonoBehaviour
         if (ownerCollider == null)
             ownerCollider = GetComponent<Collider2D>();
     }
-
+    private bool CanFireCurrentWeapon()
+    {
+        return currentWeapon != null && currentWeapon.WeaponType == WeaponType.A;
+    }
     private void Update()
     {
         if (targetCamera == null)
@@ -50,7 +56,7 @@ public class PlayerShooting : MonoBehaviour
                 transform.right = new Vector3(dir.x, dir.y, 0f);
         }
 
-        if (canShoot && Input.GetMouseButton(0) && Time.time >= nextFireTime)
+        if (canShoot && CanFireCurrentWeapon() && Input.GetMouseButton(0) && Time.time >= nextFireTime)
         {
             Vector2 dir = MouseHelper.GetDirectionToMouse2D(transform, targetCamera);
             if (dir.sqrMagnitude > 0.0001f)
@@ -79,9 +85,14 @@ public class PlayerShooting : MonoBehaviour
         if (newWeapon != null)
         {
             newWeapon.SetState(Weapon.WeaponState.HeldByPlayer);
-            newWeapon.transform.SetParent(transform);
-            newWeapon.transform.localPosition = Vector3.zero;
+            newWeapon.transform.SetParent(weaponHoldPoint != null ? weaponHoldPoint : transform);
+            newWeapon.transform.localPosition = new Vector3(0.6f, 0f, 0f);
             newWeapon.transform.localRotation = Quaternion.identity;
+        }
+
+        if (batMelee != null)
+        {
+            batMelee.SetWeapon(currentWeapon);
         }
     }
 

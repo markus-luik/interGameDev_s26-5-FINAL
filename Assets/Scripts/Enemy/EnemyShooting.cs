@@ -20,7 +20,10 @@ public class EnemyShooting : MonoBehaviour
     private float nextFireTime;
 
     public Weapon CurrentWeapon => currentWeapon;
-
+    private bool CanFireCurrentWeapon()
+    {
+        return currentWeapon != null && currentWeapon.WeaponType == WeaponType.A;
+    }
     private void Awake()
     {
         if (shootPoint == null)
@@ -49,6 +52,7 @@ public class EnemyShooting : MonoBehaviour
 
     private void Update()
     {
+        if (!CanFireCurrentWeapon()) return;
         if (!canShoot) return;
         if (currentWeapon == null) return;
         if (targetPlayer == null) return;

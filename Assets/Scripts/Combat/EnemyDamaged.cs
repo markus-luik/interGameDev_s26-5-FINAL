@@ -12,6 +12,9 @@ public class EnemyDamaged : MonoBehaviour, IHitReceiver
     [Header("State")]
     [SerializeField] private EnemyState currentState = EnemyState.Alive;
 
+    [Header("Weapon B Hits")]
+    [SerializeField] private int weaponBHitCount = 0;
+
     [Header("References")]
     [SerializeField] private EnemyMovement enemyMovement;
     [SerializeField] private EnemyVision enemyVision;
@@ -55,8 +58,20 @@ public class EnemyDamaged : MonoBehaviour, IHitReceiver
                 break;
 
             case WeaponType.B:
-                EnterKnockedOut();
+                HandleBatHit();
                 break;
+        }
+    }
+
+    private void HandleBatHit()
+    {
+        if (currentState == EnemyState.Alive)
+        {
+            EnterKnockedOut();
+        }
+        else if (currentState == EnemyState.KnockedOut)
+        {
+            EnterDead();
         }
     }
 
@@ -79,7 +94,7 @@ public class EnemyDamaged : MonoBehaviour, IHitReceiver
         if (myAnim != null)
             myAnim.SetTrigger("KnockedOut");
 
-        // start recovery timer
+        CancelInvoke(nameof(RecoverFromKnockout));
         Invoke(nameof(RecoverFromKnockout), 3f);
     }
 
@@ -96,11 +111,11 @@ public class EnemyDamaged : MonoBehaviour, IHitReceiver
         if (enemyVision != null)
             enemyVision.enabled = true;
 
-        if (enemyShooting != null)
+        if (enemyShooting != null && enemyShooting.CurrentWeapon != null)
             enemyShooting.SetCanShoot(true);
 
         if (myAnim != null)
-            myAnim.SetTrigger("WakeUp");// Wake up animations
+            myAnim.SetTrigger("WakeUp");
     }
 
     private void EnterDead()
@@ -109,6 +124,8 @@ public class EnemyDamaged : MonoBehaviour, IHitReceiver
             return;
 
         currentState = EnemyState.Dead;
+
+        CancelInvoke(nameof(RecoverFromKnockout));
 
         if (enemyMovement != null)
             enemyMovement.enabled = false;
@@ -149,13 +166,13 @@ public class EnemyDamaged : MonoBehaviour, IHitReceiver
         weapon.gameObject.SetActive(true);
         weapon.transform.position = transform.position;
 
-        weapon.SetState(Weapon.WeaponState.Projectile);
+        weapon.SetState(Weapon.WeaponState.OnGround);
 
         Rigidbody2D rb = weapon.GetComponent<Rigidbody2D>();
         if (rb != null)
         {
-            rb.linearVelocity = Random.insideUnitCircle * dropForce;
-            rb.angularVelocity = Random.Range(dropSpinMin, dropSpinMax);
+            rb.linearVelocity = Vector2.zero;
+            rb.angularVelocity = 0f;
         }
 
         enemyShooting.ClearWeapon();
