@@ -662,7 +662,7 @@ GameObject:
   m_Component:
   - component: {fileID: 752326385}
   m_Layer: 0
-  m_Name: holdpoint-baseballbat
+  m_Name: weapon hold point
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1187,6 +1187,41 @@ MonoBehaviour:
   leftAngle: 60
   rightAngle: -70
   hitRadius: 1
+  attackRadius: 1.2
+  attackAngle: 100
+  attackOrigin: {fileID: 0}
+--- !u!114 &1713113797
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1713113783}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3ed57de90e969cd4aaf9a9997f3a1299, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PunchMelee
+  playerShooting: {fileID: 1713113798}
+  punchOrigin: {fileID: 752326385}
+  enemyLayer:
+    serializedVersion: 2
+    m_Bits: 128
+  punchRadius: 0.9
+  punchAngle: 98.7
+  punchCooldown: 0.2
+  punchDuration: 0.08
+--- !u!114 &1713113798 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 371589503450696058, guid: 89c4bed9180af81429f0b8558c61c4f6, type: 3}
+  m_PrefabInstance: {fileID: 1278777449405285465}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1713113783}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c52da48199345284fb26e34e1c91a37e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerShooting
 --- !u!1 &1766022392
 GameObject:
   m_ObjectHideFlags: 0
@@ -1571,6 +1606,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 7322423897838909689, guid: 89c4bed9180af81429f0b8558c61c4f6, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1713113796}
+    - targetCorrespondingSourceObject: {fileID: 7322423897838909689, guid: 89c4bed9180af81429f0b8558c61c4f6, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1713113797}
   m_SourcePrefab: {fileID: 100100000, guid: 89c4bed9180af81429f0b8558c61c4f6, type: 3}
 --- !u!1001 &1913792118489761003
 PrefabInstance:

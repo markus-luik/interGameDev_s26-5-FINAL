@@ -23,6 +23,7 @@ public class PlayerShooting : MonoBehaviour
     [SerializeField] private Transform weaponHoldPoint;
 
     public bool HasWeapon => currentWeapon != null;
+    public Weapon CurrentWeapon => currentWeapon;
 
     private float nextFireTime;
 
