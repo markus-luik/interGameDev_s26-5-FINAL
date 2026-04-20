@@ -141,7 +141,7 @@ MonoBehaviour:
   state: 0
   myAnim: {fileID: 0}
   mySprite: {fileID: 5269584671380355515}
-  bypassPlayerInput: 1
+  bypassPlayerInput: 0
 --- !u!58 &8202675291864337367
 CircleCollider2D:
   m_ObjectHideFlags: 0
