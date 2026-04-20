@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 8202675291864337367}
   - component: {fileID: 3356677493377785317}
   - component: {fileID: 7516123086516684450}
+  - component: {fileID: 371589503450696058}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -216,3 +217,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 42d47a49baf7737408c3240259bb909a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerRotation
+--- !u!114 &371589503450696058
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7322423897838909689}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c52da48199345284fb26e34e1c91a37e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerShooting
+  shootPoint: {fileID: 6150205943266450054}
+  bulletPrefab: {fileID: 5172379101589577216, guid: 1168ca1c38fef27478bf72c8f0785412, type: 3}
+  targetCamera: {fileID: 0}
+  bulletSpeed: 16
+  fireInterval: 0.15
+  rotatePlayerToMouse: 1

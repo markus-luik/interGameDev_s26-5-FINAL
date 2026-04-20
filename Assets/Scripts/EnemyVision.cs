@@ -55,18 +55,39 @@ public class EnemyVision : MonoBehaviour
     }
 
     void OnDrawGizmosSelected()
+{
+    Gizmos.color = Color.yellow;
+
+    Vector3 pos = transform.position;
+    Vector2 forward = facingDirection.normalized;
+
+    int rayCount = 30; //more = smoother
+    float halfAngle = viewAngle * 0.5f;
+
+    float angleStep = viewAngle / rayCount;
+
+    for (int i = 0; i <= rayCount; i++)
     {
-        Gizmos.color = Color.yellow;
+        float angle = -halfAngle + angleStep * i;
 
-        Vector3 pos = transform.position;
-        Vector3 forward = new Vector3(facingDirection.x, facingDirection.y, 0f);
+        Vector2 dir = Quaternion.Euler(0, 0, angle) * forward;
 
-        Gizmos.DrawLine(pos, pos + forward * viewDistance);
+        RaycastHit2D hit = Physics2D.Raycast(pos, dir, viewDistance, obstacleLayer);
 
-        Vector3 leftBound = Quaternion.Euler(0, 0, viewAngle * 0.5f) * forward;
-        Vector3 rightBound = Quaternion.Euler(0, 0, -viewAngle * 0.5f) * forward;
+        Vector3 endPoint;
 
-        Gizmos.DrawLine(pos, pos + leftBound.normalized * viewDistance);
-        Gizmos.DrawLine(pos, pos + rightBound.normalized * viewDistance);
+        if (hit.collider != null)
+        {
+            //stop at obstacle
+            endPoint = hit.point;
+        }
+        else
+        {
+            //otherwise full length
+            endPoint = pos + (Vector3)(dir * viewDistance);
+        }
+
+        Gizmos.DrawLine(pos, endPoint);
     }
+}
 }

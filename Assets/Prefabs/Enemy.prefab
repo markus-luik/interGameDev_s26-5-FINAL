@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 5110086327670806081}
   - component: {fileID: 6430262979121427069}
   - component: {fileID: 6483528136407568157}
+  - component: {fileID: 2555707366839168709}
   m_Layer: 0
   m_Name: Enemy
   m_TagString: block
@@ -214,3 +215,16 @@ MonoBehaviour:
     amount: 3
   enemyVision: {fileID: 5110086327670806081}
   myAnim: {fileID: 0}
+--- !u!114 &2555707366839168709
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8462569438251134700}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fb59b1dd31911ef4aa12101eac05c69f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::EnemyDamaged
+  currentState: 0
