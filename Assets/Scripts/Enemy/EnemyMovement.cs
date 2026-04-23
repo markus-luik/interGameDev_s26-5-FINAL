@@ -141,6 +141,9 @@ public class EnemyMovement : Block2D
         Block2D playerBlock = player != null ? player.GetComponent<Block2D>() : null;
         if (playerBlock == null)
             return;
+        PlayerDamaged playerDamaged = player != null ? player.GetComponent<PlayerDamaged>() : null;
+        if (playerDamaged != null && playerDamaged.IsDead)
+            return;
 
         Vector2Int targetGrid = playerBlock.gridPos;
         lastKnownPlayerGridPos = targetGrid;

@@ -11,6 +11,9 @@ public class PlayerRotation : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        PlayerDamaged playerDamaged = GetComponent<PlayerDamaged>();
+        if (playerDamaged != null && playerDamaged.IsDead)
+            return;
         RotatePlayerToMouse();
     }
 

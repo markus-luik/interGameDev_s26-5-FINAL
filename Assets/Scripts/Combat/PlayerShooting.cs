@@ -44,6 +44,8 @@ public class PlayerShooting : MonoBehaviour
     }
     private void Update()
     {
+        if (!enabled)
+            return;
         if (targetCamera == null)
         {
             targetCamera = Camera.main;
@@ -133,6 +135,40 @@ public class PlayerShooting : MonoBehaviour
         Rigidbody2D rb = bullet.GetComponent<Rigidbody2D>();
         if (rb != null)
             rb.linearVelocity = dir * bulletSpeed;
+    }
+
+    public void DropCurrentWeapon(bool throwOut = false)
+    {
+        if (currentWeapon == null)
+            return;
+
+        Weapon weaponToDrop = currentWeapon;
+        currentWeapon = null;
+        canShoot = false;
+
+        weaponToDrop.transform.SetParent(null);
+        weaponToDrop.gameObject.SetActive(true);
+        weaponToDrop.transform.position = transform.position;
+
+        if (throwOut)
+        {
+            Vector2 dir = transform.right;
+            weaponToDrop.Throw(dir, throwForce, throwSpinSpeed, GetComponent<Collider2D>());
+        }
+        else
+        {
+            weaponToDrop.SetState(Weapon.WeaponState.OnGround);
+
+            Rigidbody2D rb = weaponToDrop.GetComponent<Rigidbody2D>();
+            if (rb != null)
+            {
+                rb.linearVelocity = Vector2.zero;
+                rb.angularVelocity = 0f;
+            }
+        }
+
+        if (batMelee != null)
+            batMelee.SetWeapon(null);
     }
     
 }

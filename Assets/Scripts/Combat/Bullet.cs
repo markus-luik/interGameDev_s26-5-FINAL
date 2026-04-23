@@ -38,6 +38,8 @@ public class Bullet : MonoBehaviour
         owner = bulletOwner;
         weaponType = type;
 
+        Debug.Log("Bullet owner: " + (owner != null ? owner.name : "NULL"));
+
         if (bulletCollider != null && owner != null)
         {
             Collider2D[] ownerColliders = owner.GetComponentsInChildren<Collider2D>();
@@ -59,11 +61,13 @@ public class Bullet : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
+        Debug.Log("Bullet hit trigger: " + other.name);
         HandleHit(other.gameObject, true);
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
+        Debug.Log("Bullet hit collision: " + collision.gameObject.name);
         HandleHit(collision.gameObject, false);
     }
 
@@ -96,7 +100,7 @@ public class Bullet : MonoBehaviour
             Destroy(gameObject);
             return;
         }
-
+        
         if (destroyOnAnyCollision && !collidedWithTrigger)
         {
             hasHit = true;
