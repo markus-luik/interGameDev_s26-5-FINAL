@@ -44,6 +44,8 @@ public class PlayerShooting : MonoBehaviour
     }
     private void Update()
     {
+        if (ConversationUIManager.Instance != null && ConversationUIManager.Instance.IsConversationActive())
+            return;
         if (!enabled)
             return;
         if (targetCamera == null)

@@ -11,6 +11,8 @@ public class PlayerRotation : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (ConversationUIManager.Instance != null && ConversationUIManager.Instance.IsConversationActive())
+            return;
         PlayerDamaged playerDamaged = GetComponent<PlayerDamaged>();
         if (playerDamaged != null && playerDamaged.IsDead)
             return;

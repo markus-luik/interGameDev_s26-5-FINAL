@@ -62,6 +62,8 @@ public class EnemyMovement : Block2D
 
     private void Update()
     {
+        if (ConversationUIManager.Instance != null && ConversationUIManager.Instance.IsConversationActive())
+            return;
         UpdateMode();
 
         if (State != MoveStates.idle)
