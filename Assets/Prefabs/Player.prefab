@@ -87,7 +87,7 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_Sprite: {fileID: 2747690628134850419, guid: 16037dbd798344f57a526d53d48f5ead, type: 3}
-  m_Color: {r: 0.42605335, g: 0.754717, b: 0.1210394, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -139,8 +139,10 @@ MonoBehaviour:
   gridPos: {x: 0, y: 0}
   moveChange: {x: 0, y: 0}
   state: 0
-  myAnim: {fileID: 0}
-  mySprite: {fileID: 5269584671380355515}
+  bodyAnimator: {fileID: 0}
+  legsAnimator: {fileID: 0}
+  bodySprite: {fileID: 5269584671380355515}
+  legsSprite: {fileID: 0}
   bypassPlayerInput: 0
 --- !u!58 &8202675291864337367
 CircleCollider2D:
@@ -232,6 +234,14 @@ MonoBehaviour:
   shootPoint: {fileID: 6150205943266450054}
   bulletPrefab: {fileID: 5172379101589577216, guid: 1168ca1c38fef27478bf72c8f0785412, type: 3}
   targetCamera: {fileID: 0}
+  currentWeapon: {fileID: 0}
+  ownerCollider: {fileID: 0}
   bulletSpeed: 16
   fireInterval: 0.15
   rotatePlayerToMouse: 1
+  canShoot: 0
+  throwForce: 8
+  throwSpinSpeed: 720
+  canThrow: 1
+  batMelee: {fileID: 0}
+  weaponHoldPoint: {fileID: 0}
