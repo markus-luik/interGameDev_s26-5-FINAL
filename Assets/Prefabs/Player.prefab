@@ -15,6 +15,9 @@ GameObject:
   - component: {fileID: 3356677493377785317}
   - component: {fileID: 7516123086516684450}
   - component: {fileID: 371589503450696058}
+  - component: {fileID: 80840768477870958}
+  - component: {fileID: 1827292346954791747}
+  - component: {fileID: 6279142084384786394}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -86,7 +89,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_MaskInteraction: 0
-  m_Sprite: {fileID: 2747690628134850419, guid: 16037dbd798344f57a526d53d48f5ead, type: 3}
+  m_Sprite: {fileID: -1508804677686159225, guid: 2108286fe0ff9c544a7d519b5fa2813c, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -139,9 +142,9 @@ MonoBehaviour:
   gridPos: {x: 0, y: 0}
   moveChange: {x: 0, y: 0}
   state: 0
-  bodyAnimator: {fileID: 0}
-  legsAnimator: {fileID: 0}
-  bodySprite: {fileID: 5269584671380355515}
+  myAnim: {fileID: 6279142084384786394}
+  legsAnim: {fileID: 0}
+  mySprite: {fileID: 5269584671380355515}
   legsSprite: {fileID: 0}
   bypassPlayerInput: 0
 --- !u!58 &8202675291864337367
@@ -188,14 +191,14 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7322423897838909689}
-  m_BodyType: 1
+  m_BodyType: 0
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 1
   m_LinearDamping: 0
   m_AngularDamping: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 0
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -240,8 +243,76 @@ MonoBehaviour:
   fireInterval: 0.15
   rotatePlayerToMouse: 1
   canShoot: 0
-  throwForce: 8
-  throwSpinSpeed: 720
+  throwForce: 5
+  throwSpinSpeed: 1080
   canThrow: 1
-  batMelee: {fileID: 0}
+  batMelee: {fileID: 80840768477870958}
   weaponHoldPoint: {fileID: 0}
+--- !u!114 &80840768477870958
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7322423897838909689}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 28cb5a64c02035049bc330ef2d8a93d2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::BatMelee
+  weaponHoldPoint: {fileID: 0}
+  hitPoint: {fileID: 0}
+  enemyLayer:
+    serializedVersion: 2
+    m_Bits: 128
+  attackCooldown: 0.15
+  swingDuration: 0.1
+  leftAngle: 60
+  rightAngle: -70
+  hitRadius: 1
+  attackRadius: 1.2
+  attackAngle: 100
+  attackOrigin: {fileID: 0}
+--- !u!114 &1827292346954791747
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7322423897838909689}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3ed57de90e969cd4aaf9a9997f3a1299, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PunchMelee
+  playerShooting: {fileID: 371589503450696058}
+  punchOrigin: {fileID: 0}
+  enemyLayer:
+    serializedVersion: 2
+    m_Bits: 128
+  punchRadius: 0.9
+  punchAngle: 98.7
+  punchCooldown: 0.2
+  punchDuration: 0.08
+--- !u!95 &6279142084384786394
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7322423897838909689}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: c1fcfd7e7b40fef48899b815745c9cbd, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
