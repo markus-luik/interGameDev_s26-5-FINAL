@@ -575,7 +575,7 @@ MonoBehaviour:
     m_SelectedTrigger: Selected
     m_DisabledTrigger: Disabled
   m_Interactable: 1
-  m_TargetGraphic: {fileID: 479078976}
+  m_TargetGraphic: {fileID: 1834952850}
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
@@ -709,7 +709,7 @@ MonoBehaviour:
     m_SelectedTrigger: Selected
     m_DisabledTrigger: Disabled
   m_Interactable: 1
-  m_TargetGraphic: {fileID: 1000370975}
+  m_TargetGraphic: {fileID: 1047981497}
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
@@ -1511,8 +1511,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 1644167167
-  m_fontColor: {r: 1, g: 1, b: 1, a: 0.38039216}
+    rgba: 2684354559
+  m_fontColor: {r: 1, g: 1, b: 1, a: 0.62352943}
   m_enableVertexGradient: 1
   m_colorMode: 3
   m_fontColorGradient:
@@ -2514,8 +2514,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 1644167167
-  m_fontColor: {r: 1, g: 1, b: 1, a: 0.38039216}
+    rgba: 2466250751
+  m_fontColor: {r: 1, g: 1, b: 1, a: 0.57254905}
   m_enableVertexGradient: 1
   m_colorMode: 3
   m_fontColorGradient:
