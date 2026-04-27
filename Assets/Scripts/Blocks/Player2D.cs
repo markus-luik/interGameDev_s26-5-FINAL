@@ -6,7 +6,13 @@ public class Player2D : Block2D
     private Animator myAnim;
 
     [SerializeField]
+    private Animator legsAnim;
+
+    [SerializeField]
     private SpriteRenderer mySprite;
+
+    [SerializeField]
+    private SpriteRenderer legsSprite;
     
     // Flag that allows for bypassing player input (so You can move as other entities)
     [SerializeField]
@@ -27,14 +33,14 @@ public class Player2D : Block2D
         {
             if (CheckMove(-1, 0))
             {
-                if (mySprite != null) mySprite.flipX = true;
+                SetFacingFlip(true);
             }
         }
         else if (Input.GetKey(KeyCode.D))
         {
             if (CheckMove(1, 0))
             {
-                if (mySprite != null) mySprite.flipX = false;
+                SetFacingFlip(false);
             }
         }
         else if (Input.GetKey(KeyCode.W))
@@ -55,21 +61,47 @@ public class Player2D : Block2D
 
     protected override void StartMove(Cell newParent, int _deltaX, int _deltaY)
     {
-        if (myAnim != null)
-        {
-            myAnim.SetBool("isMoving", true);
-        }
+        SetMovingAnimation(true);
 
         base.StartMove(newParent, _deltaX, _deltaY);
     }
 
     protected override void FinishMove()
     {
-        if (myAnim != null)
-        {
-            myAnim.SetBool("isMoving", false);
-        }
+        bool keepMoving =
+            Input.GetKey(KeyCode.A) ||
+            Input.GetKey(KeyCode.D) ||
+            Input.GetKey(KeyCode.W) ||
+            Input.GetKey(KeyCode.S);
+
+        SetMovingAnimation(keepMoving);
 
         base.FinishMove();
+    }
+
+    private void SetFacingFlip(bool flipX)
+    {
+        if (mySprite != null)
+        {
+            mySprite.flipX = flipX;
+        }
+
+        if (legsSprite != null)
+        {
+            legsSprite.flipX = flipX;
+        }
+    }
+
+    private void SetMovingAnimation(bool isMoving)
+    {
+        if (myAnim != null)
+        {
+            myAnim.SetBool("isMoving", isMoving);
+        }
+
+        if (legsAnim != null)
+        {
+            legsAnim.SetBool("isMoving", isMoving);
+        }
     }
 }
