@@ -1,5 +1,67 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &1205995395078145676
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8868533021366969299}
+  m_Layer: 7
+  m_Name: weapon hold point
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8868533021366969299
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1205995395078145676}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.4, y: 0.18, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 3140889717073129319}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &3662739485695357878
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4443287647797212139}
+  m_Layer: 7
+  m_Name: hitpoint-baseballbat
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4443287647797212139
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3662739485695357878}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.35, y: 0.99, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 3140889717073129319}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &8743385625017111025
 GameObject:
   m_ObjectHideFlags: 0
@@ -15,8 +77,9 @@ GameObject:
   - component: {fileID: 1131555318366651698}
   - component: {fileID: 2023612112489418281}
   - component: {fileID: 557193067504599732}
+  - component: {fileID: 9100609656421460728}
   m_Layer: 7
-  m_Name: Enemy 1
+  m_Name: EnemyWithBaseballBat
   m_TagString: block
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -34,7 +97,9 @@ Transform:
   m_LocalPosition: {x: 2.5, y: -2.75, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 8868533021366969299}
+  - {fileID: 4443287647797212139}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &3764744399782263098
@@ -87,7 +152,7 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_Sprite: {fileID: 7482667652216324306, guid: 75f5f34dc1b5347e0b8351032682f224, type: 3}
-  m_Color: {r: 0.8867924, g: 0.0697162, b: 0.0697162, a: 1}
+  m_Color: {r: 0.8862746, g: 0.08627451, b: 0.08627451, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -110,7 +175,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::EnemyVision
   player: {fileID: 0}
   viewDistance: 3
-  viewAngle: 90
+  viewAngle: 43
   obstacleLayer:
     serializedVersion: 2
     m_Bits: 64
@@ -272,7 +337,36 @@ MonoBehaviour:
   bulletPrefab: {fileID: 5172379101589577216, guid: 1168ca1c38fef27478bf72c8f0785412, type: 3}
   targetPlayer: {fileID: 0}
   enemyVision: {fileID: 6148992457638226133}
-  startingWeapon: {fileID: 8745531745395437058, guid: 391f3a5a3b317ca4e9b1df59833302ee, type: 3}
+  weaponHoldPoint: {fileID: 8868533021366969299}
+  startingWeapon: {fileID: 5015228457319200091, guid: 0175424965339f14f8a35ee4f5cdd7af, type: 3}
   canShoot: 1
+  batMelee: {fileID: 9100609656421460728}
   bulletSpeed: 16
   fireInterval: 0.15
+--- !u!114 &9100609656421460728
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8743385625017111025}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 28cb5a64c02035049bc330ef2d8a93d2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::BatMelee
+  weaponHoldPoint: {fileID: 8868533021366969299}
+  hitPoint: {fileID: 4443287647797212139}
+  enemyLayer:
+    serializedVersion: 2
+    m_Bits: 256
+  attackCooldown: 0.3
+  swingDuration: 0.3
+  leftAngle: 60
+  rightAngle: -30
+  hitRadius: 0.8
+  attackRadius: 0.9
+  attackAngle: 100
+  attackOrigin: {fileID: 8868533021366969299}
+  target: {fileID: 0}
+  usePlayerInput: 0

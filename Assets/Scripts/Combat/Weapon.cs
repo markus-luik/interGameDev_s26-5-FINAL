@@ -21,6 +21,30 @@ public class Weapon : MonoBehaviour
 
     [SerializeField] private SpriteRenderer mySprite;
     [SerializeField] private WeaponType thrownHitType = WeaponType.B;
+
+    [Header("Ammo")]
+    [SerializeField] private int maxAmmo = 15;
+    [SerializeField] private int currentAmmo = 15;
+
+    public int CurrentAmmo => currentAmmo;
+    public int MaxAmmo => maxAmmo;
+
+    public bool HasAmmo()
+    {
+        return currentAmmo > 0;
+    }
+
+    public bool UseAmmo()
+    {
+        if (weaponType != WeaponType.A)
+            return true; //non-guns don't use ammo
+
+        if (currentAmmo <= 0)
+            return false;
+
+        currentAmmo--;
+        return true;
+    }
     private void Update()
     {
         if (currentState != WeaponState.Projectile || rb == null)
@@ -83,15 +107,15 @@ public class Weapon : MonoBehaviour
                 break;
 
             case WeaponState.HeldByEnemy:
-                rb.simulated = false;
+            rb.simulated = false;
 
-                if (pickupTrigger != null) pickupTrigger.enabled = false;
-                if (physicsCollider != null) physicsCollider.enabled = false;
+            if (pickupTrigger != null) pickupTrigger.enabled = false;
+            if (physicsCollider != null) physicsCollider.enabled = false;
 
-                if (mySprite != null)
-                    mySprite.enabled = false;
+            if (mySprite != null)
+                mySprite.enabled = (weaponType == WeaponType.B); //show bat, hide gun
 
-                break;
+            break;
 
             case WeaponState.Projectile:
                 rb.bodyType = RigidbodyType2D.Dynamic;
