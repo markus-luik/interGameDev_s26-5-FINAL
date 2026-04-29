@@ -20,6 +20,8 @@ public class Player2D : Block2D
 
     private void Update()
     {
+        if (ConversationUIManager.Instance != null && ConversationUIManager.Instance.IsConversationActive())
+            return;
         if (bypassPlayerInput) return; //Exits update loop if bypass flag is true (so You can move as other entities)
         if (State == MoveStates.idle)
         {

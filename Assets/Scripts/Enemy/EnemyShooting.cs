@@ -52,6 +52,7 @@ public class EnemyShooting : MonoBehaviour
 
     private void Update()
     {
+        
         if (!CanFireCurrentWeapon()) return;
         if (!canShoot) return;
         if (currentWeapon == null) return;
@@ -59,6 +60,10 @@ public class EnemyShooting : MonoBehaviour
         if (enemyVision != null && !enemyVision.canSeePlayer) return;
         if (Time.time < nextFireTime) return;
 
+        PlayerDamaged playerDamaged = targetPlayer != null ? targetPlayer.GetComponent<PlayerDamaged>() : null;
+        if (playerDamaged != null && playerDamaged.IsDead)
+            return;
+            
         Vector2 dir = ((Vector2)targetPlayer.position - (Vector2)shootPoint.position).normalized;
         if (dir.sqrMagnitude <= 0.0001f) return;
 
@@ -100,6 +105,7 @@ public class EnemyShooting : MonoBehaviour
 
     private void FireBullet(Vector2 dir)
     {
+        
         if (bulletPrefab == null) return;
 
         Vector3 spawnPos = shootPoint.position + (Vector3)(dir.normalized * 0.35f);
@@ -120,5 +126,9 @@ public class EnemyShooting : MonoBehaviour
         Rigidbody2D rb = bullet.GetComponent<Rigidbody2D>();
         if (rb != null)
             rb.linearVelocity = dir * bulletSpeed;
+        // Debug.Log("Enemy spawned bullet prefab: " + bullet.name);
+
+        // Bullet bulletComp = bullet.GetComponent<Bullet>();
+        // Debug.Log("Bullet component found? " + (bulletComp != null));
     }
 }

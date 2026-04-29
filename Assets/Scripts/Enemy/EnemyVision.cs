@@ -45,7 +45,7 @@ public class EnemyVision : MonoBehaviour
             return;
 
         canSeePlayer = true;
-        Debug.Log("Enemy sees player!");
+        //Debug.Log("Enemy sees player!");
     }
 
     public void SetFacing(Vector2 newFacing)
