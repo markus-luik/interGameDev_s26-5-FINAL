@@ -24,7 +24,7 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 112}
   m_MaxSize: {x: 24288, y: 16192}
   vertical: 0
-  controlID: 4378
+  controlID: 75385
   draggingID: 0
 --- !u!114 &2
 MonoBehaviour:
@@ -153,7 +153,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 112}
   m_MaxSize: {x: 16192, y: 16192}
   vertical: 1
-  controlID: 4379
+  controlID: 75386
   draggingID: 0
 --- !u!114 &4
 MonoBehaviour:
@@ -179,7 +179,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 56}
   m_MaxSize: {x: 16192, y: 8096}
   vertical: 0
-  controlID: 4380
+  controlID: 75387
   draggingID: 0
 --- !u!114 &5
 MonoBehaviour:
@@ -200,8 +200,8 @@ MonoBehaviour:
     y: 0
     width: 652
     height: 388
-  m_MinSize: {x: 200, y: 200}
-  m_MaxSize: {x: 4000, y: 4000}
+  m_MinSize: {x: 201, y: 226}
+  m_MaxSize: {x: 4001, y: 4026}
   m_ActualView: {fileID: 2}
   m_Panes:
   - {fileID: 6}
@@ -831,9 +831,9 @@ MonoBehaviour:
   m_AudioPlay: 0
   m_DebugDrawModesUseInteractiveLightBakingData: 0
   m_Position:
-    m_Target: {x: -1.7530429, y: 5.873428, z: -0.013222218}
+    m_Target: {x: 3.789208, y: -10.868403, z: 0}
     speed: 2
-    m_Value: {x: -1.7530429, y: 5.873428, z: -0.013222218}
+    m_Value: {x: 3.789208, y: -10.868403, z: 0}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -884,9 +884,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 13.167448
+    m_Target: 12.809397
     speed: 2
-    m_Value: 13.167448
+    m_Value: 12.809397
   m_Ortho:
     m_Target: 1
     speed: 2
@@ -986,22 +986,15 @@ MonoBehaviour:
     m_DynamicPanelBehavior: 0
   m_SceneHierarchy:
     m_TreeViewState:
-      scrollPos: {x: 0, y: 0}
-      m_SelectedIDs:
-      - m_Data: 52172
+      scrollPos: {x: 0, y: 1513.5}
+      m_SelectedIDs: []
       m_LastClickedID:
         m_Data: 0
       m_ExpandedIDs:
-      - m_Data: -1090826
-      - m_Data: -1089532
-      - m_Data: -1084004
-      - m_Data: -1083794
-      - m_Data: -1083468
-      - m_Data: -1079860
-      - m_Data: -3106
-      - m_Data: -1342
-      - m_Data: 52736
-      - m_Data: 105072
+      - m_Data: -55788
+      - m_Data: -13674
+      - m_Data: -1380
+      - m_Data: 55042
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -1104,7 +1097,7 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Scenes
+    - Assets/Prefabs
     m_Globs: []
     m_ProductIds: 
     m_AnyWithAssetOrigin: 0
@@ -1114,7 +1107,7 @@ MonoBehaviour:
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Scenes
+  - Assets/Prefabs
   m_LastFoldersGridSize: -1
   m_LastProjectPath: C:\Users\aleja\git\interGameDev_s26-5-FINAL
   m_LockTracker:
@@ -1123,12 +1116,12 @@ MonoBehaviour:
   m_FolderTreeState:
     scrollPos: {x: 0, y: 40}
     m_SelectedIDs:
-    - m_Data: 52158
+    - m_Data: 55384
     m_LastClickedID:
-      m_Data: 52158
+      m_Data: 55384
     m_ExpandedIDs:
     - m_Data: 0
-    - m_Data: 51854
+    - m_Data: 55118
     - m_Data: 1000000000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
@@ -1163,7 +1156,7 @@ MonoBehaviour:
       m_Data: 0
     m_ExpandedIDs:
     - m_Data: 0
-    - m_Data: 51854
+    - m_Data: 55118
     - m_Data: 1000000000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
@@ -1192,11 +1185,10 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_ListAreaState:
-    m_SelectedInstanceIDs:
-    - m_Data: 52172
+    m_SelectedInstanceIDs: []
     m_LastClickedEntityId:
-      m_Data: 52172
-    m_HadKeyboardFocusLastEvent: 1
+      m_Data: 0
+    m_HadKeyboardFocusLastEvent: 0
     m_ExpandedInstanceIDs:
     - m_Data: 52952
     m_RenameOverlay:
@@ -1225,7 +1217,7 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
     m_NewAssetIndexInList: -1
-    m_ScrollPosition: {x: 0, y: 0}
+    m_ScrollPosition: {x: 0, y: 18}
     m_GridSize: 64
   m_SkipHiddenPackages: 0
   m_DirectoriesAreaWidth: 207
