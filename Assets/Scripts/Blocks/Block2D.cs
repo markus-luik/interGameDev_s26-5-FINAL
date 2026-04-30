@@ -29,6 +29,8 @@ public class Block2D : MonoBehaviour
     public bool canMove;
 
     protected GridManager2D gridManager; // ✅ changed to 2D
+    
+    public bool isPassable = false; //Overrides the block pushing
 
     #endregion
 
@@ -63,8 +65,8 @@ public class Block2D : MonoBehaviour
             {
                 Cell checkCell = gridManager.gridList[gridPos.x + _deltaX][gridPos.y + _deltaY].GetComponent<Cell>();
 
-                if (!checkCell.CheckContainObj() ||
-                    CheckHit(checkCell.ContainObj.GetComponent<Block2D>(), _deltaX, _deltaY))
+                Block2D occupant = checkCell.ContainObj?.GetComponent<Block2D>();
+                if (!checkCell.CheckContainObj() || (occupant != null && occupant.isPassable) || CheckHit(occupant, _deltaX, _deltaY))
                 {
                     StartMove(checkCell, _deltaX, _deltaY);
 
