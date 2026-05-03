@@ -24,7 +24,7 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 112}
   m_MaxSize: {x: 24288, y: 16192}
   vertical: 0
-  controlID: 75385
+  controlID: 125000
   draggingID: 0
 --- !u!114 &2
 MonoBehaviour:
@@ -153,7 +153,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 112}
   m_MaxSize: {x: 16192, y: 16192}
   vertical: 1
-  controlID: 75386
+  controlID: 125001
   draggingID: 0
 --- !u!114 &4
 MonoBehaviour:
@@ -179,7 +179,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 56}
   m_MaxSize: {x: 16192, y: 8096}
   vertical: 0
-  controlID: 75387
+  controlID: 125002
   draggingID: 0
 --- !u!114 &5
 MonoBehaviour:
@@ -831,9 +831,9 @@ MonoBehaviour:
   m_AudioPlay: 0
   m_DebugDrawModesUseInteractiveLightBakingData: 0
   m_Position:
-    m_Target: {x: 3.789208, y: -10.868403, z: 0}
+    m_Target: {x: 3.098654, y: -10.830351, z: 0}
     speed: 2
-    m_Value: {x: 3.789208, y: -10.868403, z: 0}
+    m_Value: {x: 3.098654, y: -10.830351, z: 0}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -986,15 +986,23 @@ MonoBehaviour:
     m_DynamicPanelBehavior: 0
   m_SceneHierarchy:
     m_TreeViewState:
-      scrollPos: {x: 0, y: 1513.5}
-      m_SelectedIDs: []
+      scrollPos: {x: 0, y: 187}
+      m_SelectedIDs:
+      - m_Data: -3622278
       m_LastClickedID:
-        m_Data: 0
+        m_Data: -3622278
       m_ExpandedIDs:
+      - m_Data: -3469926
+      - m_Data: -1131220
+      - m_Data: -710832
+      - m_Data: -664914
       - m_Data: -55788
+      - m_Data: -19032
       - m_Data: -13674
       - m_Data: -1380
       - m_Data: 55042
+      - m_Data: 92742
+      - m_Data: 93350
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -1097,7 +1105,7 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Prefabs
+    - Assets/Prefabs/Entities
     m_Globs: []
     m_ProductIds: 
     m_AnyWithAssetOrigin: 0
@@ -1107,21 +1115,22 @@ MonoBehaviour:
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Prefabs
+  - Assets/Prefabs/Entities
   m_LastFoldersGridSize: -1
   m_LastProjectPath: C:\Users\aleja\git\interGameDev_s26-5-FINAL
   m_LockTracker:
     m_IsLocked: 0
   m_LastLocalAssetsSearchArea: 1
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 40}
+    scrollPos: {x: 0, y: 104}
     m_SelectedIDs:
-    - m_Data: 55384
+    - m_Data: 55424
     m_LastClickedID:
-      m_Data: 55384
+      m_Data: 55424
     m_ExpandedIDs:
     - m_Data: 0
     - m_Data: 55118
+    - m_Data: 55384
     - m_Data: 1000000000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
@@ -1185,9 +1194,10 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_ListAreaState:
-    m_SelectedInstanceIDs: []
+    m_SelectedInstanceIDs:
+    - m_Data: -3622278
     m_LastClickedEntityId:
-      m_Data: 0
+      m_Data: -3622278
     m_HadKeyboardFocusLastEvent: 0
     m_ExpandedInstanceIDs:
     - m_Data: 52952
@@ -1217,7 +1227,7 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
     m_NewAssetIndexInList: -1
-    m_ScrollPosition: {x: 0, y: 18}
+    m_ScrollPosition: {x: 0, y: 0}
     m_GridSize: 64
   m_SkipHiddenPackages: 0
   m_DirectoriesAreaWidth: 207
