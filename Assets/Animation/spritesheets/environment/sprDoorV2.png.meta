@@ -1,16 +1,10 @@
 fileFormatVersion: 2
-guid: 832aed959382e0947b4f949f545351fb
+guid: c3bef6e65af9bcf40868cc0b1f301100
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 1445569743508904764
-    second: sprEBackCut_strip3_0
-  - first:
-      213: 7679261840684322909
-    second: sprEBackCut_strip3_1
-  - first:
-      213: -4892218359486969643
-    second: sprEBackCut_strip3_2
+      213: 8303248901623604159
+    second: sprDoorV2_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -43,7 +37,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 0
+    filterMode: 1
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -57,7 +51,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 32
+  spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -119,13 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: sprEBackCut_strip3_0
+      name: sprDoorV2_0
       rect:
         serializedVersion: 2
-        x: 15
-        y: 128
-        width: 28
-        height: 52
+        x: 0
+        y: 0
+        width: 5
+        height: 33
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -134,52 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: c3b96e3d502bf0410800000000000000
-      internalID: 1445569743508904764
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: sprEBackCut_strip3_1
-      rect:
-        serializedVersion: 2
-        x: 4
-        y: 68
-        width: 52
-        height: 52
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: d50933725f7329a60800000000000000
-      internalID: 7679261840684322909
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: sprEBackCut_strip3_2
-      rect:
-        serializedVersion: 2
-        x: 16
-        y: 8
-        width: 27
-        height: 51
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 5d8822772595b1cb0800000000000000
-      internalID: -4892218359486969643
+      spriteID: fb36dee22e01b3370800000000000000
+      internalID: 8303248901623604159
       vertices: []
       indices: 
       edges: []
@@ -198,9 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      sprEBackCut_strip3_0: 1445569743508904764
-      sprEBackCut_strip3_1: 7679261840684322909
-      sprEBackCut_strip3_2: -4892218359486969643
+      sprDoorV2_0: 8303248901623604159
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
