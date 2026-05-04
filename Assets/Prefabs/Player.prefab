@@ -122,8 +122,8 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_MaskInteraction: 0
-  m_Sprite: {fileID: 2747690628134850419, guid: 16037dbd798344f57a526d53d48f5ead, type: 3}
-  m_Color: {r: 0.42605335, g: 0.754717, b: 0.1210394, a: 1}
+  m_Sprite: {fileID: -1508804677686159225, guid: 2108286fe0ff9c544a7d519b5fa2813c, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -175,8 +175,10 @@ MonoBehaviour:
   gridPos: {x: 0, y: 0}
   moveChange: {x: 0, y: 0}
   state: 0
-  myAnim: {fileID: 0}
+  myAnim: {fileID: 6279142084384786394}
+  legsAnim: {fileID: 0}
   mySprite: {fileID: 5269584671380355515}
+  legsSprite: {fileID: 0}
   bypassPlayerInput: 0
 --- !u!58 &8202675291864337367
 CircleCollider2D:
