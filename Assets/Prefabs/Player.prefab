@@ -1,5 +1,36 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &4011823735183743533
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3356961212009600547}
+  m_Layer: 0
+  m_Name: hitpoint-baseballbat
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3356961212009600547
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4011823735183743533}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.96, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 6150205943266450054}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &7322423897838909689
 GameObject:
   m_ObjectHideFlags: 0
@@ -15,9 +46,9 @@ GameObject:
   - component: {fileID: 3356677493377785317}
   - component: {fileID: 7516123086516684450}
   - component: {fileID: 371589503450696058}
-  - component: {fileID: 80840768477870958}
-  - component: {fileID: 1827292346954791747}
-  - component: {fileID: 6279142084384786394}
+  - component: {fileID: 8285871958024118562}
+  - component: {fileID: 5077660743962326427}
+  - component: {fileID: 6706380982702464905}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -37,7 +68,9 @@ Transform:
   m_LocalPosition: {x: 1.5, y: 2.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 3356961212009600547}
+  - {fileID: 6553899114049686582}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &5269584671380355515
@@ -246,9 +279,10 @@ MonoBehaviour:
   throwForce: 5
   throwSpinSpeed: 1080
   canThrow: 1
-  batMelee: {fileID: 80840768477870958}
-  weaponHoldPoint: {fileID: 0}
---- !u!114 &80840768477870958
+  batMelee: {fileID: 8285871958024118562}
+  weaponHoldPoint: {fileID: 6553899114049686582}
+  ammoText: {fileID: 0}
+--- !u!114 &8285871958024118562
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -260,8 +294,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 28cb5a64c02035049bc330ef2d8a93d2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BatMelee
-  weaponHoldPoint: {fileID: 0}
-  hitPoint: {fileID: 0}
+  weaponHoldPoint: {fileID: 6553899114049686582}
+  hitPoint: {fileID: 3356961212009600547}
   enemyLayer:
     serializedVersion: 2
     m_Bits: 128
@@ -272,8 +306,10 @@ MonoBehaviour:
   hitRadius: 1
   attackRadius: 1.2
   attackAngle: 100
-  attackOrigin: {fileID: 0}
---- !u!114 &1827292346954791747
+  attackOrigin: {fileID: 6553899114049686582}
+  target: {fileID: 0}
+  usePlayerInput: 1
+--- !u!114 &5077660743962326427
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -286,7 +322,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PunchMelee
   playerShooting: {fileID: 371589503450696058}
-  punchOrigin: {fileID: 0}
+  punchOrigin: {fileID: 6553899114049686582}
   enemyLayer:
     serializedVersion: 2
     m_Bits: 128
@@ -294,25 +330,55 @@ MonoBehaviour:
   punchAngle: 98.7
   punchCooldown: 0.2
   punchDuration: 0.08
---- !u!95 &6279142084384786394
-Animator:
-  serializedVersion: 7
+--- !u!114 &6706380982702464905
+MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7322423897838909689}
   m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: c1fcfd7e7b40fef48899b815745c9cbd, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_AnimatePhysics: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
-  m_WriteDefaultValuesOnDisable: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5c47cb36e23cd334c9c1fe2869f4f88c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerDamaged
+  currentState: 0
+  playerMovement: {fileID: 5324957109344640855}
+  playerShooting: {fileID: 371589503450696058}
+  punchMelee: {fileID: 5077660743962326427}
+  batMelee: {fileID: 8285871958024118562}
+  myCollider: {fileID: 8202675291864337367}
+  myAnim: {fileID: 0}
+  pressRToRestart: 1
+  restartText: {fileID: 0}
+--- !u!1 &7423659736751216397
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6553899114049686582}
+  m_Layer: 0
+  m_Name: weapon hold point
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6553899114049686582
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7423659736751216397}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.16, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 6150205943266450054}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

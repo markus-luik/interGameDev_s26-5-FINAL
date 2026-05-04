@@ -1,4 +1,5 @@
 using UnityEngine;
+using TMPro;
 
 public class PlayerShooting : MonoBehaviour
 {
@@ -21,7 +22,9 @@ public class PlayerShooting : MonoBehaviour
     [SerializeField] private bool canThrow = true;
     [SerializeField] private BatMelee batMelee;
     [SerializeField] private Transform weaponHoldPoint;
-
+    [Header("Ammo")]
+    [SerializeField] private TMP_Text ammoText;
+    
     public bool HasWeapon => currentWeapon != null;
     public Weapon CurrentWeapon => currentWeapon;
 
@@ -38,9 +41,13 @@ public class PlayerShooting : MonoBehaviour
         if (ownerCollider == null)
             ownerCollider = GetComponent<Collider2D>();
     }
+    
     private bool CanFireCurrentWeapon()
-    {
-        return currentWeapon != null && currentWeapon.WeaponType == WeaponType.A;
+    { 
+        return currentWeapon != null &&
+            currentWeapon.WeaponType == WeaponType.A &&
+            currentWeapon.HasAmmo();
+
     }
     private void Update()
     {
@@ -84,6 +91,7 @@ public class PlayerShooting : MonoBehaviour
 
     public void EquipWeapon(Weapon newWeapon)
     {
+
         currentWeapon = newWeapon;
         canShoot = (newWeapon != null);
 
@@ -99,6 +107,7 @@ public class PlayerShooting : MonoBehaviour
         {
             batMelee.SetWeapon(currentWeapon);
         }
+        UpdateAmmoUI();
     }
 
     private void ThrowWeapon()
@@ -115,11 +124,14 @@ public class PlayerShooting : MonoBehaviour
 
         currentWeapon = null;
         canShoot = false;
+        UpdateAmmoUI();
     }
 
     private void FireBullet(Vector2 dir)
     {
         if (bulletPrefab == null) return;
+        if (currentWeapon == null) return;
+        if (!currentWeapon.HasAmmo()) return;
 
         GameObject bullet = Instantiate(bulletPrefab, shootPoint.position, Quaternion.identity);
         bullet.transform.right = new Vector3(dir.x, dir.y, 0f);
@@ -127,16 +139,21 @@ public class PlayerShooting : MonoBehaviour
         Bullet bulletComp = bullet.GetComponent<Bullet>();
         if (bulletComp != null)
         {
-            if (currentWeapon != null)
-                bulletComp.SetWeaponType(currentWeapon.WeaponType);
-
+            bulletComp.SetWeaponType(currentWeapon.WeaponType);
             bulletComp.Initialize(dir, bulletSpeed, gameObject);
+
+            currentWeapon.UseAmmo();
+            UpdateAmmoUI();
             return;
         }
 
         Rigidbody2D rb = bullet.GetComponent<Rigidbody2D>();
         if (rb != null)
+        {
             rb.linearVelocity = dir * bulletSpeed;
+            currentWeapon.UseAmmo();
+            UpdateAmmoUI();
+        }
     }
 
     public void DropCurrentWeapon(bool throwOut = false)
@@ -171,6 +188,23 @@ public class PlayerShooting : MonoBehaviour
 
         if (batMelee != null)
             batMelee.SetWeapon(null);
+
+        UpdateAmmoUI();
+    }
+
+    private void UpdateAmmoUI()
+    {
+        if (ammoText == null) return;
+
+        if (currentWeapon == null || currentWeapon.WeaponType != WeaponType.A)
+        {
+            ammoText.text = "";
+            return;
+        }
+
+        ammoText.text = currentWeapon.CurrentAmmo + " / " + currentWeapon.MaxAmmo;
+        Debug.Log("Weapon: " + (currentWeapon != null ? currentWeapon.name : "NULL") +
+          " | Type: " + (currentWeapon != null ? currentWeapon.WeaponType.ToString() : "NONE"));
     }
     
 }
