@@ -22,10 +22,17 @@ public class PlayerShooting : MonoBehaviour
     [SerializeField] private BatMelee batMelee;
     [SerializeField] private Transform weaponHoldPoint;
 
+    [Header("Animation")]
+    [SerializeField] private Animator bodyAnimator;
+    [SerializeField] private string weaponModeParam = "weaponMode";
+    [SerializeField] private string attackTriggerParam = "attack";
+
     public bool HasWeapon => currentWeapon != null;
     public Weapon CurrentWeapon => currentWeapon;
 
     private float nextFireTime;
+    private int weaponModeHash;
+    private int attackTriggerHash;
 
     private void Awake()
     {
@@ -37,6 +44,17 @@ public class PlayerShooting : MonoBehaviour
 
         if (ownerCollider == null)
             ownerCollider = GetComponent<Collider2D>();
+
+        if (bodyAnimator == null)
+            bodyAnimator = GetComponent<Animator>();
+
+        if (string.IsNullOrWhiteSpace(weaponModeParam))
+            weaponModeParam = "weaponMode";
+        if (string.IsNullOrWhiteSpace(attackTriggerParam))
+            attackTriggerParam = "attack";
+
+        weaponModeHash = Animator.StringToHash(weaponModeParam);
+        attackTriggerHash = Animator.StringToHash(attackTriggerParam);
     }
     private bool CanFireCurrentWeapon()
     {
@@ -57,9 +75,11 @@ public class PlayerShooting : MonoBehaviour
         if (rotatePlayerToMouse)
         {
             Vector2 dir = MouseHelper.GetDirectionToMouse2D(transform, targetCamera);
-            if (dir.sqrMagnitude > 0.0001f)
+            if (dir.sqrMagnitude > 0.000f)
                 transform.right = new Vector3(dir.x, dir.y, 0f);
         }
+
+        UpdateWeaponAnimationMode();
 
         if (canShoot && CanFireCurrentWeapon() && Input.GetMouseButton(0) && Time.time >= nextFireTime)
         {
@@ -99,6 +119,8 @@ public class PlayerShooting : MonoBehaviour
         {
             batMelee.SetWeapon(currentWeapon);
         }
+
+        UpdateWeaponAnimationMode();
     }
 
     private void ThrowWeapon()
@@ -115,6 +137,7 @@ public class PlayerShooting : MonoBehaviour
 
         currentWeapon = null;
         canShoot = false;
+        UpdateWeaponAnimationMode();
     }
 
     private void FireBullet(Vector2 dir)
@@ -131,12 +154,15 @@ public class PlayerShooting : MonoBehaviour
                 bulletComp.SetWeaponType(currentWeapon.WeaponType);
 
             bulletComp.Initialize(dir, bulletSpeed, gameObject);
+            TriggerAttackAnimation();
             return;
         }
 
         Rigidbody2D rb = bullet.GetComponent<Rigidbody2D>();
         if (rb != null)
             rb.linearVelocity = dir * bulletSpeed;
+
+        TriggerAttackAnimation();
     }
 
     public void DropCurrentWeapon(bool throwOut = false)
@@ -171,6 +197,28 @@ public class PlayerShooting : MonoBehaviour
 
         if (batMelee != null)
             batMelee.SetWeapon(null);
+
+        UpdateWeaponAnimationMode();
     }
-    
+
+    public void TriggerAttackAnimation()
+    {
+        if (bodyAnimator == null)
+            return;
+
+        bodyAnimator.SetTrigger(attackTriggerHash);
+    }
+
+    private void UpdateWeaponAnimationMode()
+    {
+        if (bodyAnimator == null)
+            return;
+
+        int mode = 0;
+        if (currentWeapon != null)
+            mode = currentWeapon.WeaponType == WeaponType.A ? 1 : 2;
+
+        bodyAnimator.SetInteger(weaponModeHash, mode);
+    }
+
 }

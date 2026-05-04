@@ -6,7 +6,7 @@ AnimationClip:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Player_Idle_Unarmed
+  m_Name: Player_Attack_Gun
   serializedVersion: 7
   m_Legacy: 0
   m_Compressed: 0
@@ -21,13 +21,15 @@ AnimationClip:
   - serializedVersion: 2
     curve:
     - time: 0
-      value: {fileID: -4031874428588096761, guid: e6340b6a03534e84bbbb1ba3081c2cbe, type: 3}
+      value: {fileID: -289014792795012938, guid: 9939f76763ebf0e4d893195824e2a98f, type: 3}
+    - time: 0.041666668
+      value: {fileID: 2122313610631965126, guid: 9939f76763ebf0e4d893195824e2a98f, type: 3}
     attribute: m_Sprite
     path: 
     classID: 212
     script: {fileID: 0}
     flags: 2
-  m_SampleRate: 12
+  m_SampleRate: 24
   m_WrapMode: 0
   m_Bounds:
     m_Center: {x: 0, y: 0, z: 0}
@@ -44,7 +46,8 @@ AnimationClip:
       isIntCurve: 0
       isSerializeReferenceCurve: 0
     pptrCurveMapping:
-    - {fileID: -4031874428588096761, guid: e6340b6a03534e84bbbb1ba3081c2cbe, type: 3}
+    - {fileID: -289014792795012938, guid: 9939f76763ebf0e4d893195824e2a98f, type: 3}
+    - {fileID: 2122313610631965126, guid: 9939f76763ebf0e4d893195824e2a98f, type: 3}
   m_AnimationClipSettings:
     serializedVersion: 2
     m_AdditiveReferencePoseClip: {fileID: 0}
