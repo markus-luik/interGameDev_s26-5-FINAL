@@ -22,18 +22,15 @@ public class PlayerShooting : MonoBehaviour
     [SerializeField] private bool canThrow = true;
     [SerializeField] private BatMelee batMelee;
     [SerializeField] private Transform weaponHoldPoint;
-<<<<<<< HEAD
     [Header("Ammo")]
     [SerializeField] private TMP_Text ammoText;
     
-=======
 
     [Header("Animation")]
     [SerializeField] private Animator bodyAnimator;
     [SerializeField] private string weaponModeParam = "weaponMode";
     [SerializeField] private string attackTriggerParam = "attack";
 
->>>>>>> main
     public bool HasWeapon => currentWeapon != null;
     public Weapon CurrentWeapon => currentWeapon;
 
@@ -131,12 +128,9 @@ public class PlayerShooting : MonoBehaviour
         {
             batMelee.SetWeapon(currentWeapon);
         }
-<<<<<<< HEAD
         UpdateAmmoUI();
-=======
 
         UpdateWeaponAnimationMode();
->>>>>>> main
     }
 
     private void ThrowWeapon()
@@ -153,11 +147,8 @@ public class PlayerShooting : MonoBehaviour
 
         currentWeapon = null;
         canShoot = false;
-<<<<<<< HEAD
         UpdateAmmoUI();
-=======
         UpdateWeaponAnimationMode();
->>>>>>> main
     }
 
     private void FireBullet(Vector2 dir)
@@ -174,13 +165,10 @@ public class PlayerShooting : MonoBehaviour
         {
             bulletComp.SetWeaponType(currentWeapon.WeaponType);
             bulletComp.Initialize(dir, bulletSpeed, gameObject);
-<<<<<<< HEAD
 
             currentWeapon.UseAmmo();
             UpdateAmmoUI();
-=======
             TriggerAttackAnimation();
->>>>>>> main
             return;
         }
 
@@ -188,14 +176,11 @@ public class PlayerShooting : MonoBehaviour
         if (rb != null)
         {
             rb.linearVelocity = dir * bulletSpeed;
-<<<<<<< HEAD
             currentWeapon.UseAmmo();
             UpdateAmmoUI();
         }
-=======
 
         TriggerAttackAnimation();
->>>>>>> main
     }
 
     public void DropCurrentWeapon(bool throwOut = false)
@@ -231,7 +216,6 @@ public class PlayerShooting : MonoBehaviour
         if (batMelee != null)
             batMelee.SetWeapon(null);
 
-<<<<<<< HEAD
         UpdateAmmoUI();
     }
 
@@ -248,9 +232,7 @@ public class PlayerShooting : MonoBehaviour
         ammoText.text = currentWeapon.CurrentAmmo + " / " + currentWeapon.MaxAmmo;
         Debug.Log("Weapon: " + (currentWeapon != null ? currentWeapon.name : "NULL") +
           " | Type: " + (currentWeapon != null ? currentWeapon.WeaponType.ToString() : "NONE"));
-=======
         UpdateWeaponAnimationMode();
->>>>>>> main
     }
 
     public void TriggerAttackAnimation()
