@@ -24,6 +24,9 @@ public class BatMelee : MonoBehaviour
     [Header("Is player")]
     [SerializeField] private bool usePlayerInput = true;
     
+    [Header("Animation")]
+    [SerializeField] private PlayerShooting playerShooting;
+
     private Weapon currentWeapon;
     private bool isSwinging = false;
     private float nextAttackTime = 0f;
@@ -36,6 +39,9 @@ public class BatMelee : MonoBehaviour
 
     private void Start()
     {
+        if (playerShooting == null)
+            playerShooting = GetComponent<PlayerShooting>();
+
         if (weaponHoldPoint != null)
         {
             weaponHoldPoint.localRotation = Quaternion.Euler(0f, 0f, leftAngle);
@@ -56,6 +62,9 @@ public class BatMelee : MonoBehaviour
         if (Input.GetMouseButton(0))
         {
             TrySwing();
+            if (playerShooting != null)
+                playerShooting.TriggerAttackAnimation();
+            StartCoroutine(SwingBat());
         }
     }
    public void TrySwing()

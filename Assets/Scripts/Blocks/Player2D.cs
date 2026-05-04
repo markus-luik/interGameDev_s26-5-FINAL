@@ -13,7 +13,7 @@ public class Player2D : Block2D
 
     [SerializeField]
     private SpriteRenderer legsSprite;
-    
+
     // Flag that allows for bypassing player input (so You can move as other entities)
     [SerializeField]
     private bool bypassPlayerInput = false;
@@ -49,14 +49,12 @@ public class Player2D : Block2D
         {
             if (CheckMove(0, -1))
             {
-                transform.rotation = Quaternion.Euler(0f, 0f, 90f);
             }
         }
         else if (Input.GetKey(KeyCode.S))
         {
             if (CheckMove(0, 1))
             {
-                transform.rotation = Quaternion.Euler(0f, 0f, -90f);
             }
         }
     }

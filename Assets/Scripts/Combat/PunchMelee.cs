@@ -37,6 +37,7 @@ public class PunchMelee : MonoBehaviour
 
         if (Input.GetMouseButton(0))
         {
+            playerShooting.TriggerAttackAnimation();
             StartCoroutine(Punch());
         }
     }

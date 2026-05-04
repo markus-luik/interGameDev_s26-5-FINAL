@@ -1,25 +1,31 @@
 fileFormatVersion: 2
-guid: 3546a85900f62fc4894d2bc60eca1a45
+guid: a820c8b7f32130e4fbdcc87b863a8e4d
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -8828824254825895988
-    second: Custom___Edited_-_Pizza_Tower_Customs_-_Peppino_-_Peppino_(Hotline_Miami-Style)_0
+      213: 8771444964169433566
+    second: sprPWalkBat_strip8_32_44_0
   - first:
-      213: -6885773762618180862
-    second: Custom___Edited_-_Pizza_Tower_Customs_-_Peppino_-_Peppino_(Hotline_Miami-Style)_1
+      213: -8577291957183159105
+    second: sprPWalkBat_strip8_32_44_1
   - first:
-      213: -5532862479547677394
-    second: Custom___Edited_-_Pizza_Tower_Customs_-_Peppino_-_Peppino_(Hotline_Miami-Style)_2
+      213: -3932380249175573921
+    second: sprPWalkBat_strip8_32_44_2
   - first:
-      213: -3680286530704523052
-    second: Custom___Edited_-_Pizza_Tower_Customs_-_Peppino_-_Peppino_(Hotline_Miami-Style)_3
+      213: 7305118280669243844
+    second: sprPWalkBat_strip8_32_44_3
   - first:
-      213: -8933898387708289629
-    second: Custom___Edited_-_Pizza_Tower_Customs_-_Peppino_-_Peppino_(Hotline_Miami-Style)_4
+      213: 7738641030251062098
+    second: sprPWalkBat_strip8_32_44_4
   - first:
-      213: 5102500432070919580
-    second: Custom___Edited_-_Pizza_Tower_Customs_-_Peppino_-_Peppino_(Hotline_Miami-Style)_5
+      213: 8904853394807753574
+    second: sprPWalkBat_strip8_32_44_5
+  - first:
+      213: 3520566497423561268
+    second: sprPWalkBat_strip8_32_44_6
+  - first:
+      213: 7274763170836072590
+    second: sprPWalkBat_strip8_32_44_7
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -52,7 +58,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -128,133 +134,177 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Custom___Edited_-_Pizza_Tower_Customs_-_Peppino_-_Peppino_(Hotline_Miami-Style)_0
+      name: sprPWalkBat_strip8_32_44_0
       rect:
         serializedVersion: 2
-        x: 2
-        y: 116
-        width: 59
-        height: 67
+        x: 0
+        y: 0
+        width: 32
+        height: 44
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: cc7efba0e17b97580800000000000000
-      internalID: -8828824254825895988
+      spriteID: ed14538c8be6ab970800000000000000
+      internalID: 8771444964169433566
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Custom___Edited_-_Pizza_Tower_Customs_-_Peppino_-_Peppino_(Hotline_Miami-Style)_1
+      name: sprPWalkBat_strip8_32_44_1
       rect:
         serializedVersion: 2
-        x: 79
-        y: 116
-        width: 59
-        height: 67
+        x: 32
+        y: 0
+        width: 32
+        height: 44
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 20b307bce31d070a0800000000000000
-      internalID: -6885773762618180862
+      spriteID: fb4684dc86657f880800000000000000
+      internalID: -8577291957183159105
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Custom___Edited_-_Pizza_Tower_Customs_-_Peppino_-_Peppino_(Hotline_Miami-Style)_2
+      name: sprPWalkBat_strip8_32_44_2
       rect:
         serializedVersion: 2
-        x: 156
-        y: 116
-        width: 59
-        height: 67
+        x: 64
+        y: 0
+        width: 32
+        height: 44
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: e254973a3e25733b0800000000000000
-      internalID: -5532862479547677394
+      spriteID: f5ab02e7ff06d69c0800000000000000
+      internalID: -3932380249175573921
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Custom___Edited_-_Pizza_Tower_Customs_-_Peppino_-_Peppino_(Hotline_Miami-Style)_3
+      name: sprPWalkBat_strip8_32_44_3
       rect:
         serializedVersion: 2
-        x: 2
-        y: 10
-        width: 63
-        height: 80
+        x: 96
+        y: 0
+        width: 32
+        height: 44
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 4d0c3b936eefcecc0800000000000000
-      internalID: -3680286530704523052
+      spriteID: 4c9a0814f5ef06560800000000000000
+      internalID: 7305118280669243844
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Custom___Edited_-_Pizza_Tower_Customs_-_Peppino_-_Peppino_(Hotline_Miami-Style)_4
+      name: sprPWalkBat_strip8_32_44_4
       rect:
         serializedVersion: 2
-        x: 79
-        y: 10
-        width: 63
-        height: 80
+        x: 128
+        y: 0
+        width: 32
+        height: 44
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 3ad563d00ca640480800000000000000
-      internalID: -8933898387708289629
+      spriteID: 253a064140d256b60800000000000000
+      internalID: 7738641030251062098
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Custom___Edited_-_Pizza_Tower_Customs_-_Peppino_-_Peppino_(Hotline_Miami-Style)_5
+      name: sprPWalkBat_strip8_32_44_5
       rect:
         serializedVersion: 2
-        x: 156
-        y: 10
-        width: 63
-        height: 80
+        x: 160
+        y: 0
+        width: 32
+        height: 44
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: c954dd7db19bfc640800000000000000
-      internalID: 5102500432070919580
+      spriteID: 66b827e8bf4649b70800000000000000
+      internalID: 8904853394807753574
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprPWalkBat_strip8_32_44_6
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 0
+        width: 32
+        height: 44
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 432921f93909bd030800000000000000
+      internalID: 3520566497423561268
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprPWalkBat_strip8_32_44_7
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 0
+        width: 32
+        height: 44
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e8847ce7f8625f460800000000000000
+      internalID: 7274763170836072590
       vertices: []
       indices: 
       edges: []
@@ -263,7 +313,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: a69bd295d0ba9594298908a48ec9658e
     internalID: 0
     vertices: []
     indices: 
@@ -271,14 +321,18 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     spriteCustomMetadata:
-      entries: []
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":8.0,"y":1.0},"gridSpriteSize":{"x":32.0,"y":44.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":2,"keepEmptyRects":false,"isAlternate":false}'
     nameFileIdTable:
-      Custom___Edited_-_Pizza_Tower_Customs_-_Peppino_-_Peppino_(Hotline_Miami-Style)_0: -8828824254825895988
-      Custom___Edited_-_Pizza_Tower_Customs_-_Peppino_-_Peppino_(Hotline_Miami-Style)_1: -6885773762618180862
-      Custom___Edited_-_Pizza_Tower_Customs_-_Peppino_-_Peppino_(Hotline_Miami-Style)_2: -5532862479547677394
-      Custom___Edited_-_Pizza_Tower_Customs_-_Peppino_-_Peppino_(Hotline_Miami-Style)_3: -3680286530704523052
-      Custom___Edited_-_Pizza_Tower_Customs_-_Peppino_-_Peppino_(Hotline_Miami-Style)_4: -8933898387708289629
-      Custom___Edited_-_Pizza_Tower_Customs_-_Peppino_-_Peppino_(Hotline_Miami-Style)_5: 5102500432070919580
+      sprPWalkBat_strip8_32_44_0: 8771444964169433566
+      sprPWalkBat_strip8_32_44_1: -8577291957183159105
+      sprPWalkBat_strip8_32_44_2: -3932380249175573921
+      sprPWalkBat_strip8_32_44_3: 7305118280669243844
+      sprPWalkBat_strip8_32_44_4: 7738641030251062098
+      sprPWalkBat_strip8_32_44_5: 8904853394807753574
+      sprPWalkBat_strip8_32_44_6: 3520566497423561268
+      sprPWalkBat_strip8_32_44_7: 7274763170836072590
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

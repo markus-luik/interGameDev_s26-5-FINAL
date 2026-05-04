@@ -1,31 +1,34 @@
 fileFormatVersion: 2
-guid: 2108286fe0ff9c544a7d519b5fa2813c
+guid: 67b21b1a66bd2a0439145aa5c1c0ae91
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -1508804677686159225
-    second: sprPWalkUnarmed2_strip8_3232_0
+      213: -3214288480918388319
+    second: sprPAttackBat_strip9_4848_0
   - first:
-      213: -1183153311865887040
-    second: sprPWalkUnarmed2_strip8_3232_1
+      213: 2664788712020782638
+    second: sprPAttackBat_strip9_4848_1
   - first:
-      213: -3857806027043658898
-    second: sprPWalkUnarmed2_strip8_3232_2
+      213: 7270538199912545643
+    second: sprPAttackBat_strip9_4848_2
   - first:
-      213: -5491051565853182756
-    second: sprPWalkUnarmed2_strip8_3232_3
+      213: -8604608762373563568
+    second: sprPAttackBat_strip9_4848_3
   - first:
-      213: 8755925520797417055
-    second: sprPWalkUnarmed2_strip8_3232_4
+      213: 5005723273808767659
+    second: sprPAttackBat_strip9_4848_4
   - first:
-      213: 4651483269603091119
-    second: sprPWalkUnarmed2_strip8_3232_5
+      213: -3625512358368568921
+    second: sprPAttackBat_strip9_4848_5
   - first:
-      213: 7637036994488263231
-    second: sprPWalkUnarmed2_strip8_3232_6
+      213: -909588744562478673
+    second: sprPAttackBat_strip9_4848_6
   - first:
-      213: -7920376995326336124
-    second: sprPWalkUnarmed2_strip8_3232_7
+      213: -9174181379300527024
+    second: sprPAttackBat_strip9_4848_7
+  - first:
+      213: 3935521667949506910
+    second: sprPAttackBat_strip9_4848_8
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -134,14 +137,14 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: sprPWalkUnarmed2_strip8_3232_0
+      name: sprPAttackBat_strip9_4848_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 32
-        height: 32
-      alignment: 9
+        width: 48
+        height: 48
+      alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
@@ -149,21 +152,21 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 788911fb326af0be0800000000000000
-      internalID: -1508804677686159225
+      spriteID: 1a1ca3918ad8463d0800000000000000
+      internalID: -3214288480918388319
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: sprPWalkUnarmed2_strip8_3232_1
+      name: sprPAttackBat_strip9_4848_1
       rect:
         serializedVersion: 2
-        x: 32
+        x: 48
         y: 0
-        width: 32
-        height: 32
-      alignment: 9
+        width: 48
+        height: 48
+      alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
@@ -171,43 +174,21 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 0c6286bd458949fe0800000000000000
-      internalID: -1183153311865887040
+      spriteID: e2e2875073b3bf420800000000000000
+      internalID: 2664788712020782638
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: sprPWalkUnarmed2_strip8_3232_2
-      rect:
-        serializedVersion: 2
-        x: 64
-        y: 0
-        width: 32
-        height: 32
-      alignment: 9
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: e63a3b1abd1567ac0800000000000000
-      internalID: -3857806027043658898
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: sprPWalkUnarmed2_strip8_3232_3
+      name: sprPAttackBat_strip9_4848_2
       rect:
         serializedVersion: 2
         x: 96
         y: 0
-        width: 32
-        height: 32
-      alignment: 9
+        width: 48
+        height: 48
+      alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
@@ -215,21 +196,21 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: cd4f7f591bddbc3b0800000000000000
-      internalID: -5491051565853182756
+      spriteID: b6df1bbc8f326e460800000000000000
+      internalID: 7270538199912545643
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: sprPWalkUnarmed2_strip8_3232_4
+      name: sprPAttackBat_strip9_4848_3
       rect:
         serializedVersion: 2
-        x: 128
+        x: 144
         y: 0
-        width: 32
-        height: 32
-      alignment: 9
+        width: 48
+        height: 48
+      alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
@@ -237,43 +218,21 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: f5e38eacedb438970800000000000000
-      internalID: 8755925520797417055
+      spriteID: 05b92877be9469880800000000000000
+      internalID: -8604608762373563568
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: sprPWalkUnarmed2_strip8_3232_5
-      rect:
-        serializedVersion: 2
-        x: 160
-        y: 0
-        width: 32
-        height: 32
-      alignment: 9
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: fa26d5b93636d8040800000000000000
-      internalID: 4651483269603091119
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: sprPWalkUnarmed2_strip8_3232_6
+      name: sprPAttackBat_strip9_4848_4
       rect:
         serializedVersion: 2
         x: 192
         y: 0
-        width: 32
-        height: 32
-      alignment: 9
+        width: 48
+        height: 48
+      alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
@@ -281,21 +240,21 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: f326df80fa43cf960800000000000000
-      internalID: 7637036994488263231
+      spriteID: baae64bcbc6e77540800000000000000
+      internalID: 5005723273808767659
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: sprPWalkUnarmed2_strip8_3232_7
+      name: sprPAttackBat_strip9_4848_5
       rect:
         serializedVersion: 2
-        x: 224
+        x: 240
         y: 0
-        width: 32
-        height: 32
-      alignment: 9
+        width: 48
+        height: 48
+      alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
@@ -303,8 +262,74 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 483e562361b251290800000000000000
-      internalID: -7920376995326336124
+      spriteID: 7a917a608b79fadc0800000000000000
+      internalID: -3625512358368568921
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprPAttackBat_strip9_4848_6
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 0
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fa1f8a42bdd7063f0800000000000000
+      internalID: -909588744562478673
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprPAttackBat_strip9_4848_7
+      rect:
+        serializedVersion: 2
+        x: 336
+        y: 0
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 054f9c574a2cea080800000000000000
+      internalID: -9174181379300527024
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprPAttackBat_strip9_4848_8
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 0
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e51bbff0b18cd9630800000000000000
+      internalID: 3935521667949506910
       vertices: []
       indices: 
       edges: []
@@ -313,7 +338,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 539dea5349e2c3f48affb406b49ca639
+    spriteID: 4c5c0b2d4eb07df48b40ad7fbcb6f372
     internalID: 0
     vertices: []
     indices: 
@@ -323,16 +348,17 @@ TextureImporter:
     spriteCustomMetadata:
       entries:
       - key: SpriteEditor.SliceSettings
-        value: '{"sliceOnImport":false,"gridCellCount":{"x":8.0,"y":1.0},"gridSpriteSize":{"x":32.0,"y":32.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":9,"pivotUnitMode":0,"slicingType":2,"keepEmptyRects":false,"isAlternate":false}'
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":9.0,"y":1.0},"gridSpriteSize":{"x":48.0,"y":48.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":2,"keepEmptyRects":false,"isAlternate":false}'
     nameFileIdTable:
-      sprPWalkUnarmed2_strip8_3232_0: -1508804677686159225
-      sprPWalkUnarmed2_strip8_3232_1: -1183153311865887040
-      sprPWalkUnarmed2_strip8_3232_2: -3857806027043658898
-      sprPWalkUnarmed2_strip8_3232_3: -5491051565853182756
-      sprPWalkUnarmed2_strip8_3232_4: 8755925520797417055
-      sprPWalkUnarmed2_strip8_3232_5: 4651483269603091119
-      sprPWalkUnarmed2_strip8_3232_6: 7637036994488263231
-      sprPWalkUnarmed2_strip8_3232_7: -7920376995326336124
+      sprPAttackBat_strip9_4848_0: -3214288480918388319
+      sprPAttackBat_strip9_4848_1: 2664788712020782638
+      sprPAttackBat_strip9_4848_2: 7270538199912545643
+      sprPAttackBat_strip9_4848_3: -8604608762373563568
+      sprPAttackBat_strip9_4848_4: 5005723273808767659
+      sprPAttackBat_strip9_4848_5: -3625512358368568921
+      sprPAttackBat_strip9_4848_6: -909588744562478673
+      sprPAttackBat_strip9_4848_7: -9174181379300527024
+      sprPAttackBat_strip9_4848_8: 3935521667949506910
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
