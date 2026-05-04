@@ -138,9 +138,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::NewBlock2D
   cellSize: 1
   moveSpeed: 10
+  moveRepeatDelay: 0.15
+  dashRepeatDelay: 0.03
+  isPlayer: 0
   canBePushed: 1
   isPassable: 0
-  isPlayer: 0
 --- !u!1 &31058324
 GameObject:
   m_ObjectHideFlags: 0
@@ -262,9 +264,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::NewBlock2D
   cellSize: 1
   moveSpeed: 10
+  moveRepeatDelay: 0.15
+  dashRepeatDelay: 0.03
+  isPlayer: 0
   canBePushed: 1
   isPassable: 0
-  isPlayer: 0
 --- !u!1 &115483794 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2802037562971940446, guid: 183a8fc5b7fd812448f0dd59d3f02187, type: 3}
@@ -284,9 +288,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::NewBlock2D
   cellSize: 1
   moveSpeed: 10
+  moveRepeatDelay: 0.15
+  dashRepeatDelay: 0.03
+  isPlayer: 0
   canBePushed: 1
   isPassable: 0
-  isPlayer: 0
 --- !u!1001 &178454046
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -371,9 +377,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::NewBlock2D
   cellSize: 1
   moveSpeed: 10
+  moveRepeatDelay: 0.15
+  dashRepeatDelay: 0.03
+  isPlayer: 0
   canBePushed: 1
   isPassable: 0
-  isPlayer: 0
 --- !u!1001 &234265583
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -543,9 +551,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::NewBlock2D
   cellSize: 1
   moveSpeed: 10
+  moveRepeatDelay: 0.15
+  dashRepeatDelay: 0.03
+  isPlayer: 0
   canBePushed: 0
   isPassable: 0
-  isPlayer: 0
 --- !u!1 &509666171
 GameObject:
   m_ObjectHideFlags: 0
@@ -609,9 +619,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::NewBlock2D
   cellSize: 1
   moveSpeed: 10
+  moveRepeatDelay: 0.15
+  dashRepeatDelay: 0.03
+  isPlayer: 0
   canBePushed: 1
   isPassable: 0
-  isPlayer: 0
 --- !u!1 &628131116
 GameObject:
   m_ObjectHideFlags: 0
@@ -862,9 +874,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::NewBlock2D
   cellSize: 1
   moveSpeed: 10
+  moveRepeatDelay: 0.15
+  dashRepeatDelay: 0.03
+  isPlayer: 0
   canBePushed: 0
   isPassable: 0
-  isPlayer: 0
 --- !u!1 &1069022882
 GameObject:
   m_ObjectHideFlags: 0
@@ -1066,6 +1080,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 7516123086516684450, guid: 89c4bed9180af81429f0b8558c61c4f6, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 5324957109344640855, guid: 89c4bed9180af81429f0b8558c61c4f6, type: 3}
     m_RemovedGameObjects: []
@@ -1118,9 +1136,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::NewBlock2D
   cellSize: 1
   moveSpeed: 10
+  moveRepeatDelay: 0.15
+  dashRepeatDelay: 0.03
+  isPlayer: 0
   canBePushed: 0
   isPassable: 0
-  isPlayer: 0
 --- !u!1 &1354728681
 GameObject:
   m_ObjectHideFlags: 0
@@ -1219,9 +1239,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::NewBlock2D
   cellSize: 1
   moveSpeed: 10
+  moveRepeatDelay: 0.15
+  dashRepeatDelay: 0.03
+  isPlayer: 0
   canBePushed: 1
   isPassable: 0
-  isPlayer: 0
 --- !u!1 &1485234359
 GameObject:
   m_ObjectHideFlags: 0
@@ -1398,9 +1420,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::NewBlock2D
   cellSize: 1
   moveSpeed: 10
+  moveRepeatDelay: 0.15
+  dashRepeatDelay: 0.03
+  isPlayer: 1
   canBePushed: 0
   isPassable: 0
-  isPlayer: 1
 --- !u!1 &1766022392
 GameObject:
   m_ObjectHideFlags: 0
@@ -1615,7 +1639,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1773752984}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 57faa68cc4e60b64fa7c07dd55a02053, type: 3}
   m_Name: 
@@ -1634,9 +1658,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::NewBlock2D
   cellSize: 1
   moveSpeed: 10
+  moveRepeatDelay: 0.15
+  dashRepeatDelay: 0.03
+  isPlayer: 0
   canBePushed: 1
   isPassable: 0
-  isPlayer: 0
 --- !u!1001 &1779797846
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1794,9 +1820,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::NewBlock2D
   cellSize: 1
   moveSpeed: 10
+  moveRepeatDelay: 0.15
+  dashRepeatDelay: 0.03
+  isPlayer: 0
   canBePushed: 1
   isPassable: 0
-  isPlayer: 0
 --- !u!1 &1870742844
 GameObject:
   m_ObjectHideFlags: 0
