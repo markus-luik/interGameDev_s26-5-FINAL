@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: df3169e3115acfa40ba27e9a41053036
+guid: e5de1d356d9a56f43b35b8754c9ae2a2
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -2191926283402401604
-    second: sprBossgun_0
+      213: 3458707074119649675
+    second: sprBuffe_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -113,13 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: sprBossgun_0
+      name: sprBuffe_0
       rect:
         serializedVersion: 2
-        x: 3
-        y: 2
-        width: 12
-        height: 8
+        x: 0
+        y: 0
+        width: 80
+        height: 27
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: cb825f798a6b491e0800000000000000
-      internalID: -2191926283402401604
+      spriteID: b89480742cbcfff20800000000000000
+      internalID: 3458707074119649675
       vertices: []
       indices: 
       edges: []
@@ -148,7 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      sprBossgun_0: -2191926283402401604
+      sprBuffe_0: 3458707074119649675
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
