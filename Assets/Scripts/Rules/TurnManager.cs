@@ -23,7 +23,7 @@ public class TurnManager : MonoBehaviour {
 
         if (dir == Vector2Int.zero) return;
 
-        ExecuteTurn(dir);
+        //ExecuteTurn(dir);
     }
 
     public void ExecuteTurn(Vector2Int dir) {
