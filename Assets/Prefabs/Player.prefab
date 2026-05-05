@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 832783434663512211}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: weapon hold point
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -42,7 +42,7 @@ GameObject:
   - component: {fileID: 6525754065164295982}
   - component: {fileID: 4249621525616435212}
   - component: {fileID: 4892875596650844051}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Leg
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -154,7 +154,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3356961212009600547}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: hitpoint-baseballbat
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -195,7 +195,7 @@ GameObject:
   - component: {fileID: 1827292346954791747}
   - component: {fileID: 5336774600731965159}
   - component: {fileID: 1778279174186063866}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Player
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -536,7 +536,7 @@ GameObject:
   - component: {fileID: 4567767871466389492}
   - component: {fileID: 1564594240846730047}
   - component: {fileID: 525973289424905065}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Leg
   m_TagString: Untagged
   m_Icon: {fileID: 0}

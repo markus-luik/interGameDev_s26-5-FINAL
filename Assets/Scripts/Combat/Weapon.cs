@@ -102,7 +102,7 @@ public class Weapon : MonoBehaviour
                 if (physicsCollider != null) physicsCollider.enabled = false;
 
                 if (mySprite != null)
-                    mySprite.enabled = (weaponType == WeaponType.B);
+                    mySprite.enabled = false;//(weaponType == WeaponType.B);
 
                 break;
 
@@ -113,7 +113,7 @@ public class Weapon : MonoBehaviour
             if (physicsCollider != null) physicsCollider.enabled = false;
 
             if (mySprite != null)
-                mySprite.enabled = (weaponType == WeaponType.B); //show bat, hide gun
+                mySprite.enabled = false;//(weaponType == WeaponType.B); //show bat, hide gun
 
             break;
 
