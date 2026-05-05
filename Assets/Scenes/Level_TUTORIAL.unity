@@ -5641,63 +5641,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 917610057}
   m_CullTransparentMesh: 1
---- !u!1 &972772414
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 972772415}
-  - component: {fileID: 972772416}
-  m_Layer: 0
-  m_Name: PauseManager
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &972772415
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 972772414}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 983.1782, y: 220.57811, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1635434436}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &972772416
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 972772414}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1a15bc101f0e49c4bbcb6282a1e9e7ec, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::PauseUIManager
-  pauseKey: 27
-  leftPanel: {fileID: 530304899}
-  bottomPanel: {fileID: 1769805675}
-  pauseText: {fileID: 455567844}
-  glitchImage: {fileID: 2008946420}
-  darkenImage: {fileID: 989690242}
-  flashImage: {fileID: 1183453015}
-  flashDuration: 0.1
-  leftPanelShownPos: {x: 398, y: 77}
-  leftPanelHiddenPos: {x: 1324, y: 77}
-  bottomPanelShownPos: {x: 0, y: -200}
-  bottomPanelHiddenPos: {x: 0, y: -1000}
-  panelMoveDuration: 0.1
 --- !u!1 &982870715
 GameObject:
   m_ObjectHideFlags: 0
@@ -6367,67 +6310,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 261653190640877008, guid: 0e0f03683d6eb814eaf8de277c87bd58, type: 3}
   m_PrefabInstance: {fileID: 1055377790}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1060127840
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1060127841}
-  - component: {fileID: 1060127842}
-  m_Layer: 2
-  m_Name: ConversationManager
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1060127841
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1060127840}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.01145, y: 3.6942, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 1824185304}
-  m_Father: {fileID: 1635434436}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1060127842
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1060127840}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b329b0beb5a39a54bb51d8c289d7c010, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::ConversationUIManager
-  topBar: {fileID: 2098352162}
-  bottomBar: {fileID: 754059131}
-  barMoveDuration: 0.5
-  characterBackgroundImage: {fileID: 222051123}
-  characterImage: {fileID: 2069579397}
-  characterFlyDuration: 0.5
-  dialogueText: {fileID: 2086002314}
-  topBarShownPos: {x: 0, y: -50}
-  topBarHiddenPos: {x: 0, y: 300}
-  bottomBarShownPos: {x: 0, y: 150}
-  bottomBarHiddenPos: {x: 0, y: -300}
-  characterShownPos: {x: 500, y: -10}
-  characterHiddenPos: {x: 2500, y: -10}
-  characterBgShownPos: {x: -120, y: 73}
-  characterBgHiddenPos: {x: 1300, y: 73}
-  typingSpeed: 0.02
 --- !u!1001 &1079601970
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6552,6 +6434,38 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 6887070712194663695, guid: 9604749680dd008439e0b5a1d01c1710, type: 3}
   m_PrefabInstance: {fileID: 1086349841}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1096384852
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1096384853}
+  m_Layer: 0
+  m_Name: DIALOGUE
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1096384853
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1096384852}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.0847, y: -6.96527, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1824185304}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1101687551
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9365,8 +9279,6 @@ Transform:
   - {fileID: 666171321}
   - {fileID: 566419212}
   - {fileID: 1473170239}
-  - {fileID: 1060127841}
-  - {fileID: 972772415}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1659514644
@@ -10249,11 +10161,11 @@ Transform:
   m_GameObject: {fileID: 1824185303}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.018380001, y: -7.99611, z: 0}
+  m_LocalPosition: {x: -0.103080004, y: 0.46527004, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1060127841}
+  m_Father: {fileID: 1096384853}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1824185305
 MonoBehaviour:
@@ -10281,6 +10193,7 @@ MonoBehaviour:
   - text: Wait KEKE is that you?
     characterSprite: {fileID: -8828824254825895988, guid: 3546a85900f62fc4894d2bc60eca1a45, type: 3}
   triggerOnlyOnce: 1
+  triggerID: Start
 --- !u!61 &1824185306
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -10315,7 +10228,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0.010063827, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -10325,7 +10238,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 2.9925828, y: 1}
   m_EdgeRadius: 0
 --- !u!1001 &1826724909
 PrefabInstance:
@@ -12800,3 +12713,4 @@ SceneRoots:
   - {fileID: 59620324}
   - {fileID: 2125268374}
   - {fileID: 1293742491}
+  - {fileID: 1096384853}

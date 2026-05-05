@@ -61,7 +61,7 @@ public class ConversationUIManager : MonoBehaviour
     {
         if (Instance == null) Instance = this;
         else Destroy(gameObject);
-        DontDestroyOnLoad(gameObject);
+        //DontDestroyOnLoad(Instance);
     }
 
     private void Start()
