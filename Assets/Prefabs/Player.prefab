@@ -323,7 +323,7 @@ MonoBehaviour:
   gridPos: {x: 0, y: 0}
   moveChange: {x: 0, y: 0}
   state: 0
-  myAnim: {fileID: 0}
+  myAnim: {fileID: 1778279174186063866}
   legsAnim: {fileID: 4892875596650844051}
   mySprite: {fileID: 5269584671380355515}
   legsSprite: {fileID: 4249621525616435212}
@@ -430,6 +430,9 @@ MonoBehaviour:
   batMelee: {fileID: 80840768477870958}
   weaponHoldPoint: {fileID: 832783434663512211}
   ammoText: {fileID: 0}
+  bodyAnimator: {fileID: 0}
+  weaponModeParam: weaponMode
+  attackTriggerParam: attack
 --- !u!114 &80840768477870958
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -457,6 +460,7 @@ MonoBehaviour:
   attackOrigin: {fileID: 0}
   target: {fileID: 0}
   usePlayerInput: 1
+  playerShooting: {fileID: 0}
 --- !u!114 &1827292346954791747
 MonoBehaviour:
   m_ObjectHideFlags: 0
