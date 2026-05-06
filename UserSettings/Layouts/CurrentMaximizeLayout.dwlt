@@ -24,7 +24,7 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 112}
   m_MaxSize: {x: 24288, y: 16192}
   vertical: 0
-  controlID: 24865
+  controlID: 48448
   draggingID: 0
 --- !u!114 &2
 MonoBehaviour:
@@ -97,7 +97,7 @@ MonoBehaviour:
     m_HSlider: 0
     m_VSlider: 0
     m_IgnoreScrollWheelUntilClicked: 0
-    m_EnableMouseInput: 0
+    m_EnableMouseInput: 1
     m_EnableSliderZoomHorizontal: 0
     m_EnableSliderZoomVertical: 0
     m_UniformScale: 1
@@ -153,7 +153,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 112}
   m_MaxSize: {x: 16192, y: 16192}
   vertical: 1
-  controlID: 24866
+  controlID: 48449
   draggingID: 0
 --- !u!114 &4
 MonoBehaviour:
@@ -179,7 +179,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 56}
   m_MaxSize: {x: 16192, y: 8096}
   vertical: 0
-  controlID: 24867
+  controlID: 48450
   draggingID: 0
 --- !u!114 &5
 MonoBehaviour:
@@ -831,9 +831,9 @@ MonoBehaviour:
   m_AudioPlay: 0
   m_DebugDrawModesUseInteractiveLightBakingData: 0
   m_Position:
-    m_Target: {x: -5.5368843, y: -8.056967, z: 4.823513}
+    m_Target: {x: -3.3922, y: 2.5954165, z: -0.06433716}
     speed: 2
-    m_Value: {x: -5.5368843, y: -8.056967, z: 4.823513}
+    m_Value: {x: -3.3922, y: 2.5954165, z: -0.06433716}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -884,9 +884,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 22.797447
+    m_Target: 13.975455
     speed: 2
-    m_Value: 22.797447
+    m_Value: 13.975455
   m_Ortho:
     m_Target: 1
     speed: 2
@@ -988,10 +988,14 @@ MonoBehaviour:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
       m_SelectedIDs:
-      - m_Data: 220714
+      - m_Data: -13115338
+      - m_Data: -13115340
       m_LastClickedID:
-        m_Data: 220714
+        m_Data: -13115340
       m_ExpandedIDs:
+      - m_Data: -9868124
+      - m_Data: -8189466
+      - m_Data: -8147440
       - m_Data: -7646280
       - m_Data: -7644604
       - m_Data: -7641850
@@ -1040,7 +1044,20 @@ MonoBehaviour:
       - m_Data: 189198
       - m_Data: 202102
       - m_Data: 219278
-      - m_Data: 221026
+      - m_Data: 220458
+      - m_Data: 236170
+      - m_Data: 236202
+      - m_Data: 236210
+      - m_Data: 236554
+      - m_Data: 236558
+      - m_Data: 236596
+      - m_Data: 236692
+      - m_Data: 236716
+      - m_Data: 236776
+      - m_Data: 236838
+      - m_Data: 237064
+      - m_Data: 289656
+      - m_Data: 290006
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -1144,7 +1161,7 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Scenes
+    - Assets/Prefabs
     m_Globs: []
     m_ProductIds: 
     m_AnyWithAssetOrigin: 0
@@ -1154,7 +1171,7 @@ MonoBehaviour:
   m_ViewMode: 1
   m_StartGridSize: 16
   m_LastFolders:
-  - Assets/Scenes
+  - Assets/Prefabs
   m_LastFoldersGridSize: -1
   m_LastProjectPath: C:\Users\aleja\git\interGameDev_s26-5-FINAL
   m_LockTracker:
@@ -1163,9 +1180,9 @@ MonoBehaviour:
   m_FolderTreeState:
     scrollPos: {x: 0, y: 118}
     m_SelectedIDs:
-    - m_Data: 53302
+    - m_Data: 53300
     m_LastClickedID:
-      m_Data: 53302
+      m_Data: 53300
     m_ExpandedIDs:
     - m_Data: 0
     - m_Data: 53154
@@ -1233,9 +1250,10 @@ MonoBehaviour:
       m_ResourceFile: 
   m_ListAreaState:
     m_SelectedInstanceIDs:
-    - m_Data: 220714
+    - m_Data: -13115338
+    - m_Data: -13115340
     m_LastClickedEntityId:
-      m_Data: 220714
+      m_Data: -13115340
     m_HadKeyboardFocusLastEvent: 0
     m_ExpandedInstanceIDs:
     - m_Data: 50432
@@ -1265,7 +1283,7 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
     m_NewAssetIndexInList: -1
-    m_ScrollPosition: {x: 0, y: 45}
+    m_ScrollPosition: {x: 0, y: 205}
     m_GridSize: 16
   m_SkipHiddenPackages: 0
   m_DirectoriesAreaWidth: 200
@@ -1415,8 +1433,8 @@ MonoBehaviour:
     y: 0
     width: 406.5
     height: 654
-  m_MinSize: {x: 275, y: 50}
-  m_MaxSize: {x: 4000, y: 4000}
+  m_MinSize: {x: 276, y: 76}
+  m_MaxSize: {x: 4001, y: 4026}
   m_ActualView: {fileID: 14}
   m_Panes:
   - {fileID: 14}
@@ -1468,7 +1486,7 @@ MonoBehaviour:
     m_PrefName: Preview_InspectorPreview
   m_LastInspectedObjectEntityId:
     m_Data: 0
-  m_LastVerticalScrollValue: 0
+  m_LastVerticalScrollValue: 586.80005
   m_GlobalObjectId: 
   m_InspectorMode: 0
   m_LockTracker:
