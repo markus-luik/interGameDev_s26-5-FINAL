@@ -18,6 +18,9 @@ public class Player2D : Block2D
     [SerializeField]
     private bool bypassPlayerInput = false;
 
+    [Header("Audio")]
+    [SerializeField] private AudioSource walkAudioSource;
+    [SerializeField] private AudioClip walkClip;
     private void Update()
     {
         if (ConversationUIManager.Instance != null && ConversationUIManager.Instance.IsConversationActive())
@@ -58,10 +61,17 @@ public class Player2D : Block2D
             }
         }
     }
-
     protected override void StartMove(Cell newParent, int _deltaX, int _deltaY)
     {
         SetMovingAnimation(true);
+
+        //play walking sound
+        if (walkAudioSource != null && walkClip != null)
+        {
+            walkAudioSource.clip = walkClip;
+            walkAudioSource.loop = true;
+            walkAudioSource.Play();
+        }
 
         base.StartMove(newParent, _deltaX, _deltaY);
     }
@@ -75,6 +85,12 @@ public class Player2D : Block2D
             Input.GetKey(KeyCode.S);
 
         SetMovingAnimation(keepMoving);
+
+        //stop walking sound if no longer moving
+        if (!keepMoving && walkAudioSource != null)
+        {
+            walkAudioSource.Stop();
+        }
 
         base.FinishMove();
     }

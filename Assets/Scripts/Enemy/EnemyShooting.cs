@@ -18,6 +18,9 @@ public class EnemyShooting : MonoBehaviour
     [SerializeField] private float bulletSpeed = 16f;
     [SerializeField] private float fireInterval = 0.5f;
 
+    [Header("Audio")]
+    [SerializeField] private AudioSource shootAudioSource;
+    [SerializeField] private AudioClip shootClip;
     private Weapon currentWeapon;
     private float nextFireTime;
 
@@ -134,6 +137,10 @@ public class EnemyShooting : MonoBehaviour
 
         GameObject bullet = Instantiate(bulletPrefab, spawnPos, Quaternion.identity);
         bullet.transform.right = new Vector3(dir.x, dir.y, 0f);
+        if (shootAudioSource != null && shootClip != null)
+        {
+            shootAudioSource.PlayOneShot(shootClip);
+        }
 
         Bullet bulletComp = bullet.GetComponent<Bullet>();
         if (bulletComp != null)

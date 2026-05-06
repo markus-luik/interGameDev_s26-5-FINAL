@@ -31,6 +31,9 @@ public class PlayerShooting : MonoBehaviour
     [SerializeField] private string weaponModeParam = "weaponMode";
     [SerializeField] private string attackTriggerParam = "attack";
 
+    [Header("Audio")]
+    [SerializeField] private AudioSource shootAudioSource;
+    [SerializeField] private AudioClip shootClip;
     public bool HasWeapon => currentWeapon != null;
     public Weapon CurrentWeapon => currentWeapon;
 
@@ -158,6 +161,11 @@ public class PlayerShooting : MonoBehaviour
         if (!currentWeapon.HasAmmo()) return;
 
         GameObject bullet = Instantiate(bulletPrefab, shootPoint.position, Quaternion.identity);
+        if (shootAudioSource != null && shootClip != null)
+        {
+            shootAudioSource.PlayOneShot(shootClip);
+        }
+        
         bullet.transform.right = new Vector3(dir.x, dir.y, 0f);
 
         Bullet bulletComp = bullet.GetComponent<Bullet>();

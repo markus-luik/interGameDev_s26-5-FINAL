@@ -41,20 +41,16 @@ public class ConversationUIManager : MonoBehaviour
     [Header("Typing")]
     [SerializeField] private float typingSpeed = 0.02f;
 
+    [Header("Audio")]
+    [SerializeField] private AudioSource speakingAudioSource;
+    [SerializeField] private AudioClip speakingClip;
+    [SerializeField] private int speakEveryNCharacters = 2;
     private List<DialogueLine> currentLines = new List<DialogueLine>();
     private int currentLineIndex = 0;
     private Sprite currentDisplayedSprite;
     private bool isTyping = false;
     // public bool conversationHasEnded = false;
     private Coroutine typingCoroutine;
-
-    // private Vector2 topBarHiddenPos;
-    // private Vector2 topBarShownPos;
-    // private Vector2 bottomBarHiddenPos;
-    // private Vector2 bottomBarShownPos;
-
-    // private Vector2 characterHiddenPos;
-
     private bool conversationActive = false;
 
     private void Awake()
@@ -62,6 +58,8 @@ public class ConversationUIManager : MonoBehaviour
         if (Instance == null) Instance = this;
         else Destroy(gameObject);
         //DontDestroyOnLoad(Instance);
+        if (speakingAudioSource == null)
+            speakingAudioSource = GetComponent<AudioSource>();
     }
 
     private void Start()
@@ -246,15 +244,30 @@ public class ConversationUIManager : MonoBehaviour
         isTyping = true;
         dialogueText.text = "";
 
+        int charCount = 0;
+
         foreach (char c in line)
         {
             dialogueText.text += c;
+
+            if (!char.IsWhiteSpace(c))
+            {
+                charCount++;
+
+                if (speakingAudioSource != null &&
+                    speakingClip != null &&
+                    charCount % speakEveryNCharacters == 0)
+                {
+                    speakingAudioSource.pitch = Random.Range(0.9f, 1.1f);
+                    speakingAudioSource.PlayOneShot(speakingClip);
+                }
+            }
+
             yield return new WaitForSeconds(typingSpeed);
         }
 
         isTyping = false;
     }
-
     public void NextLine()
     {
         if (!conversationActive) return;

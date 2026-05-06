@@ -27,6 +27,9 @@ public class BatMelee : MonoBehaviour
     [Header("Animation")]
     [SerializeField] private PlayerShooting playerShooting;
 
+    [Header("Audio")]
+    [SerializeField] private AudioSource audioSource;
+    [SerializeField] private AudioClip swingClip;
     private Weapon currentWeapon;
     private bool isSwinging = false;
     private float nextAttackTime = 0f;
@@ -120,6 +123,10 @@ public class BatMelee : MonoBehaviour
             if (!didHit && t >= 0.5f)
             {
                 DoHit();
+                if (audioSource != null && swingClip != null)
+                {
+                    audioSource.PlayOneShot(swingClip);
+                }
                 didHit = true;
             }
 

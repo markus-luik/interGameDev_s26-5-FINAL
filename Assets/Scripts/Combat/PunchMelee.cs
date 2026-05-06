@@ -16,6 +16,9 @@ public class PunchMelee : MonoBehaviour
     [SerializeField] private float punchCooldown = 0.3f;
     [SerializeField] private float punchDuration = 0.08f;
 
+    [Header("Audio")]
+    [SerializeField] private AudioSource audioSource;
+    [SerializeField] private AudioClip punchClip;
     private bool isPunching = false;
     private float nextPunchTime = 0f;
 
@@ -23,13 +26,14 @@ public class PunchMelee : MonoBehaviour
     {
         if (playerShooting == null)
             playerShooting = GetComponent<PlayerShooting>();
+
     }
 
     private void Update()
     {
         if (playerShooting == null) return;
 
-        // Only punch when player has NO weapon
+        // Only punch when player has no weapon
         if (playerShooting.HasWeapon) return;
 
         if (isPunching) return;
@@ -46,6 +50,10 @@ public class PunchMelee : MonoBehaviour
     {
         isPunching = true;
         nextPunchTime = Time.time + punchCooldown;
+        if (audioSource != null && punchClip != null)
+        {
+            audioSource.PlayOneShot(punchClip);
+        }
 
         yield return new WaitForSeconds(punchDuration * 0.5f);
 
