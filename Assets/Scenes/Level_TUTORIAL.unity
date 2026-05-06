@@ -819,7 +819,7 @@ PrefabInstance:
       objectReference: {fileID: 347019209}
     - target: {fileID: 6148992457638226133, guid: 2804f352c5e8d2240b541f6aa6e2695b, type: 3}
       propertyPath: viewAngle
-      value: 180
+      value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 6148992457638226133, guid: 2804f352c5e8d2240b541f6aa6e2695b, type: 3}
       propertyPath: viewDistance
@@ -3035,7 +3035,7 @@ PrefabInstance:
       objectReference: {fileID: 347019209}
     - target: {fileID: 6148992457638226133, guid: 2804f352c5e8d2240b541f6aa6e2695b, type: 3}
       propertyPath: viewAngle
-      value: 180
+      value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 6148992457638226133, guid: 2804f352c5e8d2240b541f6aa6e2695b, type: 3}
       propertyPath: viewDistance
@@ -5189,7 +5189,7 @@ PrefabInstance:
       objectReference: {fileID: 347019209}
     - target: {fileID: 6148992457638226133, guid: 2804f352c5e8d2240b541f6aa6e2695b, type: 3}
       propertyPath: viewAngle
-      value: 180
+      value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 6148992457638226133, guid: 2804f352c5e8d2240b541f6aa6e2695b, type: 3}
       propertyPath: viewDistance
@@ -11444,7 +11444,7 @@ PrefabInstance:
       objectReference: {fileID: 347019209}
     - target: {fileID: 6148992457638226133, guid: a78eb56cdac63ef4c97f0c700450c79b, type: 3}
       propertyPath: viewAngle
-      value: 180
+      value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 6148992457638226133, guid: a78eb56cdac63ef4c97f0c700450c79b, type: 3}
       propertyPath: viewDistance
