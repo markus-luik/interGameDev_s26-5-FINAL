@@ -1,6 +1,5 @@
 using UnityEngine;
 
-//This is all by Claude
 public class GridEntity : MonoBehaviour {
     [Header("Entity definition")]
     public EntityType type;
@@ -17,26 +16,25 @@ public class GridEntity : MonoBehaviour {
     [HideInInspector] public bool isDefeat;
 
     private void Awake() {
-        // Text blocks are always pushable — hardcoded, not rule-derived
         if (type != null && type.isTextBlock)
             isPush = true;
     }
 
     private void Start() {
-        Block block = GetComponent<Block>();
+        // Derive gridPos from NewBlock2D's snapped world position
+        var block = GetComponent<NewBlock2D>();
         if (block != null) {
-            gridPos = block.gridPos;
-        } else {
-            Block2D block2D = GetComponent<Block2D>();
-            if (block2D != null)
-                gridPos = block2D.gridPos;
+            var grid = FindObjectOfType<NewGridManager2D>();
+            if (grid != null) {
+                Vector2 snapped = grid.SnapToGrid(block.TargetPos);
+                gridPos = new Vector2Int(Mathf.RoundToInt(snapped.x), Mathf.RoundToInt(snapped.y));
+            }
         }
         BabaGridIndex.Instance.Register(this);
     }
 
     public void ClearProperties() {
         isYou = isWin = isStop = isSink = isDefeat = false;
-        // Text blocks keep isPush — reset it only for non-text entities
         if (type != null && !type.isTextBlock)
             isPush = false;
     }

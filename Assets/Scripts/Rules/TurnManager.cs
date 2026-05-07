@@ -1,10 +1,12 @@
 using UnityEngine;
+using System.Linq;
 
+/// <summary>
+/// Reads player input, triggers NewBlock2D movement, re-parses rules, checks win.
+/// All movement and push logic lives in NewBlock2D.
+/// </summary>
 public class TurnManager : MonoBehaviour {
     public static TurnManager Instance;
-
-    [SerializeField]
-    private bool bypassPlayerInput = false;
 
     private void Awake() {
         if (Instance == null) Instance = this;
@@ -12,22 +14,24 @@ public class TurnManager : MonoBehaviour {
     }
 
     private void Update() {
-        if (!bypassPlayerInput) return;
-
         Vector2Int dir = Vector2Int.zero;
 
-        if (Input.GetKeyDown(KeyCode.A)) dir = Vector2Int.left;
+        if      (Input.GetKeyDown(KeyCode.A)) dir = Vector2Int.left;
         else if (Input.GetKeyDown(KeyCode.D)) dir = Vector2Int.right;
-        else if (Input.GetKeyDown(KeyCode.W)) dir = new Vector2Int(0, -1);
-        else if (Input.GetKeyDown(KeyCode.S)) dir = new Vector2Int(0, 1);
+        else if (Input.GetKeyDown(KeyCode.W)) dir = Vector2Int.up;
+        else if (Input.GetKeyDown(KeyCode.S)) dir = Vector2Int.down;
 
-        if (dir == Vector2Int.zero) return;
-
-        //ExecuteTurn(dir);
+        if (dir != Vector2Int.zero)
+            ExecuteTurn(dir);
     }
 
     public void ExecuteTurn(Vector2Int dir) {
-        EntityMover.Instance.MoveAllYou(dir);
+        // Move every YOU entity — NewBlock2D handles push chains internally
+        foreach (var entity in BabaGridIndex.Instance.GetAll().Where(e => e.isYou).ToList()) {
+            var block = entity.GetComponent<NewBlock2D>();
+            block?.TryMove(dir.x, dir.y);
+        }
+
         RuleParser.Instance.ParseAllRules();
         CheckWin();
     }
@@ -36,13 +40,11 @@ public class TurnManager : MonoBehaviour {
         foreach (var entity in BabaGridIndex.Instance.GetAll()) {
             if (!entity.isYou) continue;
 
-            // Check if this YOU entity is itself WIN
             if (entity.isWin) {
                 Debug.Log("YOU WIN — you are win!");
                 return;
             }
 
-            // Check if a WIN entity shares this cell
             foreach (var occupant in BabaGridIndex.Instance.GetAt(entity.gridPos)) {
                 if (occupant != entity && occupant.isWin) {
                     Debug.Log("YOU WIN — stepped on win!");
