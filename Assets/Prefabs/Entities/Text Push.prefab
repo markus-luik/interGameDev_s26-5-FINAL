@@ -82,15 +82,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6005956403829970872, guid: 0e0f03683d6eb814eaf8de277c87bd58, type: 3}
       propertyPath: m_Color.b
-      value: 1
+      value: 0.2743363
       objectReference: {fileID: 0}
     - target: {fileID: 6005956403829970872, guid: 0e0f03683d6eb814eaf8de277c87bd58, type: 3}
       propertyPath: m_Color.g
-      value: 1
+      value: 0.899371
       objectReference: {fileID: 0}
     - target: {fileID: 6005956403829970872, guid: 0e0f03683d6eb814eaf8de277c87bd58, type: 3}
       propertyPath: m_Color.r
-      value: 1
+      value: 0.36200815
       objectReference: {fileID: 0}
     - target: {fileID: 6005956403829970872, guid: 0e0f03683d6eb814eaf8de277c87bd58, type: 3}
       propertyPath: m_WasSpriteAssigned
@@ -126,7 +126,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GridEntity
   type: {fileID: 11400000, guid: 44e97efae18ffe442982f39f2e1d1c4e, type: 2}
-  gridPos: {x: 0, y: 0}
   isYou: 0
   isWin: 0
   isPush: 0
