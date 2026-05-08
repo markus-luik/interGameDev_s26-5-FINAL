@@ -678,7 +678,7 @@ PrefabInstance:
     - target: {fileID: 5336774600731965159, guid: 89c4bed9180af81429f0b8558c61c4f6, type: 3}
       propertyPath: restartText
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1002486175}
     - target: {fileID: 6150205943266450054, guid: 89c4bed9180af81429f0b8558c61c4f6, type: 3}
       propertyPath: m_LocalPosition.x
       value: 1
@@ -6547,7 +6547,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 694a1a42b0715b54e96c8c5ffac721e8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::RuleParser
-  goal: {fileID: 2731422400200305128, guid: fd74fd74e0d4a8646945e18989ffe430, type: 3}
 --- !u!1001 &541783697
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10360,6 +10359,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 790886f3f97dd1043b223cfb28d0a982, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EntityMover
+--- !u!1 &1002486175 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3197263227572280979, guid: e41760ed230035641848c4c96995d88e, type: 3}
+  m_PrefabInstance: {fileID: 391021748}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1003429208 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3140889717073129319, guid: 2804f352c5e8d2240b541f6aa6e2695b, type: 3}
@@ -11943,7 +11947,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5f9c48ce24a0bb24097054c65636f64f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TurnManager
-  bypassPlayerInput: 1
 --- !u!1001 &1205201441
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -13189,7 +13192,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1342802085
 Transform:
   m_ObjectHideFlags: 0
@@ -16811,19 +16814,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PauseUIManager
   pauseKey: 27
-  leftPanel: {fileID: 0}
-  bottomPanel: {fileID: 0}
-  pauseText: {fileID: 0}
-  glitchImage: {fileID: 0}
-  darkenImage: {fileID: 0}
-  flashImage: {fileID: 0}
+  leftPanel: {fileID: 1462959325}
+  bottomPanel: {fileID: 211384404}
+  pauseText: {fileID: 1430358850}
+  glitchImage: {fileID: 486434549}
+  darkenImage: {fileID: 86710240}
+  flashImage: {fileID: 1553432573}
   flashDuration: 0.1
   leftPanelShownPos: {x: 398, y: 77}
   leftPanelHiddenPos: {x: 1324, y: 77}
   bottomPanelShownPos: {x: 0, y: -200}
   bottomPanelHiddenPos: {x: 0, y: -1000}
   panelMoveDuration: 0.1
-  audioSource: {fileID: 0}
+  audioSource: {fileID: 1662486584}
   buttonClickClip: {fileID: 0}
 --- !u!1001 &1681137654
 PrefabInstance:

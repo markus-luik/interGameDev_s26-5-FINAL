@@ -180,10 +180,11 @@ MonoBehaviour:
   lerpSnapDist: 0
   targetPos: {x: 0, y: 0, z: 0}
   canMove: 1
+  isPassable: 0
   gridPos: {x: 0, y: 0}
   moveChange: {x: 0, y: 0}
   audioSource: {fileID: 1973083250855500406}
-  pushedClip: {fileID: 0}
+  pushedClip: {fileID: 8300000, guid: cdc46383f5fcaf1448fbeb65ebc5f44a, type: 3}
   state: 0
 --- !u!82 &1973083250855500406
 AudioSource:
