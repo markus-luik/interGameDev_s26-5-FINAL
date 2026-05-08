@@ -32,11 +32,13 @@ public class OperatorBehavior : MonoBehaviour
         if  (_ruleManager == null) Debug.Log("No RuleManager found on Operator! Add RuleManager.cs as object in scene.");
     }
 
-    private void Update()
-    {   
-        if(Input.GetKeyDown(KeyCode.N)){
+    private void Start()
+    {
+        RayCheckMyNeighbour();
+    }
+
+    void GridChanged(){
             RayCheckMyNeighbour();
-        }
     }
 
     void RayCheckMyNeighbour()
