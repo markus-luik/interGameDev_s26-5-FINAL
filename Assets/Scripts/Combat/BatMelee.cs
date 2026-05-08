@@ -178,6 +178,10 @@ public class BatMelee : MonoBehaviour
         if (target != null)
             return ((Vector2)target.position - (Vector2)(attackOrigin != null ? attackOrigin.position : transform.position)).normalized;
 
+        Vector2 mouseDir = MouseHelper.GetDirectionToMouse2D(transform, Camera.main);
+        if (mouseDir.sqrMagnitude > 0.0001f)
+            return mouseDir.normalized;
+
         return transform.right;
     }
 

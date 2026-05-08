@@ -83,7 +83,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_MaskInteraction: 0
-  m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
+  m_Sprite: {fileID: 7891613413866523154, guid: d112a09b79e88cb45bdecc40c7be9042, type: 3}
   m_Color: {r: 0, g: 0.39897528, b: 0.59748423, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -131,7 +131,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
+    oldSize: {x: 0.32, y: 0.08}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -161,6 +161,9 @@ MonoBehaviour:
   lerpSnapDist: 0
   targetPos: {x: 0, y: 0, z: 0}
   canMove: 0
+  isPassable: 0
   gridPos: {x: 0, y: 0}
   moveChange: {x: 0, y: 0}
+  audioSource: {fileID: 0}
+  pushedClip: {fileID: 0}
   state: 0
