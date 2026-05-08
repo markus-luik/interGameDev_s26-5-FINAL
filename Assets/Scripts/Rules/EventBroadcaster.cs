@@ -2,8 +2,8 @@ using UnityEngine;
 
 public class EventBroadcaster : MonoBehaviour
 {
-    public delegate void TestBroadcastDelegate();
-    public static event TestBroadcastDelegate OnTestCast1;
+    //public delegate void TestBroadcastDelegate();
+    //public static event TestBroadcastDelegate OnTestCast1;
 
     public delegate void RuleBroadcastDelegate(string entityName, bool ruleActive);
     public static event RuleBroadcastDelegate IsYou;
@@ -21,15 +21,24 @@ public class EventBroadcaster : MonoBehaviour
     
     void ReadInput()
     {
-        if (Input.GetKey(KeyCode.Space))
+        // if (Input.GetKey(KeyCode.Space))
+        // {
+        //     OnSpaceBar?.Invoke(nameToBroadcast);
+        // }
+        //
+        // if (Input.GetKeyDown(KeyCode.I))
+        // {
+        //     Debug.Log("I was pressed!");
+        //     OnTestCast1?.Invoke();
+        // }
+        if (Input.GetKeyDown(KeyCode.U))
         {
-            OnSpaceBar?.Invoke(nameToBroadcast);
+            IsWin?.Invoke(nameToBroadcast, true);
         }
-        
+
         if (Input.GetKeyDown(KeyCode.I))
         {
-            Debug.Log("I was pressed!");
-            OnTestCast1?.Invoke();
+            IsWin?.Invoke(nameToBroadcast, false);
         }
         if (Input.GetKey(KeyCode.Y)){
             if (Input.GetKeyDown(KeyCode.B))

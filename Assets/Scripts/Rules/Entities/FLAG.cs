@@ -8,6 +8,9 @@ public class FLAG : MonoBehaviour
     //Components
     private NewBlock2D  _block2D;
     private PlayerRotation _playerRotation;
+    //Goal prefab
+    [SerializeField] private GameObject _prefabGoal;
+    private GameObject _spawnedGoal;
     
     private void Awake()
     {
@@ -22,21 +25,40 @@ public class FLAG : MonoBehaviour
     {
         Debug.Log($"{myName} OnEnable");
         EventBroadcaster.IsYou += OnIsYou;
+        EventBroadcaster.IsWin += OnIsWin;
     }
 
     private void OnDisable()
     {
         Debug.Log($"{myName} OnDisable");
         EventBroadcaster.IsYou -= OnIsYou;
+        EventBroadcaster.IsWin -= OnIsWin;
+    }
+
+    void OnIsWin(string who, bool what)
+    {
+        if (who == myName){
+            if (what)
+            {
+                Debug.Log($"{myName} is WIN");
+                if (_spawnedGoal == null){
+                    _spawnedGoal = Instantiate(_prefabGoal, transform.position, Quaternion.identity); //spawns prefab goal at self with no rotation
+                }
+            }
+            else
+            {
+                Destroy(_spawnedGoal);
+            }
+        }
     }
     
-    void OnIsYou(string name, bool isYou)
+    void OnIsYou(string who, bool what)
     {
-        if (name == myName){
-            Debug.Log(isYou ? $"{name} is now YOU!" : $"{name} is NOT YOU!");
+        if (who == myName){
+            Debug.Log(what ? $"{who} is now YOU!" : $"{who} is NOT YOU!");
 
-            if (_block2D != null) _block2D.isPlayer = isYou;
-            if (_playerRotation != null) _playerRotation.enabled = isYou;
+            if (_block2D != null) _block2D.isPlayer = what;
+            if (_playerRotation != null) _playerRotation.enabled = what;
         }
     }
 }

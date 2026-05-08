@@ -322,8 +322,11 @@ MonoBehaviour:
   lerpSnapDist: 0
   targetPos: {x: 0, y: 0, z: 0}
   canMove: 1
+  isPassable: 0
   gridPos: {x: 0, y: 0}
   moveChange: {x: 0, y: 0}
+  audioSource: {fileID: 0}
+  pushedClip: {fileID: 0}
   state: 0
   myAnim: {fileID: 1778279174186063866}
   legsAnim: {fileID: 4892875596650844051}
@@ -469,6 +472,7 @@ MonoBehaviour:
   playerShooting: {fileID: 0}
   audioSource: {fileID: -3239705732226441651}
   swingClip: {fileID: 0}
+  hitClip: {fileID: 0}
 --- !u!114 &1827292346954791747
 MonoBehaviour:
   m_ObjectHideFlags: 0
