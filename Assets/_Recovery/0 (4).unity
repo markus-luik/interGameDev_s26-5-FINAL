@@ -1787,7 +1787,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::GridManager2D
   cellSize: 1
   emptyCell: {fileID: 6976938398710031939, guid: 3c00367465711428283f1e8a71bd152a, type: 3}
-  gridBounds: {fileID: 2034191121}
+  gridBounds: {fileID: 2063604226}
   overlapRadius: 0.4
   debugZ: 0
   debugMode: 1
@@ -5649,19 +5649,19 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2214881175674117368, guid: 47027b94d09471a4384ea914bb793501, type: 3}
       propertyPath: m_LocalScale.x
-      value: 100
+      value: 798.17017
       objectReference: {fileID: 0}
     - target: {fileID: 2214881175674117368, guid: 47027b94d09471a4384ea914bb793501, type: 3}
       propertyPath: m_LocalScale.y
-      value: 100
+      value: 549.8026
       objectReference: {fileID: 0}
     - target: {fileID: 2214881175674117368, guid: 47027b94d09471a4384ea914bb793501, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.5
+      value: 0.52
       objectReference: {fileID: 0}
     - target: {fileID: 2214881175674117368, guid: 47027b94d09471a4384ea914bb793501, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.5
+      value: 0.2
       objectReference: {fileID: 0}
     - target: {fileID: 2214881175674117368, guid: 47027b94d09471a4384ea914bb793501, type: 3}
       propertyPath: m_LocalPosition.z
@@ -5722,6 +5722,10 @@ PrefabInstance:
     - target: {fileID: 6637378660070570503, guid: 47027b94d09471a4384ea914bb793501, type: 3}
       propertyPath: m_Color.r
       value: 0.8616352
+      objectReference: {fileID: 0}
+    - target: {fileID: 6637378660070570503, guid: 47027b94d09471a4384ea914bb793501, type: 3}
+      propertyPath: m_DrawMode
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6637378660070570503, guid: 47027b94d09471a4384ea914bb793501, type: 3}
       propertyPath: m_SortingLayer
@@ -18515,7 +18519,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1873165088
 Transform:
   m_ObjectHideFlags: 0
@@ -19888,11 +19892,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 47027b94d09471a4384ea914bb793501, type: 3}
---- !u!1 &2034191121 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 5419239345710665634, guid: 47027b94d09471a4384ea914bb793501, type: 3}
-  m_PrefabInstance: {fileID: 2034191120}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &2034191123 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2214881175674117368, guid: 47027b94d09471a4384ea914bb793501, type: 3}
@@ -20158,6 +20157,11 @@ PrefabInstance:
 Transform:
   m_CorrespondingSourceObject: {fileID: 261653190640877008, guid: 0e0f03683d6eb814eaf8de277c87bd58, type: 3}
   m_PrefabInstance: {fileID: 736752073}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &2063604226 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5419239345710665634, guid: 47027b94d09471a4384ea914bb793501, type: 3}
+  m_PrefabInstance: {fileID: 464330229}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &2068050807
 PrefabInstance:
