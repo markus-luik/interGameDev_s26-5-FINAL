@@ -279,8 +279,8 @@ MonoBehaviour:
   dropSpinMin: -200
   dropSpinMax: 200
   audioSource: {fileID: 4039548798127110834}
-  knockoutClip: {fileID: 0}
-  deathClip: {fileID: 0}
+  knockoutClip: {fileID: 8300000, guid: 5c9699952aeae894da91463046420202, type: 3}
+  deathClip: {fileID: 8300000, guid: dd38f81eb3b24ed4b9b8b07f34b65083, type: 3}
 --- !u!114 &557193067504599732
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -303,8 +303,8 @@ MonoBehaviour:
   batMelee: {fileID: 9100609656421460728}
   bulletSpeed: 16
   fireInterval: 0.15
-  shootAudioSource: {fileID: 0}
-  shootClip: {fileID: 0}
+  shootAudioSource: {fileID: 4039548798127110834}
+  shootClip: {fileID: 8300000, guid: 1d43bfe9e7157ee438e73b5f1e6bfd7a, type: 3}
 --- !u!114 &9100609656421460728
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -334,8 +334,8 @@ MonoBehaviour:
   usePlayerInput: 0
   playerShooting: {fileID: 0}
   audioSource: {fileID: 4039548798127110834}
-  swingClip: {fileID: 0}
-  hitClip: {fileID: 0}
+  swingClip: {fileID: 8300000, guid: bdacec3d70da26b40aad7711254ac786, type: 3}
+  hitClip: {fileID: 8300000, guid: 8b4c9a4fef37d5243904092d5b89edc7, type: 3}
 --- !u!82 &4039548798127110834
 AudioSource:
   m_ObjectHideFlags: 0

@@ -322,8 +322,11 @@ MonoBehaviour:
   lerpSnapDist: 0
   targetPos: {x: 0, y: 0, z: 0}
   canMove: 1
+  isPassable: 0
   gridPos: {x: 0, y: 0}
   moveChange: {x: 0, y: 0}
+  audioSource: {fileID: 0}
+  pushedClip: {fileID: 0}
   state: 0
   myAnim: {fileID: 1778279174186063866}
   legsAnim: {fileID: 4892875596650844051}
@@ -331,7 +334,7 @@ MonoBehaviour:
   legsSprite: {fileID: 4249621525616435212}
   bypassPlayerInput: 0
   walkAudioSource: {fileID: -5732466584385658476}
-  walkClip: {fileID: 0}
+  walkClip: {fileID: 8300000, guid: df3c6ddfe8c618c45876eee8d003b493, type: 3}
 --- !u!58 &8202675291864337367
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -438,7 +441,7 @@ MonoBehaviour:
   weaponModeParam: weaponMode
   attackTriggerParam: attack
   shootAudioSource: {fileID: -3239705732226441651}
-  shootClip: {fileID: 0}
+  shootClip: {fileID: 8300000, guid: 1d43bfe9e7157ee438e73b5f1e6bfd7a, type: 3}
 --- !u!114 &80840768477870958
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -468,7 +471,8 @@ MonoBehaviour:
   usePlayerInput: 1
   playerShooting: {fileID: 0}
   audioSource: {fileID: -3239705732226441651}
-  swingClip: {fileID: 0}
+  swingClip: {fileID: 8300000, guid: bdacec3d70da26b40aad7711254ac786, type: 3}
+  hitClip: {fileID: 8300000, guid: 8b4c9a4fef37d5243904092d5b89edc7, type: 3}
 --- !u!114 &1827292346954791747
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -491,7 +495,7 @@ MonoBehaviour:
   punchCooldown: 0.2
   punchDuration: 0.08
   audioSource: {fileID: -3239705732226441651}
-  punchClip: {fileID: 0}
+  punchClip: {fileID: 8300000, guid: 41d9a07688bc60d4984bcdb5ca1e3c7d, type: 3}
 --- !u!114 &5336774600731965159
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -514,7 +518,7 @@ MonoBehaviour:
   pressRToRestart: 1
   restartText: {fileID: 0}
   audioSource: {fileID: -5732466584385658476}
-  deathClip: {fileID: 0}
+  deathClip: {fileID: 8300000, guid: a5accfb42f12db64fa9a199c40bc95a4, type: 3}
 --- !u!95 &1778279174186063866
 Animator:
   serializedVersion: 7
