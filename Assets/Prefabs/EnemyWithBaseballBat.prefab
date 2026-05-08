@@ -75,11 +75,11 @@ GameObject:
   - component: {fileID: 6148992457638226133}
   - component: {fileID: 8115169757352188069}
   - component: {fileID: 1131555318366651698}
-  - component: {fileID: 2023612112489418281}
   - component: {fileID: 557193067504599732}
   - component: {fileID: 9100609656421460728}
   - component: {fileID: 4039548798127110834}
   - component: {fileID: -4301307184655560604}
+  - component: {fileID: -8840340626821140745}
   m_Layer: 7
   m_Name: EnemyWithBaseballBat
   m_TagString: block
@@ -223,8 +223,11 @@ MonoBehaviour:
   lerpSnapDist: 0
   targetPos: {x: 0, y: 0, z: 0}
   canMove: 1
+  isPassable: 0
   gridPos: {x: 0, y: 0}
   moveChange: {x: 0, y: 0}
+  audioSource: {fileID: 0}
+  pushedClip: {fileID: 0}
   state: 0
   patrolSteps:
   - direction: 0
@@ -269,7 +272,7 @@ MonoBehaviour:
   enemyVision: {fileID: 6148992457638226133}
   enemyShooting: {fileID: 557193067504599732}
   myAnim: {fileID: 0}
-  myCollider: {fileID: 2023612112489418281}
+  myCollider: {fileID: 0}
   dropWeaponOnDeath: 1
   destroyDelay: 0.5
   dropForce: 2
@@ -278,56 +281,6 @@ MonoBehaviour:
   audioSource: {fileID: 4039548798127110834}
   knockoutClip: {fileID: 0}
   deathClip: {fileID: 0}
---- !u!60 &2023612112489418281
-PolygonCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8743385625017111025}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_ForceSendLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ForceReceiveLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ContactCaptureLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_CallbackLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_CompositeOperation: 0
-  m_CompositeOrder: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1.375}
-    newSize: {x: 1.96875, y: 2.5}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  m_Points:
-    m_Paths:
-    - - {x: 0, y: 0.5773587}
-      - {x: -0.5, y: -0.28866667}
-      - {x: 0.5, y: -0.28866667}
-  m_UseDelaunayMesh: 1
 --- !u!114 &557193067504599732
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -382,6 +335,7 @@ MonoBehaviour:
   playerShooting: {fileID: 0}
   audioSource: {fileID: 4039548798127110834}
   swingClip: {fileID: 0}
+  hitClip: {fileID: 0}
 --- !u!82 &4039548798127110834
 AudioSource:
   m_ObjectHideFlags: 0
@@ -576,3 +530,49 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!61 &-8840340626821140745
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8743385625017111025}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1, y: 1.375}
+    newSize: {x: 1.96875, y: 2.5}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Size: {x: 1, y: 1.375}
+  m_EdgeRadius: 0

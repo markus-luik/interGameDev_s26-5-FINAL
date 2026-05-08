@@ -70,7 +70,17 @@ public class Block2D : MonoBehaviour
             {
                 Cell checkCell = gridManager.gridList[gridPos.x + _deltaX][gridPos.y + _deltaY].GetComponent<Cell>();
 
-                Block2D occupant = checkCell.ContainObj?.GetComponent<Block2D>();
+                Block2D occupant = null;
+
+                if (checkCell.ContainObj != null)
+                {
+                    occupant = checkCell.ContainObj.GetComponent<Block2D>();
+                }
+                else
+                {
+                    checkCell.RemoveContainObj();
+                }
+                
                 if (!checkCell.CheckContainObj() || (occupant != null && occupant.isPassable) || CheckHit(occupant, _deltaX, _deltaY))
                 {
                     StartMove(checkCell, _deltaX, _deltaY);
