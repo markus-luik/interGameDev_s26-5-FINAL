@@ -94,6 +94,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 1946115471797055793, guid: eb64e8059a30abd42988ad1d92495fd9, type: 3}
       insertIndex: -1
       addedObject: {fileID: 7806063055828893773}
+    - targetCorrespondingSourceObject: {fileID: 1946115471797055793, guid: eb64e8059a30abd42988ad1d92495fd9, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 8225888940660718250}
   m_SourcePrefab: {fileID: 100100000, guid: eb64e8059a30abd42988ad1d92495fd9, type: 3}
 --- !u!1 &5447699550831206959 stripped
 GameObject:
@@ -113,7 +116,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GridEntity
   type: {fileID: 11400000, guid: cf9859a0f0ecb444a9cb22dddd63bd90, type: 2}
-  gridPos: {x: 0, y: 0}
   isYou: 0
   isWin: 0
   isPush: 0
@@ -217,3 +219,16 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &8225888940660718250
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5447699550831206959}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3c79851102662eb4d84cbba5eff24965, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::FLAG
+  _prefabGoal: {fileID: 2731422400200305128, guid: fd74fd74e0d4a8646945e18989ffe430, type: 3}
