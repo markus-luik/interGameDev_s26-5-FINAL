@@ -40,6 +40,9 @@ public class EnemyMovement : Block2D
     [SerializeField] private Vector3 patrolStartPos;
     [SerializeField] private bool useCustomStart = false;
 
+    [Header("Audio")]
+    [SerializeField] private AudioSource walkAudioSource;
+    [SerializeField] private AudioClip walkClip;
     private EnemyMode currentMode = EnemyMode.Patrol;
 
     private int currentStepIndex = 0;
@@ -125,6 +128,12 @@ public class EnemyMovement : Block2D
             myAnim.SetBool("isWalking", true);
 
         CheckMove(dir.x, dir.y);
+        if (walkAudioSource != null && walkClip != null)
+        {
+            walkAudioSource.clip = walkClip;
+            walkAudioSource.loop = true;
+            walkAudioSource.Play();
+        }
 
         movedInCurrentStep++;
 

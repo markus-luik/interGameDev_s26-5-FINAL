@@ -1,0 +1,728 @@
+fileFormatVersion: 2
+guid: c1e78e2715579e144acfd262d3f8660c
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -6844564359042856656
+    second: sprBigWeapons_strip23_0
+  - first:
+      213: -1645569594942513170
+    second: sprBigWeapons_strip23_1
+  - first:
+      213: 4996345314354386238
+    second: sprBigWeapons_strip23_2
+  - first:
+      213: 2359046893733811700
+    second: sprBigWeapons_strip23_3
+  - first:
+      213: 8883231819775160142
+    second: sprBigWeapons_strip23_4
+  - first:
+      213: 425828490561843741
+    second: sprBigWeapons_strip23_5
+  - first:
+      213: -6684836245799502320
+    second: sprBigWeapons_strip23_6
+  - first:
+      213: 5444592954103156665
+    second: sprBigWeapons_strip23_7
+  - first:
+      213: -1050633448904439435
+    second: sprBigWeapons_strip23_8
+  - first:
+      213: -8175821494098151052
+    second: sprBigWeapons_strip23_9
+  - first:
+      213: -6021944878490918075
+    second: sprBigWeapons_strip23_10
+  - first:
+      213: 5647695728390441162
+    second: sprBigWeapons_strip23_11
+  - first:
+      213: 1532722919846944545
+    second: sprBigWeapons_strip23_12
+  - first:
+      213: -6266621806506480215
+    second: sprBigWeapons_strip23_13
+  - first:
+      213: 4196700096477926573
+    second: sprBigWeapons_strip23_14
+  - first:
+      213: 114659233511902740
+    second: sprBigWeapons_strip23_15
+  - first:
+      213: -7475280802167318131
+    second: sprBigWeapons_strip23_16
+  - first:
+      213: 2877635058318083632
+    second: sprBigWeapons_strip23_17
+  - first:
+      213: -18982893155289387
+    second: sprBigWeapons_strip23_18
+  - first:
+      213: -2127471199614784389
+    second: sprBigWeapons_strip23_19
+  - first:
+      213: -223982773247532239
+    second: sprBigWeapons_strip23_20
+  - first:
+      213: -5805722425870245631
+    second: sprBigWeapons_strip23_21
+  - first:
+      213: -442515529607159572
+    second: sprBigWeapons_strip23_22
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 32
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: sprBigWeapons_strip23_0
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 30
+        width: 62
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 03983f0caf83301a0800000000000000
+      internalID: -6844564359042856656
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprBigWeapons_strip23_1
+      rect:
+        serializedVersion: 2
+        x: 76
+        y: 26
+        width: 58
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eef94480c23c929e0800000000000000
+      internalID: -1645569594942513170
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprBigWeapons_strip23_2
+      rect:
+        serializedVersion: 2
+        x: 146
+        y: 27
+        width: 57
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e35d7457795965540800000000000000
+      internalID: 4996345314354386238
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprBigWeapons_strip23_3
+      rect:
+        serializedVersion: 2
+        x: 227
+        y: 30
+        width: 40
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4f51e7da6a40db020800000000000000
+      internalID: 2359046893733811700
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprBigWeapons_strip23_4
+      rect:
+        serializedVersion: 2
+        x: 280
+        y: 20
+        width: 69
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e4f25235644974b70800000000000000
+      internalID: 8883231819775160142
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprBigWeapons_strip23_5
+      rect:
+        serializedVersion: 2
+        x: 352
+        y: 20
+        width: 65
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d12fd2b81c8d8e500800000000000000
+      internalID: 425828490561843741
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprBigWeapons_strip23_6
+      rect:
+        serializedVersion: 2
+        x: 419
+        y: 19
+        width: 72
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 01ef67b2ad0ba33a0800000000000000
+      internalID: -6684836245799502320
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprBigWeapons_strip23_7
+      rect:
+        serializedVersion: 2
+        x: 494
+        y: 17
+        width: 62
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9bfc9efe1741f8b40800000000000000
+      internalID: 5444592954103156665
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprBigWeapons_strip23_8
+      rect:
+        serializedVersion: 2
+        x: 570
+        y: 24
+        width: 54
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 57948e8d1766b61f0800000000000000
+      internalID: -1050633448904439435
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprBigWeapons_strip23_9
+      rect:
+        serializedVersion: 2
+        x: 629
+        y: 14
+        width: 68
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 479b6412ba5a98e80800000000000000
+      internalID: -8175821494098151052
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprBigWeapons_strip23_10
+      rect:
+        serializedVersion: 2
+        x: 706
+        y: 25
+        width: 60
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 543e094e901cd6ca0800000000000000
+      internalID: -6021944878490918075
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprBigWeapons_strip23_11
+      rect:
+        serializedVersion: 2
+        x: 793
+        y: 25
+        width: 32
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ac8043a9755a06e40800000000000000
+      internalID: 5647695728390441162
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprBigWeapons_strip23_12
+      rect:
+        serializedVersion: 2
+        x: 852
+        y: 14
+        width: 46
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 12f9398ff53554510800000000000000
+      internalID: 1532722919846944545
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprBigWeapons_strip23_13
+      rect:
+        serializedVersion: 2
+        x: 927
+        y: 21
+        width: 40
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9ade6714bac7809a0800000000000000
+      internalID: -6266621806506480215
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprBigWeapons_strip23_14
+      rect:
+        serializedVersion: 2
+        x: 1002
+        y: 25
+        width: 33
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: da41a6fa08cad3a30800000000000000
+      internalID: 4196700096477926573
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprBigWeapons_strip23_15
+      rect:
+        serializedVersion: 2
+        x: 1067
+        y: 8
+        width: 36
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 41e02b327f9579100800000000000000
+      internalID: 114659233511902740
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprBigWeapons_strip23_16
+      rect:
+        serializedVersion: 2
+        x: 1124
+        y: 21
+        width: 61
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d89158657b7724890800000000000000
+      internalID: -7475280802167318131
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprBigWeapons_strip23_17
+      rect:
+        serializedVersion: 2
+        x: 1207
+        y: 16
+        width: 36
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0368244d6d96fe720800000000000000
+      internalID: 2877635058318083632
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprBigWeapons_strip23_18
+      rect:
+        serializedVersion: 2
+        x: 1277
+        y: 30
+        width: 37
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5d67ba4c82f8cbff0800000000000000
+      internalID: -18982893155289387
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprBigWeapons_strip23_19
+      rect:
+        serializedVersion: 2
+        x: 1341
+        y: 14
+        width: 50
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b7c261d3734b972e0800000000000000
+      internalID: -2127471199614784389
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprBigWeapons_strip23_20
+      rect:
+        serializedVersion: 2
+        x: 1404
+        y: 20
+        width: 62
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 13326ccbad044ecf0800000000000000
+      internalID: -223982773247532239
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprBigWeapons_strip23_21
+      rect:
+        serializedVersion: 2
+        x: 1482
+        y: 19
+        width: 45
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1012c75b63eed6fa0800000000000000
+      internalID: -5805722425870245631
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprBigWeapons_strip23_22
+      rect:
+        serializedVersion: 2
+        x: 1551
+        y: 20
+        width: 50
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ce0eb2a687edbd9f0800000000000000
+      internalID: -442515529607159572
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      sprBigWeapons_strip23_0: -6844564359042856656
+      sprBigWeapons_strip23_1: -1645569594942513170
+      sprBigWeapons_strip23_10: -6021944878490918075
+      sprBigWeapons_strip23_11: 5647695728390441162
+      sprBigWeapons_strip23_12: 1532722919846944545
+      sprBigWeapons_strip23_13: -6266621806506480215
+      sprBigWeapons_strip23_14: 4196700096477926573
+      sprBigWeapons_strip23_15: 114659233511902740
+      sprBigWeapons_strip23_16: -7475280802167318131
+      sprBigWeapons_strip23_17: 2877635058318083632
+      sprBigWeapons_strip23_18: -18982893155289387
+      sprBigWeapons_strip23_19: -2127471199614784389
+      sprBigWeapons_strip23_2: 4996345314354386238
+      sprBigWeapons_strip23_20: -223982773247532239
+      sprBigWeapons_strip23_21: -5805722425870245631
+      sprBigWeapons_strip23_22: -442515529607159572
+      sprBigWeapons_strip23_3: 2359046893733811700
+      sprBigWeapons_strip23_4: 8883231819775160142
+      sprBigWeapons_strip23_5: 425828490561843741
+      sprBigWeapons_strip23_6: -6684836245799502320
+      sprBigWeapons_strip23_7: 5444592954103156665
+      sprBigWeapons_strip23_8: -1050633448904439435
+      sprBigWeapons_strip23_9: -8175821494098151052
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
