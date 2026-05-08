@@ -11688,7 +11688,7 @@ MonoBehaviour:
   - text: Wait KEKE is that you?
     characterSprite: {fileID: -8828824254825895988, guid: 3546a85900f62fc4894d2bc60eca1a45, type: 3}
   triggerOnlyOnce: 1
-  triggerID: Start
+  triggerID: Tutorial
 --- !u!61 &1824185306
 BoxCollider2D:
   m_ObjectHideFlags: 0
