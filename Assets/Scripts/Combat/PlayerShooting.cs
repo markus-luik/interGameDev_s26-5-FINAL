@@ -13,7 +13,7 @@ public class PlayerShooting : MonoBehaviour
     [Header("Shooting")]
     [SerializeField] private float bulletSpeed = 16f;
     [SerializeField] private float fireInterval = 0.15f;
-    [SerializeField] private bool rotatePlayerToMouse = true;
+    [SerializeField] private bool rotatePlayerToMouse = false;
     [SerializeField] private bool canShoot = false;
 
     [Header("Throwing")]
@@ -85,7 +85,7 @@ public class PlayerShooting : MonoBehaviour
 
         if (rotatePlayerToMouse)
         {
-            Vector2 dir = MouseHelper.GetDirectionToMouse2D(transform, targetCamera);
+            Vector2 dir = GetAimDirection();
             if (dir.sqrMagnitude > 0.000f)
                 transform.right = new Vector3(dir.x, dir.y, 0f);
         }
@@ -94,7 +94,7 @@ public class PlayerShooting : MonoBehaviour
 
         if (canShoot && CanFireCurrentWeapon() && Input.GetMouseButton(0) && Time.time >= nextFireTime)
         {
-            Vector2 dir = MouseHelper.GetDirectionToMouse2D(transform, targetCamera);
+            Vector2 dir = GetAimDirection();
             if (dir.sqrMagnitude > 0.0001f)
             {
                 FireBullet(dir.normalized);
@@ -140,9 +140,7 @@ public class PlayerShooting : MonoBehaviour
     {
         if (currentWeapon == null) return;
 
-        Vector2 dir = MouseHelper.GetDirectionToMouse2D(transform, targetCamera);
-        if (dir.sqrMagnitude <= 0.0001f)
-            dir = transform.right;
+        Vector2 dir = GetAimDirection();
 
         currentWeapon.transform.position = shootPoint.position + (Vector3)(dir.normalized * 0.4f);
         currentWeapon.gameObject.SetActive(true);
@@ -206,7 +204,7 @@ public class PlayerShooting : MonoBehaviour
 
         if (throwOut)
         {
-            Vector2 dir = transform.right;
+            Vector2 dir = GetAimDirection();
             weaponToDrop.Throw(dir, throwForce, throwSpinSpeed, GetComponent<Collider2D>());
         }
         else
@@ -261,6 +259,15 @@ public class PlayerShooting : MonoBehaviour
             mode = currentWeapon.WeaponType == WeaponType.A ? 1 : 2;
 
         bodyAnimator.SetInteger(weaponModeHash, mode);
+    }
+
+    private Vector2 GetAimDirection()
+    {
+        Vector2 dir = MouseHelper.GetDirectionToMouse2D(transform, targetCamera);
+        if (dir.sqrMagnitude <= 0.0001f)
+            return transform.right;
+
+        return dir.normalized;
     }
 
 }
