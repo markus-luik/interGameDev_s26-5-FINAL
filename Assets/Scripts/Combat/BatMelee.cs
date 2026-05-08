@@ -30,6 +30,7 @@ public class BatMelee : MonoBehaviour
     [Header("Audio")]
     [SerializeField] private AudioSource audioSource;
     [SerializeField] private AudioClip swingClip;
+    [SerializeField] private AudioClip hitClip;
     private Weapon currentWeapon;
     private bool isSwinging = false;
     private float nextAttackTime = 0f;
@@ -159,6 +160,11 @@ public class BatMelee : MonoBehaviour
             IHitReceiver receiver = hits[i].GetComponentInParent<IHitReceiver>();
             if (receiver != null)
             {
+                if (audioSource != null && hitClip != null)
+                {
+                    audioSource.pitch = Random.Range(0.95f, 1.05f);
+                    audioSource.PlayOneShot(hitClip);
+                }
                 receiver.OnHit(new HitInfo
                 {
                     weaponType = WeaponType.B,

@@ -29,6 +29,10 @@ public class PauseUIManager : MonoBehaviour
 
     [Header("Timing")]
     [SerializeField] private float panelMoveDuration = 0.35f;
+    
+    [Header("Audio")]
+    [SerializeField] private AudioSource audioSource;
+    [SerializeField] private AudioClip buttonClickClip;
 
     private bool isPaused = false;
     private bool isAnimating = false;
@@ -229,5 +233,12 @@ public class PauseUIManager : MonoBehaviour
     #if UNITY_EDITOR
         UnityEditor.EditorApplication.isPlaying = false;
     #endif
+    }
+    private void PlayButtonSound()
+    {
+        if (audioSource != null && buttonClickClip != null)
+        {
+            audioSource.PlayOneShot(buttonClickClip);
+        }
     }
 }

@@ -4,19 +4,28 @@ using UnityEngine;
 public class BABA : MonoBehaviour
 {
     private string myName = "BABA";
-    private bool canMove = true;
     
     //Components
-    private Player2D _player2D;
+    private NewBlock2D _block2D;
     private PlayerRotation _playerRotation;
+    private PlayerShooting _playerShooting;
+    private PlayerDamaged _playerDamaged;
     
     private void Awake()
     {
         // Getting component references
-        _player2D = GetComponent<Player2D>();
-        if (_player2D == null) {Debug.Log($"{myName} does not have a Player2D!");}
+        //Block2D (current player movement)
+        _block2D = GetComponent<NewBlock2D>();
+        if (_block2D == null) {Debug.Log($"{myName} does not have a Player2D!");}
+        //Player Rotation
         _playerRotation = GetComponent<PlayerRotation>();
         if (_playerRotation == null){Debug.Log($"{myName} does not have a PlayerRotation!");}
+        //Player Shooting
+        _playerShooting = GetComponent<PlayerShooting>();
+        if (_playerShooting == null) {Debug.Log($"{myName} does not have a PlayerShooting!");}
+        //Player Damaged
+        _playerDamaged = GetComponent<PlayerDamaged>();
+        if (_playerDamaged == null){Debug.Log($"{myName} does not have a PlayerDamaged!");}
     }
     
     private void OnEnable()
@@ -31,25 +40,15 @@ public class BABA : MonoBehaviour
         EventBroadcaster.IsYou -= OnIsYou;
     }
     
-    void OnIsYou(string name, bool isYou)
+    void OnIsYou(string nameCalled, bool isYou)
     {
-        if (name == myName){
-            if (isYou){
-                Debug.Log($"{name} is now YOU!");
-                if (_player2D != null && _playerRotation != null){
-                    _player2D.enabled =  true;
-                    _playerRotation.enabled = true;
-                }
-            }
-            else
-            {
-                Debug.Log($"{name} is NOT YOU!");
-                if (_player2D != null && _playerRotation != null){
-                    _player2D.enabled = false;
-                    _playerRotation.enabled = false;
-                }
-            }
-            canMove =  isYou;
+        if (nameCalled == myName){
+            Debug.Log(isYou ? $"{nameCalled} is now YOU!" : $"{nameCalled} is NOT YOU!");
+
+            if (_block2D != null) _block2D.isPlayer = isYou;
+            if (_playerRotation != null) _playerRotation.enabled = isYou;
+            if (_playerShooting != null) _playerShooting.enabled = isYou;
+            if (_playerDamaged != null) _playerDamaged.enabled = isYou;
         }
     }
 }
