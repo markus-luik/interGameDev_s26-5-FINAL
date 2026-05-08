@@ -97,11 +97,6 @@ public class Player2D : Block2D
 
     private void SetFacingFlip(bool flipX)
     {
-        if (mySprite != null)
-        {
-            mySprite.flipX = flipX;
-        }
-
         if (legsSprite != null)
         {
             legsSprite.flipX = flipX;

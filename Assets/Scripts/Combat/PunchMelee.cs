@@ -67,7 +67,11 @@ public class PunchMelee : MonoBehaviour
     private void DoPunchHit()
     {
         Vector2 origin = punchOrigin != null ? punchOrigin.position : transform.position;
-        Vector2 forward = transform.right;
+        Vector2 forward = MouseHelper.GetDirectionToMouse2D(transform, Camera.main);
+        if (forward.sqrMagnitude <= 0.0001f)
+            forward = transform.right;
+        else
+            forward = forward.normalized;
 
         Collider2D[] hits = Physics2D.OverlapCircleAll(origin, punchRadius, enemyLayer);
 
@@ -100,7 +104,8 @@ public class PunchMelee : MonoBehaviour
     {
         Transform originTransform = punchOrigin != null ? punchOrigin : transform;
         Vector3 origin = originTransform.position;
-        Vector3 forward = transform.right;
+        Vector2 aim = MouseHelper.GetDirectionToMouse2D(transform, Camera.main);
+        Vector3 forward = aim.sqrMagnitude > 0.0001f ? (Vector3)aim.normalized : transform.right;
 
         float halfAngle = punchAngle * 0.5f;
 

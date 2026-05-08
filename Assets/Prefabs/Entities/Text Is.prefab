@@ -98,12 +98,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6514592042932092980, guid: 0e0f03683d6eb814eaf8de277c87bd58, type: 3}
       propertyPath: m_Name
-      value: Text is Variant
+      value: Text Is
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 6514592042932092980, guid: 0e0f03683d6eb814eaf8de277c87bd58, type: 3}
+      insertIndex: 4
+      addedObject: {fileID: 2736099863089132543}
     - targetCorrespondingSourceObject: {fileID: 6514592042932092980, guid: 0e0f03683d6eb814eaf8de277c87bd58, type: 3}
       insertIndex: -1
       addedObject: {fileID: -3388814596178723891}
@@ -113,6 +116,25 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 6514592042932092980, guid: 0e0f03683d6eb814eaf8de277c87bd58, type: 3}
   m_PrefabInstance: {fileID: 7833389691415751835}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &2736099863089132543
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3953510221888302255}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0f6b2df9a5c845b4593b8195e9e0933e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::OperatorBehavior
+  operatorName: IS
+  rayCount: 4
+  rayCheckDist: 0.25
+  rayCheckGap: 0.01
+  neighbours: []
+  ruleHor: []
+  ruleVer: []
 --- !u!114 &-3388814596178723891
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -126,7 +148,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GridEntity
   type: {fileID: 11400000, guid: 71e0c5e866944e74cac7d5183b257251, type: 2}
-  gridPos: {x: 0, y: 0}
   isYou: 0
   isWin: 0
   isPush: 0
