@@ -7,22 +7,29 @@ public class EnemyShooting : MonoBehaviour
     [SerializeField] private GameObject bulletPrefab;
     [SerializeField] private Transform targetPlayer;
     [SerializeField] private EnemyVision enemyVision;
+    [SerializeField] private Transform weaponHoldPoint;
 
     [Header("Weapon")]
     [SerializeField] private Weapon startingWeapon;
     [SerializeField] private bool canShoot = false;
+    [SerializeField] private BatMelee batMelee;
 
     [Header("Shooting")]
     [SerializeField] private float bulletSpeed = 16f;
     [SerializeField] private float fireInterval = 0.5f;
 
+    [Header("Audio")]
+    [SerializeField] private AudioSource shootAudioSource;
+    [SerializeField] private AudioClip shootClip;
     private Weapon currentWeapon;
     private float nextFireTime;
 
     public Weapon CurrentWeapon => currentWeapon;
     private bool CanFireCurrentWeapon()
     {
-        return currentWeapon != null && currentWeapon.WeaponType == WeaponType.A;
+        return currentWeapon != null &&
+            currentWeapon.WeaponType == WeaponType.A &&
+            currentWeapon.HasAmmo();
     }
     private void Awake()
     {
@@ -31,14 +38,15 @@ public class EnemyShooting : MonoBehaviour
 
         if (enemyVision == null)
             enemyVision = GetComponent<EnemyVision>();
+
+        if (batMelee == null)
+        batMelee = GetComponent<BatMelee>();
     }
 
     private void Start()
     {
         if (startingWeapon != null)
         {
-            // If the starting weapon is already a scene object, use it directly.
-            // If it's a prefab, instantiate it first.
             Weapon weaponInstance = startingWeapon;
 
             if (startingWeapon.gameObject.scene.rootCount == 0)
@@ -52,25 +60,35 @@ public class EnemyShooting : MonoBehaviour
 
     private void Update()
     {
-        
-        if (!CanFireCurrentWeapon()) return;
         if (!canShoot) return;
         if (currentWeapon == null) return;
         if (targetPlayer == null) return;
-        if (enemyVision != null && !enemyVision.canSeePlayer) return;
-        if (Time.time < nextFireTime) return;
 
-        PlayerDamaged playerDamaged = targetPlayer != null ? targetPlayer.GetComponent<PlayerDamaged>() : null;
+        PlayerDamaged playerDamaged = targetPlayer.GetComponent<PlayerDamaged>();
         if (playerDamaged != null && playerDamaged.IsDead)
             return;
-            
-        Vector2 dir = ((Vector2)targetPlayer.position - (Vector2)shootPoint.position).normalized;
+
+        if (enemyVision != null && !enemyVision.canSeePlayer)
+            return;
+
+        Vector2 dir = ((Vector2)targetPlayer.position - (Vector2)transform.position).normalized;
         if (dir.sqrMagnitude <= 0.0001f) return;
 
         transform.right = new Vector3(dir.x, dir.y, 0f);
 
-        FireBullet(dir);
-        nextFireTime = Time.time + fireInterval;
+        if (currentWeapon.WeaponType == WeaponType.A)
+        {
+            if (!CanFireCurrentWeapon()) return;
+            if (Time.time < nextFireTime) return;
+
+            FireBullet(dir);
+            nextFireTime = Time.time + fireInterval;
+        }
+        else if (currentWeapon.WeaponType == WeaponType.B)
+        {
+            if (batMelee != null)
+                batMelee.TrySwing();
+        }
     }
 
     public void SetCanShoot(bool value)
@@ -85,14 +103,18 @@ public class EnemyShooting : MonoBehaviour
         if (currentWeapon == null)
         {
             canShoot = false;
+            if (batMelee != null)
+            batMelee.SetWeapon(currentWeapon);
             return;
         }
 
-        currentWeapon.transform.SetParent(transform);
+        currentWeapon.transform.SetParent(weaponHoldPoint != null ? weaponHoldPoint : transform);
         currentWeapon.transform.localPosition = Vector3.zero;
         currentWeapon.transform.localRotation = Quaternion.identity;
         currentWeapon.gameObject.SetActive(true);
         currentWeapon.SetState(Weapon.WeaponState.HeldByEnemy);
+        if (batMelee != null)
+            batMelee.SetWeapon(currentWeapon);
 
         canShoot = true;
     }
@@ -101,6 +123,9 @@ public class EnemyShooting : MonoBehaviour
     {
         currentWeapon = null;
         canShoot = false;
+
+        if (batMelee != null)
+            batMelee.SetWeapon(null);
     }
 
     private void FireBullet(Vector2 dir)
@@ -112,6 +137,10 @@ public class EnemyShooting : MonoBehaviour
 
         GameObject bullet = Instantiate(bulletPrefab, spawnPos, Quaternion.identity);
         bullet.transform.right = new Vector3(dir.x, dir.y, 0f);
+        if (shootAudioSource != null && shootClip != null)
+        {
+            shootAudioSource.PlayOneShot(shootClip);
+        }
 
         Bullet bulletComp = bullet.GetComponent<Bullet>();
         if (bulletComp != null)
@@ -120,6 +149,7 @@ public class EnemyShooting : MonoBehaviour
                 bulletComp.SetWeaponType(currentWeapon.WeaponType);
 
             bulletComp.Initialize(dir, bulletSpeed, gameObject);
+            currentWeapon.UseAmmo();
             return;
         }
 

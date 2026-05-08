@@ -37,6 +37,9 @@ public class Block2D : MonoBehaviour
     [HideInInspector]
     public Vector2Int gridPos, moveChange;
 
+    [Header("Audio")]
+    [SerializeField] private AudioSource audioSource;
+    [SerializeField] private AudioClip pushedClip;
     public enum MoveStates
     {
         idle,
@@ -51,6 +54,8 @@ public class Block2D : MonoBehaviour
     {
         startPos = transform.position;
         targetPos = transform.position;
+        if (audioSource == null)
+        audioSource = GetComponent<AudioSource>();
     }
 
     #region Movement Methods
@@ -116,6 +121,11 @@ public class Block2D : MonoBehaviour
     protected virtual void StartMove(Cell _newParent, int _deltaX, int _deltaY)
     {
         State = MoveStates.moving;
+        if (audioSource != null && pushedClip != null)
+        {
+            audioSource.PlayOneShot(pushedClip);
+        }
+
 
         moveChange.Set(_deltaX, _deltaY);
 

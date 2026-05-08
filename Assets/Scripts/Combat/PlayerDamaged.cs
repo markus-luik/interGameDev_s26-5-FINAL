@@ -25,6 +25,9 @@ public class PlayerDamaged : MonoBehaviour, IHitReceiver
     [SerializeField] private bool pressRToRestart = true;
     [SerializeField] private GameObject restartText;
 
+    [Header("Audio")]
+    [SerializeField] private AudioSource audioSource;
+    [SerializeField] private AudioClip deathClip;
     public PlayerState CurrentState => currentState;
     public bool IsDead => currentState == PlayerState.Dead;
 
@@ -75,7 +78,10 @@ public class PlayerDamaged : MonoBehaviour, IHitReceiver
             return;
 
         currentState = PlayerState.Dead;
-
+        if (audioSource != null && deathClip != null)
+        {
+            audioSource.PlayOneShot(deathClip);
+        }
         if (restartText != null)
             restartText.SetActive(true);
             
