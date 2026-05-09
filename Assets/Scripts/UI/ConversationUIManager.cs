@@ -53,6 +53,10 @@ public class ConversationUIManager : MonoBehaviour
     private Coroutine typingCoroutine;
     private bool conversationActive = false;
 
+    [Header("Voice Clips")]
+    [SerializeField] private AudioClip babaClip;
+    [SerializeField] private AudioClip kekeClip;
+
     private void Awake()
     {
         if (Instance == null) Instance = this;
@@ -258,8 +262,27 @@ public class ConversationUIManager : MonoBehaviour
                     speakingClip != null &&
                     charCount % speakEveryNCharacters == 0)
                 {
-                    speakingAudioSource.pitch = Random.Range(0.9f, 1.1f);
-                    speakingAudioSource.PlayOneShot(speakingClip);
+                    if (speakingAudioSource != null && charCount % speakEveryNCharacters == 0)
+                    {
+                        AudioClip clipToPlay = speakingClip;
+
+                        string name = currentLines[currentLineIndex].characterName;
+
+                        if (name == "Keke")
+                        {
+                            clipToPlay = kekeClip;
+                        }
+                        else if (name == "Baba")
+                        {
+                            clipToPlay = babaClip;
+                        }
+
+                        if (clipToPlay != null)
+                        {
+                            speakingAudioSource.pitch = Random.Range(0.9f, 1.1f);
+                            speakingAudioSource.PlayOneShot(clipToPlay);
+                        }
+                    }
                 }
             }
 
