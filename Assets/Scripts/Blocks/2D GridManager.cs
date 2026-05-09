@@ -117,8 +117,17 @@ public class GridManager2D : MonoBehaviour
             text.text = gridX + "," + gridY;
         }
     }
-    public void UpdateGrid()
+    public void UpdateGrid(Block2D movedBlock)
     {
+        if (movedBlock == null) return;
+
+        GridEntity movedEntity = movedBlock.GetComponent<GridEntity>();
+
+        if (movedEntity == null || movedEntity.type == null || !movedEntity.type.isTextBlock)
+        {
+            return;
+        }
+
         BroadcastMessage("GridChanged");
     }
 
