@@ -3,12 +3,12 @@ using UnityEngine;
 public class Goal : MonoBehaviour
 {
     //Boolean, just in case
-    private bool PlayerInGoal = false;
+    [SerializeField, ReadOnly] private bool PlayerInGoal = false;
     private GameObject _roundManagerObj;
     private RoundManager _roundManager;
 
     //What tag to check for
-    private string CheckFor = "Player";
+    [SerializeField] private string checkForTag = "Player";
     
     /// <summary>
     /// Finds the RoundManager object and gets its RoundManager script.
@@ -20,30 +20,30 @@ public class Goal : MonoBehaviour
     }
     
     /// <summary>
-    /// Checks for collision ENTRY with CheckFor tagged object.
-    /// Reports to _roundManager if Player (or another CheckFor) enters collider.
+    /// Checks for collision ENTRY with checkForTag tagged object.
+    /// Reports to _roundManager if Player (or another checkForTag) enters collider.
     /// </summary>
     /// <param name="col">collider</param>
     void OnTriggerEnter2D(Collider2D col)
     {
-        if (col.CompareTag(CheckFor))
+        if (col.CompareTag(checkForTag))
         {
             PlayerInGoal = true;
-           _roundManager.ReportGoalEnter(CheckFor);
+           _roundManager.ReportGoalEnter(checkForTag);
         }
     }
     
     /// <summary>
-    /// Checks for collision EXIT with CheckFor tagged object.
-    /// Reports to _roundManager if Player (or another CheckFor) exits collider.
+    /// Checks for collision EXIT with checkForTag tagged object.
+    /// Reports to _roundManager if Player (or another checkForTag) exits collider.
     /// </summary>
     /// <param name="col">collider</param>
     void OnTriggerExit2D(Collider2D col)
     {
-        if (col.CompareTag(CheckFor))
+        if (col.CompareTag(checkForTag))
         {
             PlayerInGoal = false;
-            _roundManager.ReportGoalExit(CheckFor);
+            _roundManager.ReportGoalExit(checkForTag);
         }
     }
 }

@@ -53,16 +53,20 @@ PrefabInstance:
       value: Wall
       objectReference: {fileID: 0}
     - target: {fileID: 7865308988543309622, guid: eb64e8059a30abd42988ad1d92495fd9, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 7891613413866523154, guid: d112a09b79e88cb45bdecc40c7be9042, type: 3}
+    - target: {fileID: 7865308988543309622, guid: eb64e8059a30abd42988ad1d92495fd9, type: 3}
       propertyPath: m_Color.b
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7865308988543309622, guid: eb64e8059a30abd42988ad1d92495fd9, type: 3}
       propertyPath: m_Color.g
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7865308988543309622, guid: eb64e8059a30abd42988ad1d92495fd9, type: 3}
       propertyPath: m_Color.r
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -90,7 +94,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GridEntity
   type: {fileID: 11400000, guid: 182aaa7133f597a45ba1045fa2cbf368, type: 2}
-  gridPos: {x: 0, y: 0}
   isYou: 0
   isWin: 0
   isPush: 0

@@ -20,11 +20,15 @@ public class PlayerDamaged : MonoBehaviour, IHitReceiver
     [SerializeField] private BatMelee batMelee;
     [SerializeField] private Collider2D myCollider;
     [SerializeField] private Animator myAnim;
+    [SerializeField] private Animator legsAnim;
 
     [Header("Restart")]
     [SerializeField] private bool pressRToRestart = true;
     [SerializeField] private GameObject restartText;
 
+    [Header("Audio")]
+    [SerializeField] private AudioSource audioSource;
+    [SerializeField] private AudioClip deathClip;
     public PlayerState CurrentState => currentState;
     public bool IsDead => currentState == PlayerState.Dead;
 
@@ -44,6 +48,28 @@ public class PlayerDamaged : MonoBehaviour, IHitReceiver
 
         if (myCollider == null)
             myCollider = GetComponent<Collider2D>();
+
+        if (myAnim == null)
+            myAnim = GetComponent<Animator>();
+
+        if (legsAnim == null)
+        {
+            Animator[] animators = GetComponentsInChildren<Animator>(true);
+            for (int i = 0; i < animators.Length; i++)
+            {
+                if (animators[i] != null && animators[i] != myAnim)
+                {
+                    legsAnim = animators[i];
+                    break;
+                }
+            }
+        }
+
+        if (myAnim != null)
+            myAnim.SetBool("isDead", false);
+
+        if (legsAnim != null)
+            legsAnim.SetBool("isMoving", false);
     }
 
     private void Update()
@@ -75,7 +101,10 @@ public class PlayerDamaged : MonoBehaviour, IHitReceiver
             return;
 
         currentState = PlayerState.Dead;
-
+        if (audioSource != null && deathClip != null)
+        {
+            audioSource.PlayOneShot(deathClip);
+        }
         if (restartText != null)
             restartText.SetActive(true);
             
@@ -101,7 +130,10 @@ public class PlayerDamaged : MonoBehaviour, IHitReceiver
             myCollider.enabled = false;
 
         if (myAnim != null)
-            myAnim.SetTrigger("Die");
+            myAnim.SetBool("isDead", true);
+
+        if (legsAnim != null)
+            legsAnim.SetBool("isMoving", false);
 
         //Debug.Log("Player died. Press R to restart.");
     }

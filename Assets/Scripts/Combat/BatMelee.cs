@@ -19,10 +19,18 @@ public class BatMelee : MonoBehaviour
     [SerializeField] private float attackRadius = 1.2f;
     [SerializeField] private float attackAngle = 100f;
     [SerializeField] private Transform attackOrigin;
+    [SerializeField] private Transform target;
 
+    [Header("Is player")]
+    [SerializeField] private bool usePlayerInput = true;
+    
     [Header("Animation")]
     [SerializeField] private PlayerShooting playerShooting;
 
+    [Header("Audio")]
+    [SerializeField] private AudioSource audioSource;
+    [SerializeField] private AudioClip swingClip;
+    [SerializeField] private AudioClip hitClip;
     private Weapon currentWeapon;
     private bool isSwinging = false;
     private float nextAttackTime = 0f;
@@ -47,18 +55,52 @@ public class BatMelee : MonoBehaviour
 
     private void Update()
     {
+        if (!usePlayerInput) return;
+
         if (currentWeapon == null) return;
         if (currentWeapon.WeaponType != WeaponType.B) return;
         if (weaponHoldPoint == null) return;
         if (isSwinging) return;
         if (Time.time < nextAttackTime) return;
 
-        if (Input.GetMouseButton(0) && Time.time >= nextAttackTime && !isSwinging)
+        if (Input.GetMouseButton(0))
         {
+            TrySwing();
             if (playerShooting != null)
                 playerShooting.TriggerAttackAnimation();
             StartCoroutine(SwingBat());
         }
+    }
+   public bool TrySwing()
+    {
+        Debug.Log("TrySwing called");
+
+        if (currentWeapon == null)
+        {
+            Debug.Log("No bat weapon assigned");
+            return false;
+        }
+
+        if (currentWeapon.WeaponType != WeaponType.B)
+        {
+            Debug.Log("Weapon is not bat: " + currentWeapon.WeaponType);
+            return false;
+        }
+
+        if (weaponHoldPoint == null)
+        {
+            Debug.Log("No weapon hold point");
+            return false;
+        }
+
+        if (isSwinging)
+            return false;
+
+        if (Time.time < nextAttackTime)
+            return false;
+
+        StartCoroutine(SwingBat());
+        return true;
     }
 
     private IEnumerator SwingBat()
@@ -83,6 +125,10 @@ public class BatMelee : MonoBehaviour
             if (!didHit && t >= 0.5f)
             {
                 DoHit();
+                if (audioSource != null && swingClip != null)
+                {
+                    audioSource.PlayOneShot(swingClip);
+                }
                 didHit = true;
             }
 
@@ -97,7 +143,7 @@ public class BatMelee : MonoBehaviour
     private void DoHit()
     {
         Vector2 origin = attackOrigin != null ? attackOrigin.position : transform.position;
-        Vector2 forward = weaponHoldPoint != null ? weaponHoldPoint.right : transform.right;
+        Vector2 forward = GetAttackForward();
 
         Collider2D[] hits = Physics2D.OverlapCircleAll(origin, attackRadius, enemyLayer);
 
@@ -115,6 +161,11 @@ public class BatMelee : MonoBehaviour
             IHitReceiver receiver = hits[i].GetComponentInParent<IHitReceiver>();
             if (receiver != null)
             {
+                if (audioSource != null && hitClip != null)
+                {
+                    audioSource.pitch = Random.Range(0.95f, 1.05f);
+                    audioSource.PlayOneShot(hitClip);
+                }
                 receiver.OnHit(new HitInfo
                 {
                     weaponType = WeaponType.B,
@@ -123,13 +174,23 @@ public class BatMelee : MonoBehaviour
             }
         }
     }
+    private Vector2 GetAttackForward()
+    {
+        if (target != null)
+            return ((Vector2)target.position - (Vector2)(attackOrigin != null ? attackOrigin.position : transform.position)).normalized;
+
+        Vector2 mouseDir = MouseHelper.GetDirectionToMouse2D(transform, Camera.main);
+        if (mouseDir.sqrMagnitude > 0.0001f)
+            return mouseDir.normalized;
+
+        return transform.right;
+    }
 
     private void OnDrawGizmosSelected()
     {
         Transform originTransform = attackOrigin != null ? attackOrigin : transform;
-        Vector3 origin = originTransform.position;
-
-        Vector3 forward = weaponHoldPoint != null ? weaponHoldPoint.right : transform.right;
+        Vector3 origin = attackOrigin != null ? attackOrigin.position : transform.position;
+        Vector3 forward = GetAttackForward();
 
         float halfAngle = attackAngle * 0.5f;
 

@@ -18,8 +18,8 @@ TagManager:
   - UI
   - Obstacle
   - Enemy
-  - 
-  - 
+  - Player
+  - Bottom
   - 
   - 
   - 
@@ -45,6 +45,12 @@ TagManager:
   m_SortingLayers:
   - name: Bound
     uniqueID: 57221655
+    locked: 0
+  - name: FloorSprites
+    uniqueID: 3644295437
+    locked: 0
+  - name: Furnitures
+    uniqueID: 1846002117
     locked: 0
   - name: Wall
     uniqueID: 442375229

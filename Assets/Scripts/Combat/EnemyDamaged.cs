@@ -29,6 +29,11 @@ public class EnemyDamaged : MonoBehaviour, IHitReceiver
     [SerializeField] private float dropSpinMin = -200f;
     [SerializeField] private float dropSpinMax = 200f;
 
+    [Header("Audio")]
+    [SerializeField] private AudioSource audioSource;
+    [SerializeField] private AudioClip knockoutClip;
+    [SerializeField] private AudioClip deathClip;
+
     public EnemyState CurrentState => currentState;
 
     private void Awake()
@@ -44,6 +49,9 @@ public class EnemyDamaged : MonoBehaviour, IHitReceiver
 
         if (myCollider == null)
             myCollider = GetComponent<Collider2D>();
+
+        if (myAnim == null)
+            myAnim = GetComponent<Animator>();
     }
 
     public void OnHit(HitInfo hitInfo)
@@ -81,6 +89,11 @@ public class EnemyDamaged : MonoBehaviour, IHitReceiver
             return;
 
         currentState = EnemyState.KnockedOut;
+        if (audioSource != null && knockoutClip != null)
+        {
+            audioSource.pitch = Random.Range(0.9f, 1.1f);
+            audioSource.PlayOneShot(knockoutClip);
+        }
 
         if (enemyMovement != null)
             enemyMovement.enabled = false;
@@ -124,6 +137,11 @@ public class EnemyDamaged : MonoBehaviour, IHitReceiver
             return;
 
         currentState = EnemyState.Dead;
+        if (audioSource != null && deathClip != null)
+        {
+            audioSource.pitch = Random.Range(0.9f, 1.1f);
+            audioSource.PlayOneShot(deathClip);
+        }
 
         CancelInvoke(nameof(RecoverFromKnockout));
 

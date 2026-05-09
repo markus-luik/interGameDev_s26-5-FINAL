@@ -49,6 +49,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1790699796088169966, guid: eb64e8059a30abd42988ad1d92495fd9, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1790699796088169966, guid: eb64e8059a30abd42988ad1d92495fd9, type: 3}
       propertyPath: m_IsTrigger
       value: 1
       objectReference: {fileID: 0}
@@ -91,6 +95,12 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 1946115471797055793, guid: eb64e8059a30abd42988ad1d92495fd9, type: 3}
       insertIndex: -1
       addedObject: {fileID: -8002844119346742753}
+    - targetCorrespondingSourceObject: {fileID: 1946115471797055793, guid: eb64e8059a30abd42988ad1d92495fd9, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 7806063055828893773}
+    - targetCorrespondingSourceObject: {fileID: 1946115471797055793, guid: eb64e8059a30abd42988ad1d92495fd9, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 8225888940660718250}
   m_SourcePrefab: {fileID: 100100000, guid: eb64e8059a30abd42988ad1d92495fd9, type: 3}
 --- !u!1 &5447699550831206959 stripped
 GameObject:
@@ -110,10 +120,126 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GridEntity
   type: {fileID: 11400000, guid: cf9859a0f0ecb444a9cb22dddd63bd90, type: 2}
-  gridPos: {x: 0, y: 0}
   isYou: 0
   isWin: 0
   isPush: 0
   isStop: 0
   isSink: 0
   isDefeat: 0
+--- !u!82 &7806063055828893773
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5447699550831206959}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_Resource: {fileID: 0}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+--- !u!114 &8225888940660718250
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5447699550831206959}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3c79851102662eb4d84cbba5eff24965, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::FLAG
+  _prefabGoal: {fileID: 2731422400200305128, guid: fd74fd74e0d4a8646945e18989ffe430, type: 3}
+  speakingAudioSource: {fileID: 7806063055828893773}
+  statementMadeClips:
+  - {fileID: 8300000, guid: 5c5edd72953669c4082ad8ec9c622cc1, type: 3}
+  - {fileID: 8300000, guid: 067f9dbc419ebb345a1a2e9075602979, type: 3}
+  - {fileID: 8300000, guid: 25755a92f79b29e45ba835031897153c, type: 3}
+  - {fileID: 8300000, guid: 780487da3e55b2049b4d20088bd82a3d, type: 3}
+  - {fileID: 8300000, guid: 1e53c3da0ff841e48ad72376c9a1407d, type: 3}

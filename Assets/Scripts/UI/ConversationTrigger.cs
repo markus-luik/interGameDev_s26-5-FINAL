@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using UnityEngine;
+using System.Collections;
 
 public class ConversationTrigger2D : MonoBehaviour
 {
@@ -12,6 +13,15 @@ public class ConversationTrigger2D : MonoBehaviour
     [SerializeField] private bool triggerOnlyOnce = true;
 
     private bool hasTriggered = false;
+    [SerializeField] private string triggerID;
+    private static HashSet<string> triggeredIDs = new HashSet<string>();
+    private void Start()
+    {
+        if (triggeredIDs.Contains(triggerID))
+        {
+            gameObject.SetActive(false);
+        }
+    }
 
     private void OnTriggerEnter2D(Collider2D other)
     {
@@ -33,6 +43,10 @@ public class ConversationTrigger2D : MonoBehaviour
                 Debug.Log("Starting conversation.");
                 ConversationUIManager.Instance.StartConversation(dialogueLines);
                 hasTriggered = true;
+                if (triggerOnlyOnce)
+                {
+                    triggeredIDs.Add(triggerID);
+                }
             }
             else
             {
@@ -44,4 +58,5 @@ public class ConversationTrigger2D : MonoBehaviour
             Debug.Log("Entered object is not tagged Player.");
         }
     }
+   
 }
