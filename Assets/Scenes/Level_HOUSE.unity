@@ -7505,6 +7505,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 720622976}
     m_Modifications:
+    - target: {fileID: 5206785344677132016, guid: fe84518f0111b384085d4d2130040ab5, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5447699550831206959, guid: fe84518f0111b384085d4d2130040ab5, type: 3}
       propertyPath: m_Name
       value: Flag
