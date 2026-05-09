@@ -7,4 +7,6 @@ public class DialogueLine
     public string text;
 
     public Sprite characterSprite;
+
+    public string characterName;
 }

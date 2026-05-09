@@ -852,6 +852,8 @@ MonoBehaviour:
   speakingAudioSource: {fileID: 56220025}
   speakingClip: {fileID: 8300000, guid: 26814229e15ac5d49af9fb0d3a505276, type: 3}
   speakEveryNCharacters: 5
+  babaClip: {fileID: 8300000, guid: 26814229e15ac5d49af9fb0d3a505276, type: 3}
+  kekeClip: {fileID: 8300000, guid: c0c8bd75a7a6e1d4e9b96a7703311641, type: 3}
 --- !u!4 &56220024
 Transform:
   m_ObjectHideFlags: 0
@@ -9689,16 +9691,22 @@ MonoBehaviour:
   dialogueLines:
   - text: Yo yall know what
     characterSprite: {fileID: -3680286530704523052, guid: 3546a85900f62fc4894d2bc60eca1a45, type: 3}
+    characterName: Keke
   - text: IM FK tired of baba
     characterSprite: {fileID: -3680286530704523052, guid: 3546a85900f62fc4894d2bc60eca1a45, type: 3}
+    characterName: Keke
   - text: Why is it the protagonist
     characterSprite: {fileID: -3680286530704523052, guid: 3546a85900f62fc4894d2bc60eca1a45, type: 3}
+    characterName: Keke
   - text: I am the real protagonist!!
     characterSprite: {fileID: -3680286530704523052, guid: 3546a85900f62fc4894d2bc60eca1a45, type: 3}
+    characterName: Keke
   - text: I thought KEKE is my friend
     characterSprite: {fileID: -8828824254825895988, guid: 3546a85900f62fc4894d2bc60eca1a45, type: 3}
+    characterName: Baba
   - text: It must be a dream
     characterSprite: {fileID: -8828824254825895988, guid: 3546a85900f62fc4894d2bc60eca1a45, type: 3}
+    characterName: Baba
   triggerOnlyOnce: 1
   triggerID: Main2
 --- !u!4 &747570371
@@ -9924,14 +9932,19 @@ MonoBehaviour:
   dialogueLines:
   - text: Why is everything so weird
     characterSprite: {fileID: -8828824254825895988, guid: 3546a85900f62fc4894d2bc60eca1a45, type: 3}
+    characterName: Baba
   - text: Is this a lucid dream?
     characterSprite: {fileID: -8828824254825895988, guid: 3546a85900f62fc4894d2bc60eca1a45, type: 3}
+    characterName: Baba
   - text: Who am I? What am I doing here?
     characterSprite: {fileID: -8828824254825895988, guid: 3546a85900f62fc4894d2bc60eca1a45, type: 3}
+    characterName: Baba
   - text: I can't hold myself anymore!
     characterSprite: {fileID: -8828824254825895988, guid: 3546a85900f62fc4894d2bc60eca1a45, type: 3}
+    characterName: Baba
   - text: Let me get out of here!
     characterSprite: {fileID: -8828824254825895988, guid: 3546a85900f62fc4894d2bc60eca1a45, type: 3}
+    characterName: 
   triggerOnlyOnce: 1
   triggerID: Main1
 --- !u!4 &777309666
