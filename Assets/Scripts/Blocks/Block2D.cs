@@ -221,7 +221,7 @@ public class Block2D : MonoBehaviour
         }
 
         SetNewGridPos(_newParent, _newX, _newY);
-        gridManager.UpdateGrid();
+        gridManager.UpdateGrid(this);
     }
 
     public void SetupNewGridBlock(GridManager2D _gM, GameObject _parent, int _gridX, int _gridY)
