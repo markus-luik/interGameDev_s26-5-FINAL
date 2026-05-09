@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 1790699796088169966}
   - component: {fileID: 5316050151152435035}
   m_Layer: 6
-  m_Name: Wall
+  m_Name: Wall_Forest
   m_TagString: block
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -83,7 +83,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_MaskInteraction: 0
-  m_Sprite: {fileID: 7891613413866523154, guid: d112a09b79e88cb45bdecc40c7be9042, type: 3}
+  m_Sprite: {fileID: -3105243775491413577, guid: 3be63f4b6e69bd44a966add18d5bcbe7, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -131,7 +131,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.5, y: 0.5}
+    oldSize: {x: 1, y: 1}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 2
