@@ -1,10 +1,19 @@
 fileFormatVersion: 2
-guid: 45aa1584f962ee7448fef71a6b1a80da
+guid: 4ab365a1a9d40c245bb621230215536c
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -5120180754014924857
-    second: sprSaunaCounter_0
+      213: -4242567164094691064
+    second: sprPlant1_0
+  - first:
+      213: -1096729918682968293
+    second: sprPlant1_1
+  - first:
+      213: -5271933500777374765
+    second: sprPlant1_2
+  - first:
+      213: -4004305390305554128
+    second: sprPlant1_3
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -46,7 +55,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -113,13 +122,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: sprSaunaCounter_0
+      name: sprPlant1_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 27
-        height: 64
+        x: 43
+        y: 1
+        width: 29
+        height: 38
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +137,74 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 7cf062b6bb671f8b0800000000000000
-      internalID: -5120180754014924857
+      spriteID: 809466074af5f15c0800000000000000
+      internalID: -4242567164094691064
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprPlant1_1
+      rect:
+        serializedVersion: 2
+        x: 63
+        y: 34
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b1fcb5e13f1a7c0f0800000000000000
+      internalID: -1096729918682968293
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprPlant1_2
+      rect:
+        serializedVersion: 2
+        x: 7
+        y: 12
+        width: 24
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3dbdea6b96456d6b0800000000000000
+      internalID: -5271933500777374765
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprPlant1_3
+      rect:
+        serializedVersion: 2
+        x: 69
+        y: 20
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 031d7a69679dd68c0800000000000000
+      internalID: -4004305390305554128
       vertices: []
       indices: 
       edges: []
@@ -148,7 +223,10 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      sprSaunaCounter_0: -5120180754014924857
+      sprPlant1_0: -4242567164094691064
+      sprPlant1_1: -1096729918682968293
+      sprPlant1_2: -5271933500777374765
+      sprPlant1_3: -4004305390305554128
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
