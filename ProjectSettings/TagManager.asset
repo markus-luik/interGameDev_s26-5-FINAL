@@ -49,6 +49,9 @@ TagManager:
   - name: FloorSprites
     uniqueID: 3644295437
     locked: 0
+  - name: Furnitures
+    uniqueID: 1846002117
+    locked: 0
   - name: Wall
     uniqueID: 442375229
     locked: 0
