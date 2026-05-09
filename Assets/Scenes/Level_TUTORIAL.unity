@@ -1544,6 +1544,7 @@ MonoBehaviour:
   dialogueLines:
   - text: Use SHIFT for more visibility.
     characterSprite: {fileID: -8828824254825895988, guid: 3546a85900f62fc4894d2bc60eca1a45, type: 3}
+    characterName: 
   triggerOnlyOnce: 1
   triggerID: 
 --- !u!61 &206128187
@@ -4632,6 +4633,8 @@ MonoBehaviour:
   speakingAudioSource: {fileID: 566419214}
   speakingClip: {fileID: 8300000, guid: 26814229e15ac5d49af9fb0d3a505276, type: 3}
   speakEveryNCharacters: 5
+  babaClip: {fileID: 0}
+  kekeClip: {fileID: 0}
 --- !u!82 &566419214
 AudioSource:
   m_ObjectHideFlags: 0
@@ -6389,8 +6392,10 @@ MonoBehaviour:
   dialogueLines:
   - text: '"KEKE IS ENEMY"'
     characterSprite: {fileID: -8828824254825895988, guid: 3546a85900f62fc4894d2bc60eca1a45, type: 3}
+    characterName: 
   - text: Is this why Keke is evil?
     characterSprite: {fileID: -8828824254825895988, guid: 3546a85900f62fc4894d2bc60eca1a45, type: 3}
+    characterName: 
   triggerOnlyOnce: 0
   triggerID: 
 --- !u!61 &769397612
@@ -6970,8 +6975,10 @@ MonoBehaviour:
   dialogueLines:
   - text: '"BABA IS YOU"'
     characterSprite: {fileID: -8828824254825895988, guid: 3546a85900f62fc4894d2bc60eca1a45, type: 3}
+    characterName: 
   - text: I am Baba! Baba is me. The name of the game.
     characterSprite: {fileID: -8828824254825895988, guid: 3546a85900f62fc4894d2bc60eca1a45, type: 3}
+    characterName: 
   triggerOnlyOnce: 0
   triggerID: 
 --- !u!61 &888771607
@@ -8044,10 +8051,13 @@ MonoBehaviour:
   dialogueLines:
   - text: '"WALL IS STOP"'
     characterSprite: {fileID: -8828824254825895988, guid: 3546a85900f62fc4894d2bc60eca1a45, type: 3}
+    characterName: 
   - text: Ah yes! How familiar.
     characterSprite: {fileID: -8828824254825895988, guid: 3546a85900f62fc4894d2bc60eca1a45, type: 3}
+    characterName: 
   - text: The walls stop me from moving into them.
     characterSprite: {fileID: -8828824254825895988, guid: 3546a85900f62fc4894d2bc60eca1a45, type: 3}
+    characterName: 
   triggerOnlyOnce: 0
   triggerID: 
 --- !u!61 &1110436977
@@ -8968,6 +8978,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 6887070712194663695, guid: 9604749680dd008439e0b5a1d01c1710, type: 3}
   m_PrefabInstance: {fileID: 1258471584}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1263041373 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2740046011236347009, guid: 05698d7997655e643b10386f35d2ec67, type: 3}
+  m_PrefabInstance: {fileID: 1736447774}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1265549012
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9275,10 +9290,13 @@ MonoBehaviour:
   dialogueLines:
   - text: '"ROCK IS PUSH"'
     characterSprite: {fileID: -8828824254825895988, guid: 3546a85900f62fc4894d2bc60eca1a45, type: 3}
+    characterName: 
   - text: Ah yes! How familiar.
     characterSprite: {fileID: -8828824254825895988, guid: 3546a85900f62fc4894d2bc60eca1a45, type: 3}
+    characterName: 
   - text: I can push rocks.
     characterSprite: {fileID: -8828824254825895988, guid: 3546a85900f62fc4894d2bc60eca1a45, type: 3}
+    characterName: 
   triggerOnlyOnce: 0
   triggerID: 
 --- !u!61 &1302966869
@@ -10551,6 +10569,7 @@ MonoBehaviour:
   dialogueLines:
   - text: That Keke in the small room looks different.
     characterSprite: {fileID: -8828824254825895988, guid: 3546a85900f62fc4894d2bc60eca1a45, type: 3}
+    characterName: 
   triggerOnlyOnce: 1
   triggerID: 
 --- !u!61 &1488186409
@@ -10877,8 +10896,10 @@ MonoBehaviour:
   dialogueLines:
   - text: Are you trying to escape?
     characterSprite: {fileID: -8828824254825895988, guid: 3546a85900f62fc4894d2bc60eca1a45, type: 3}
+    characterName: 
   - text: Use ESCAPE to PAUSE the game.
     characterSprite: {fileID: -8828824254825895988, guid: 3546a85900f62fc4894d2bc60eca1a45, type: 3}
+    characterName: 
   triggerOnlyOnce: 1
   triggerID: 
 --- !u!61 &1580281796
@@ -11761,16 +11782,140 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7108178797801122245, guid: 05698d7997655e643b10386f35d2ec67, type: 3}
+      propertyPath: audioSource
+      value: 
+      objectReference: {fileID: 1736447777}
+    - target: {fileID: 7108178797801122245, guid: 05698d7997655e643b10386f35d2ec67, type: 3}
+      propertyPath: speakingAudioSource
+      value: 
+      objectReference: {fileID: 1736447777}
+    - target: {fileID: 7108178797801122245, guid: 05698d7997655e643b10386f35d2ec67, type: 3}
+      propertyPath: levelClearClips.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7108178797801122245, guid: 05698d7997655e643b10386f35d2ec67, type: 3}
+      propertyPath: 'levelClearClips.Array.data[0]'
+      value: 
+      objectReference: {fileID: 8300000, guid: b8cb41c7c8fd64d48ab8b26d0cc7792a, type: 3}
+    - target: {fileID: 7108178797801122245, guid: 05698d7997655e643b10386f35d2ec67, type: 3}
+      propertyPath: 'levelClearClips.Array.data[1]'
+      value: 
+      objectReference: {fileID: 8300000, guid: d28dde6fc79395144865ba42e52db9fd, type: 3}
+    - target: {fileID: 7108178797801122245, guid: 05698d7997655e643b10386f35d2ec67, type: 3}
+      propertyPath: 'levelClearClips.Array.data[2]'
+      value: 
+      objectReference: {fileID: 8300000, guid: 625bc03fff716894097e64ab4d25d996, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 2740046011236347009, guid: 05698d7997655e643b10386f35d2ec67, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1736447777}
   m_SourcePrefab: {fileID: 100100000, guid: 05698d7997655e643b10386f35d2ec67, type: 3}
 --- !u!4 &1736447775 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3625493221993064854, guid: 05698d7997655e643b10386f35d2ec67, type: 3}
   m_PrefabInstance: {fileID: 1736447774}
   m_PrefabAsset: {fileID: 0}
+--- !u!82 &1736447777
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1263041373}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_Resource: {fileID: 0}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1001 &1739245523
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -12563,16 +12708,22 @@ MonoBehaviour:
   dialogueLines:
   - text: Where am I?
     characterSprite: {fileID: -8828824254825895988, guid: 3546a85900f62fc4894d2bc60eca1a45, type: 3}
+    characterName: 
   - text: Thought I was in Miami for holiday
     characterSprite: {fileID: -8828824254825895988, guid: 3546a85900f62fc4894d2bc60eca1a45, type: 3}
+    characterName: 
   - text: Didn't I js beat "BABA is you"?
     characterSprite: {fileID: -8828824254825895988, guid: 3546a85900f62fc4894d2bc60eca1a45, type: 3}
+    characterName: 
   - text: Oh no, I am Baba
     characterSprite: {fileID: -8828824254825895988, guid: 3546a85900f62fc4894d2bc60eca1a45, type: 3}
+    characterName: 
   - text: For now
     characterSprite: {fileID: -8828824254825895988, guid: 3546a85900f62fc4894d2bc60eca1a45, type: 3}
+    characterName: 
   - text: Wait KEKE is that you?
     characterSprite: {fileID: -8828824254825895988, guid: 3546a85900f62fc4894d2bc60eca1a45, type: 3}
+    characterName: 
   triggerOnlyOnce: 1
   triggerID: 
 --- !u!61 &1824185306
@@ -12925,10 +13076,13 @@ MonoBehaviour:
   dialogueLines:
   - text: There's Keke! Use CLICK to PUNCH.
     characterSprite: {fileID: -8828824254825895988, guid: 3546a85900f62fc4894d2bc60eca1a45, type: 3}
+    characterName: 
   - text: Keke has a cool baseball bat!
     characterSprite: {fileID: -8828824254825895988, guid: 3546a85900f62fc4894d2bc60eca1a45, type: 3}
+    characterName: 
   - text: Once YOU get a bat, use SPACE to THROW it.
     characterSprite: {fileID: -8828824254825895988, guid: 3546a85900f62fc4894d2bc60eca1a45, type: 3}
+    characterName: 
   triggerOnlyOnce: 1
   triggerID: 
 --- !u!61 &1868769394
@@ -14068,8 +14222,10 @@ MonoBehaviour:
   dialogueLines:
   - text: '"FLAG WIN"'
     characterSprite: {fileID: -8828824254825895988, guid: 3546a85900f62fc4894d2bc60eca1a45, type: 3}
+    characterName: 
   - text: This one looks different!
     characterSprite: {fileID: -8828824254825895988, guid: 3546a85900f62fc4894d2bc60eca1a45, type: 3}
+    characterName: 
   triggerOnlyOnce: 0
   triggerID: 
 --- !u!61 &2042099147

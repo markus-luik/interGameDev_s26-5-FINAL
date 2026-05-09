@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -12,7 +13,11 @@ public class RoundManager : MonoBehaviour
     //Canvas prefab that signals round end
     [SerializeField] private GameObject goalCanvas;
     private GameObject currentGoalCanvas;
-    
+
+    [Header("Audio")]
+    [SerializeField] private AudioSource audioSource;
+    [SerializeField] private List<AudioClip> levelClearClips = new List<AudioClip>();
+
     private void Awake()
     {
         if (Instance != null && Instance != this)//If RoundManager exists && it is not itself, destroy that other game manager
@@ -87,6 +92,7 @@ public class RoundManager : MonoBehaviour
         Debug.Log($"{entityName} entered goal.");
         currentGoalCanvas = Instantiate(goalCanvas);
         playerFinished = true;
+        PlayVictorySFX();
     }
     
     /// <summary>
@@ -119,6 +125,17 @@ public class RoundManager : MonoBehaviour
         }
     }
     //--------------------------------- 
+
+
+    private void PlayVictorySFX()
+    {
+        if (levelClearClips != null && levelClearClips.Count > 0)
+        {
+            int index = UnityEngine.Random.Range(0, levelClearClips.Count);
+            audioSource.pitch = Random.Range(0.95f, 1.05f);
+            audioSource.PlayOneShot(levelClearClips[index]);
+        }
+    }
     
     //--------------------------------- UPDATE
     void Update()

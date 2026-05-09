@@ -1056,6 +1056,7 @@ MonoBehaviour:
   dialogueLines:
   - text: BEEP BEEP
     characterSprite: {fileID: -8828824254825895988, guid: 3546a85900f62fc4894d2bc60eca1a45, type: 3}
+    characterName: 
   triggerOnlyOnce: 0
   triggerID: Forest
 --- !u!61 &85177192
@@ -3010,6 +3011,8 @@ MonoBehaviour:
   speakingAudioSource: {fileID: 0}
   speakingClip: {fileID: 0}
   speakEveryNCharacters: 2
+  babaClip: {fileID: 0}
+  kekeClip: {fileID: 0}
 --- !u!1 &299019722
 GameObject:
   m_ObjectHideFlags: 0
@@ -8738,6 +8741,197 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 1083161924119533073, guid: f7e649f31761642428f4c18b2cad48ae, type: 3}
   m_PrefabInstance: {fileID: 819245405}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &824217207
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 1609486852}
+    m_Modifications:
+    - target: {fileID: 2740046011236347009, guid: 05698d7997655e643b10386f35d2ec67, type: 3}
+      propertyPath: m_Name
+      value: RoundManager
+      objectReference: {fileID: 0}
+    - target: {fileID: 3625493221993064854, guid: 05698d7997655e643b10386f35d2ec67, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3625493221993064854, guid: 05698d7997655e643b10386f35d2ec67, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3625493221993064854, guid: 05698d7997655e643b10386f35d2ec67, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3625493221993064854, guid: 05698d7997655e643b10386f35d2ec67, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3625493221993064854, guid: 05698d7997655e643b10386f35d2ec67, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3625493221993064854, guid: 05698d7997655e643b10386f35d2ec67, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3625493221993064854, guid: 05698d7997655e643b10386f35d2ec67, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3625493221993064854, guid: 05698d7997655e643b10386f35d2ec67, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3625493221993064854, guid: 05698d7997655e643b10386f35d2ec67, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3625493221993064854, guid: 05698d7997655e643b10386f35d2ec67, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7108178797801122245, guid: 05698d7997655e643b10386f35d2ec67, type: 3}
+      propertyPath: audioSource
+      value: 
+      objectReference: {fileID: 824217210}
+    - target: {fileID: 7108178797801122245, guid: 05698d7997655e643b10386f35d2ec67, type: 3}
+      propertyPath: speakingAudioSource
+      value: 
+      objectReference: {fileID: 824217210}
+    - target: {fileID: 7108178797801122245, guid: 05698d7997655e643b10386f35d2ec67, type: 3}
+      propertyPath: levelClearClips.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7108178797801122245, guid: 05698d7997655e643b10386f35d2ec67, type: 3}
+      propertyPath: 'levelClearClips.Array.data[0]'
+      value: 
+      objectReference: {fileID: 8300000, guid: b8cb41c7c8fd64d48ab8b26d0cc7792a, type: 3}
+    - target: {fileID: 7108178797801122245, guid: 05698d7997655e643b10386f35d2ec67, type: 3}
+      propertyPath: 'levelClearClips.Array.data[1]'
+      value: 
+      objectReference: {fileID: 8300000, guid: d28dde6fc79395144865ba42e52db9fd, type: 3}
+    - target: {fileID: 7108178797801122245, guid: 05698d7997655e643b10386f35d2ec67, type: 3}
+      propertyPath: 'levelClearClips.Array.data[2]'
+      value: 
+      objectReference: {fileID: 8300000, guid: 625bc03fff716894097e64ab4d25d996, type: 3}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 2740046011236347009, guid: 05698d7997655e643b10386f35d2ec67, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 824217210}
+  m_SourcePrefab: {fileID: 100100000, guid: 05698d7997655e643b10386f35d2ec67, type: 3}
+--- !u!4 &824217208 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3625493221993064854, guid: 05698d7997655e643b10386f35d2ec67, type: 3}
+  m_PrefabInstance: {fileID: 824217207}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &824217209 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2740046011236347009, guid: 05698d7997655e643b10386f35d2ec67, type: 3}
+  m_PrefabInstance: {fileID: 824217207}
+  m_PrefabAsset: {fileID: 0}
+--- !u!82 &824217210
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 824217209}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_Resource: {fileID: 0}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1001 &840891392
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10700,68 +10894,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -46.341}
---- !u!1001 &1038836352
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 1609486852}
-    m_Modifications:
-    - target: {fileID: 2740046011236347009, guid: 05698d7997655e643b10386f35d2ec67, type: 3}
-      propertyPath: m_Name
-      value: RoundManager
-      objectReference: {fileID: 0}
-    - target: {fileID: 3625493221993064854, guid: 05698d7997655e643b10386f35d2ec67, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3625493221993064854, guid: 05698d7997655e643b10386f35d2ec67, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3625493221993064854, guid: 05698d7997655e643b10386f35d2ec67, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3625493221993064854, guid: 05698d7997655e643b10386f35d2ec67, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3625493221993064854, guid: 05698d7997655e643b10386f35d2ec67, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3625493221993064854, guid: 05698d7997655e643b10386f35d2ec67, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3625493221993064854, guid: 05698d7997655e643b10386f35d2ec67, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3625493221993064854, guid: 05698d7997655e643b10386f35d2ec67, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3625493221993064854, guid: 05698d7997655e643b10386f35d2ec67, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3625493221993064854, guid: 05698d7997655e643b10386f35d2ec67, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 05698d7997655e643b10386f35d2ec67, type: 3}
---- !u!4 &1038836353 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 3625493221993064854, guid: 05698d7997655e643b10386f35d2ec67, type: 3}
-  m_PrefabInstance: {fileID: 1038836352}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1047879848 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3140889717073129319, guid: a78eb56cdac63ef4c97f0c700450c79b, type: 3}
@@ -15281,7 +15413,7 @@ Transform:
   - {fileID: 1532038324}
   - {fileID: 1691525840}
   - {fileID: 371494126}
-  - {fileID: 1038836353}
+  - {fileID: 824217208}
   - {fileID: 511493667}
   - {fileID: 150266720}
   - {fileID: 2143102451}
@@ -16810,16 +16942,22 @@ MonoBehaviour:
   dialogueLines:
   - text: Where am I?
     characterSprite: {fileID: -8828824254825895988, guid: 3546a85900f62fc4894d2bc60eca1a45, type: 3}
+    characterName: 
   - text: Thought I was in Miami for holiday
     characterSprite: {fileID: -8828824254825895988, guid: 3546a85900f62fc4894d2bc60eca1a45, type: 3}
+    characterName: 
   - text: Didn't I js beat "BABA is you"?
     characterSprite: {fileID: -8828824254825895988, guid: 3546a85900f62fc4894d2bc60eca1a45, type: 3}
+    characterName: 
   - text: Oh no, I am Baba
     characterSprite: {fileID: -8828824254825895988, guid: 3546a85900f62fc4894d2bc60eca1a45, type: 3}
+    characterName: 
   - text: For now
     characterSprite: {fileID: -8828824254825895988, guid: 3546a85900f62fc4894d2bc60eca1a45, type: 3}
+    characterName: 
   - text: Wait KEKE is that you?
     characterSprite: {fileID: -8828824254825895988, guid: 3546a85900f62fc4894d2bc60eca1a45, type: 3}
+    characterName: 
   triggerOnlyOnce: 1
   triggerID: 
 --- !u!61 &1769772381
@@ -19410,10 +19548,13 @@ MonoBehaviour:
   dialogueLines:
   - text: Wait this looks like somewhere I am from
     characterSprite: {fileID: -8828824254825895988, guid: 3546a85900f62fc4894d2bc60eca1a45, type: 3}
+    characterName: 
   - text: Is this a maze tho?
     characterSprite: {fileID: -8828824254825895988, guid: 3546a85900f62fc4894d2bc60eca1a45, type: 3}
+    characterName: 
   - text: It's as tangled as my mind right now
     characterSprite: {fileID: -8828824254825895988, guid: 3546a85900f62fc4894d2bc60eca1a45, type: 3}
+    characterName: 
   triggerOnlyOnce: 1
   triggerID: Forest
 --- !u!61 &1987333554
@@ -19643,10 +19784,13 @@ MonoBehaviour:
   dialogueLines:
   - text: Baba looks far down the street
     characterSprite: {fileID: -8828824254825895988, guid: 3546a85900f62fc4894d2bc60eca1a45, type: 3}
+    characterName: 
   - text: Hoping for an explanation of this bizarre world
     characterSprite: {fileID: -8828824254825895988, guid: 3546a85900f62fc4894d2bc60eca1a45, type: 3}
+    characterName: 
   - text: But instead sees a donkey pooping upside down
     characterSprite: {fileID: -8828824254825895988, guid: 3546a85900f62fc4894d2bc60eca1a45, type: 3}
+    characterName: 
   triggerOnlyOnce: 0
   triggerID: Forest
 --- !u!61 &2024841874
@@ -21216,6 +21360,8 @@ MonoBehaviour:
   speakingAudioSource: {fileID: 0}
   speakingClip: {fileID: 0}
   speakEveryNCharacters: 2
+  babaClip: {fileID: 0}
+  kekeClip: {fileID: 0}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
