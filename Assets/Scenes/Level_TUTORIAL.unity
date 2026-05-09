@@ -932,6 +932,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3764744399782263098, guid: 2804f352c5e8d2240b541f6aa6e2695b, type: 3}
+      propertyPath: m_SortingLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3764744399782263098, guid: 2804f352c5e8d2240b541f6aa6e2695b, type: 3}
+      propertyPath: m_SortingLayerID
+      value: 2092879673
+      objectReference: {fileID: 0}
     - target: {fileID: 6148992457638226133, guid: 2804f352c5e8d2240b541f6aa6e2695b, type: 3}
       propertyPath: player
       value: 
@@ -3155,6 +3163,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3764744399782263098, guid: 2804f352c5e8d2240b541f6aa6e2695b, type: 3}
+      propertyPath: m_SortingLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3764744399782263098, guid: 2804f352c5e8d2240b541f6aa6e2695b, type: 3}
+      propertyPath: m_SortingLayerID
+      value: 2092879673
+      objectReference: {fileID: 0}
     - target: {fileID: 6148992457638226133, guid: 2804f352c5e8d2240b541f6aa6e2695b, type: 3}
       propertyPath: player
       value: 
@@ -5338,6 +5354,14 @@ PrefabInstance:
     - target: {fileID: 3140889717073129319, guid: 2804f352c5e8d2240b541f6aa6e2695b, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3764744399782263098, guid: 2804f352c5e8d2240b541f6aa6e2695b, type: 3}
+      propertyPath: m_SortingLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3764744399782263098, guid: 2804f352c5e8d2240b541f6aa6e2695b, type: 3}
+      propertyPath: m_SortingLayerID
+      value: 2092879673
       objectReference: {fileID: 0}
     - target: {fileID: 6148992457638226133, guid: 2804f352c5e8d2240b541f6aa6e2695b, type: 3}
       propertyPath: player
@@ -12390,6 +12414,14 @@ PrefabInstance:
     - target: {fileID: 3140889717073129319, guid: a78eb56cdac63ef4c97f0c700450c79b, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3764744399782263098, guid: a78eb56cdac63ef4c97f0c700450c79b, type: 3}
+      propertyPath: m_SortingLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3764744399782263098, guid: a78eb56cdac63ef4c97f0c700450c79b, type: 3}
+      propertyPath: m_SortingLayerID
+      value: 2092879673
       objectReference: {fileID: 0}
     - target: {fileID: 6148992457638226133, guid: a78eb56cdac63ef4c97f0c700450c79b, type: 3}
       propertyPath: player
