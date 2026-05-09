@@ -87,7 +87,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_MaskInteraction: 0
-  m_Sprite: {fileID: 7482667652216324306, guid: 75f5f34dc1b5347e0b8351032682f224, type: 3}
+  m_Sprite: {fileID: -1508804677686159225, guid: 6ca1092a07036b840b6bc6a7eb900d5d, type: 3}
   m_Color: {r: 0.9685534, g: 0.51473427, b: 0.84126127, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -219,6 +219,9 @@ MonoBehaviour:
   startingWeapon: {fileID: 0}
   canShoot: 1
   batMelee: {fileID: 0}
+  bodyAnimator: {fileID: 0}
+  weaponModeParam: weaponMode
+  attackTriggerParam: attack
   bulletSpeed: 16
   fireInterval: 0.15
   shootAudioSource: {fileID: 0}
@@ -357,8 +360,8 @@ BoxCollider2D:
   m_Offset: {x: 0, y: 0.21133333}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.28866667}
-    oldSize: {x: 1, y: 1}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.46875, y: 0.8125}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
