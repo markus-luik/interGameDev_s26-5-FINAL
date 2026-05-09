@@ -4629,9 +4629,9 @@ MonoBehaviour:
   characterBgShownPos: {x: -120, y: 73}
   characterBgHiddenPos: {x: 1300, y: 73}
   typingSpeed: 0.02
-  speakingAudioSource: {fileID: 0}
-  speakingClip: {fileID: 0}
-  speakEveryNCharacters: 2
+  speakingAudioSource: {fileID: 566419214}
+  speakingClip: {fileID: 8300000, guid: 26814229e15ac5d49af9fb0d3a505276, type: 3}
+  speakEveryNCharacters: 5
 --- !u!82 &566419214
 AudioSource:
   m_ObjectHideFlags: 0
