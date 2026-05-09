@@ -17,6 +17,7 @@ GameObject:
   - component: {fileID: -1422640155058697257}
   - component: {fileID: 1528103232760767756}
   - component: {fileID: -5218163817292740351}
+  - component: {fileID: 1914815114024775558}
   m_Layer: 7
   m_Name: EnemyWithGun
   m_TagString: block
@@ -236,6 +237,9 @@ MonoBehaviour:
   startingWeapon: {fileID: 0}
   canShoot: 1
   batMelee: {fileID: 0}
+  bodyAnimator: {fileID: 0}
+  weaponModeParam: weaponMode
+  attackTriggerParam: attack
   bulletSpeed: 16
   fireInterval: 0.15
   shootAudioSource: {fileID: -1422640155058697257}
@@ -480,3 +484,25 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!95 &1914815114024775558
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8743385625017111025}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: c30c371eb87560448b0f0284aec08b8b, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0

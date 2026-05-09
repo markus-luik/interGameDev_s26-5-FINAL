@@ -49,6 +49,9 @@ public class EnemyDamaged : MonoBehaviour, IHitReceiver
 
         if (myCollider == null)
             myCollider = GetComponent<Collider2D>();
+
+        if (myAnim == null)
+            myAnim = GetComponent<Animator>();
     }
 
     public void OnHit(HitInfo hitInfo)

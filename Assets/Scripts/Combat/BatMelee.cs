@@ -71,35 +71,36 @@ public class BatMelee : MonoBehaviour
             StartCoroutine(SwingBat());
         }
     }
-   public void TrySwing()
+   public bool TrySwing()
     {
         Debug.Log("TrySwing called");
 
         if (currentWeapon == null)
         {
             Debug.Log("No bat weapon assigned");
-            return;
+            return false;
         }
 
         if (currentWeapon.WeaponType != WeaponType.B)
         {
             Debug.Log("Weapon is not bat: " + currentWeapon.WeaponType);
-            return;
+            return false;
         }
 
         if (weaponHoldPoint == null)
         {
             Debug.Log("No weapon hold point");
-            return;
+            return false;
         }
 
         if (isSwinging)
-            return;
+            return false;
 
         if (Time.time < nextAttackTime)
-            return;
+            return false;
 
         StartCoroutine(SwingBat());
+        return true;
     }
 
     private IEnumerator SwingBat()

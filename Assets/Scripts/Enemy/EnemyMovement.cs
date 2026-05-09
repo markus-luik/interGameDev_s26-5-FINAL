@@ -53,6 +53,12 @@ public class EnemyMovement : Block2D
     private Vector2Int patrolStartGridPos;
     private Vector2Int lastKnownPlayerGridPos;
 
+    private void Awake()
+    {
+        if (myAnim == null)
+            myAnim = GetComponent<Animator>();
+    }
+
     protected override void Start()
     {
         base.Start();

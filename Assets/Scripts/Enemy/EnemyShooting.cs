@@ -13,6 +13,9 @@ public class EnemyShooting : MonoBehaviour
     [SerializeField] private Weapon startingWeapon;
     [SerializeField] private bool canShoot = false;
     [SerializeField] private BatMelee batMelee;
+    [SerializeField] private Animator bodyAnimator;
+    [SerializeField] private string weaponModeParam = "weaponMode";
+    [SerializeField] private string attackTriggerParam = "attack";
 
     [Header("Shooting")]
     [SerializeField] private float bulletSpeed = 16f;
@@ -23,6 +26,8 @@ public class EnemyShooting : MonoBehaviour
     [SerializeField] private AudioClip shootClip;
     private Weapon currentWeapon;
     private float nextFireTime;
+    private int weaponModeHash;
+    private int attackTriggerHash;
 
     public Weapon CurrentWeapon => currentWeapon;
     private bool CanFireCurrentWeapon()
@@ -41,6 +46,17 @@ public class EnemyShooting : MonoBehaviour
 
         if (batMelee == null)
         batMelee = GetComponent<BatMelee>();
+
+        if (bodyAnimator == null)
+            bodyAnimator = GetComponent<Animator>();
+
+        if (string.IsNullOrWhiteSpace(weaponModeParam))
+            weaponModeParam = "weaponMode";
+        if (string.IsNullOrWhiteSpace(attackTriggerParam))
+            attackTriggerParam = "attack";
+
+        weaponModeHash = Animator.StringToHash(weaponModeParam);
+        attackTriggerHash = Animator.StringToHash(attackTriggerParam);
     }
 
     private void Start()
@@ -86,8 +102,8 @@ public class EnemyShooting : MonoBehaviour
         }
         else if (currentWeapon.WeaponType == WeaponType.B)
         {
-            if (batMelee != null)
-                batMelee.TrySwing();
+            if (batMelee != null && batMelee.TrySwing())
+                TriggerAttackAnimation();
         }
     }
 
@@ -105,6 +121,7 @@ public class EnemyShooting : MonoBehaviour
             canShoot = false;
             if (batMelee != null)
             batMelee.SetWeapon(currentWeapon);
+            UpdateWeaponAnimationMode();
             return;
         }
 
@@ -117,6 +134,7 @@ public class EnemyShooting : MonoBehaviour
             batMelee.SetWeapon(currentWeapon);
 
         canShoot = true;
+        UpdateWeaponAnimationMode();
     }
 
     public void ClearWeapon()
@@ -126,6 +144,8 @@ public class EnemyShooting : MonoBehaviour
 
         if (batMelee != null)
             batMelee.SetWeapon(null);
+
+        UpdateWeaponAnimationMode();
     }
 
     private void FireBullet(Vector2 dir)
@@ -150,15 +170,37 @@ public class EnemyShooting : MonoBehaviour
 
             bulletComp.Initialize(dir, bulletSpeed, gameObject);
             currentWeapon.UseAmmo();
+            TriggerAttackAnimation();
             return;
         }
 
         Rigidbody2D rb = bullet.GetComponent<Rigidbody2D>();
         if (rb != null)
             rb.linearVelocity = dir * bulletSpeed;
+        TriggerAttackAnimation();
         // Debug.Log("Enemy spawned bullet prefab: " + bullet.name);
 
         // Bullet bulletComp = bullet.GetComponent<Bullet>();
         // Debug.Log("Bullet component found? " + (bulletComp != null));
+    }
+
+    private void TriggerAttackAnimation()
+    {
+        if (bodyAnimator == null)
+            return;
+
+        bodyAnimator.SetTrigger(attackTriggerHash);
+    }
+
+    private void UpdateWeaponAnimationMode()
+    {
+        if (bodyAnimator == null)
+            return;
+
+        int mode = 0;
+        if (currentWeapon != null)
+            mode = currentWeapon.WeaponType == WeaponType.A ? 1 : 2;
+
+        bodyAnimator.SetInteger(weaponModeHash, mode);
     }
 }
