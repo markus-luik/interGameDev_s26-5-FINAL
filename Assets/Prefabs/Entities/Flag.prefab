@@ -232,3 +232,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::FLAG
   _prefabGoal: {fileID: 2731422400200305128, guid: fd74fd74e0d4a8646945e18989ffe430, type: 3}
+  speakingAudioSource: {fileID: 7806063055828893773}
+  statementMadeClips:
+  - {fileID: 8300000, guid: 5c5edd72953669c4082ad8ec9c622cc1, type: 3}
+  - {fileID: 8300000, guid: 067f9dbc419ebb345a1a2e9075602979, type: 3}
+  - {fileID: 8300000, guid: 25755a92f79b29e45ba835031897153c, type: 3}
+  - {fileID: 8300000, guid: 780487da3e55b2049b4d20088bd82a3d, type: 3}
+  - {fileID: 8300000, guid: 1e53c3da0ff841e48ad72376c9a1407d, type: 3}

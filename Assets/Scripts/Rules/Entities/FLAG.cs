@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using UnityEngine;
 
 public class FLAG : MonoBehaviour
@@ -11,7 +12,11 @@ public class FLAG : MonoBehaviour
     //Goal prefab
     [SerializeField] private GameObject _prefabGoal;
     private GameObject _spawnedGoal;
-    
+
+    [Header("Audio")]
+    [SerializeField] private AudioSource speakingAudioSource;
+    [SerializeField] private List<AudioClip> statementMadeClips = new List<AudioClip>();
+
     private void Awake()
     {
         // Getting component references
@@ -44,6 +49,10 @@ public class FLAG : MonoBehaviour
                 if (_spawnedGoal == null){
                     _spawnedGoal = Instantiate(_prefabGoal, transform.position, Quaternion.identity); //spawns prefab goal at self with no rotation
                 }
+
+                // Play Statement Made SFX
+                PlayStatementSound();
+
             }
             else
             {
@@ -61,4 +70,14 @@ public class FLAG : MonoBehaviour
             if (_playerRotation != null) _playerRotation.enabled = what;
         }
     }
+
+    public void PlayStatementSound()
+    {
+        if (statementMadeClips != null && statementMadeClips.Count > 0)
+        {
+            int index = UnityEngine.Random.Range(0, statementMadeClips.Count);
+            speakingAudioSource.PlayOneShot(statementMadeClips[index]);
+        }
+    }
+
 }
